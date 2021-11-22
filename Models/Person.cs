@@ -20,7 +20,7 @@ namespace Snack_Shack.Models
         [DisplayName("Email Address"), Required, StringLength(60)]
         public string EmailAddress { get; set; }
 
-        [DisplayName("Over 18?"), Required]
+        [DisplayName("Over 18?")]
         // Needs to be nullable?
         public bool IsMinor { get; set; }
 
