@@ -9,6 +9,7 @@ namespace Snack_Shack.Models
 {
     public class Staff
     {
+        [Key]
         public int StaffID { get; set; }
         
         //Nullable?

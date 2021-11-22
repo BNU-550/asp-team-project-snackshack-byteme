@@ -9,6 +9,7 @@ namespace Snack_Shack.Models
 {
     public class Product
     {
+        [Key]
         public int ProductID { get; set; }
 
         // Make it product name?

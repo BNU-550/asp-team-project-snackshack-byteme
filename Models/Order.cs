@@ -9,6 +9,7 @@ namespace Snack_Shack.Models
 {
     public class Order : Person
     {
+        [Key]
         public int OrderID { get; set; }
 
         public int TableNo { get; set; }

@@ -9,6 +9,7 @@ namespace Snack_Shack.Models
 {
     public class Payment
     {
+        [Key]
         public string CardNo { get; set; }
 
         // Range too small? Use String instead?
