@@ -8,4 +8,5 @@ namespace Snack_Shack.Models
     public class Drink
     {
     }
+    // Definitely could make use of Enums
 }
