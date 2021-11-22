@@ -4,13 +4,14 @@ using System.ComponentModel.DataAnnotations;
 
 
 namespace Snack_Shack.Models
-{ 
+{
     /// <summary>
     /// Represents each person in the database, storing their details such as their
     /// name, email address, phone number, 18+ verification, and indicates whether the
     /// individual is a customer or staff member.
     /// 
-    /// Created by Isabelle Thorpe and Kayley Syrett 
+    /// Created by Isabelle Thorpe and Kayley Syrett
+    /// Modified by Isabelle Thorpe (22/11/2021)
     /// </summary>
     public class Person
     {
@@ -70,4 +71,5 @@ namespace Snack_Shack.Models
     }
 
     //Need to fix IsCustomer
+    //Expression for phone number and email?
 }
