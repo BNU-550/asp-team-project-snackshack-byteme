@@ -55,5 +55,7 @@ namespace Snack_Shack.Models
         // Kayley and I don't think it's required
         [DisplayName("Image"), Required, StringLength(150)]
         public string ImageURL { get; set; }
+
+        // Use of enums?
     }
 }

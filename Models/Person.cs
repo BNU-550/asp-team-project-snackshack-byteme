@@ -40,6 +40,7 @@ namespace Snack_Shack.Models
         [DisplayName("Email Address"), Required, StringLength(60)]
         public string EmailAddress { get; set; }
 
+
         /// <summary>
         /// The person's mobile number.
         /// </summary>
@@ -59,7 +60,7 @@ namespace Snack_Shack.Models
         /// differentiates between staff and customer.
         /// Not sure how to do this.
         /// </summary>
-        private bool IsCustomer { get; set; }
+        public bool IsCustomer { get; set; }
 
         /// <summary>
         /// Returns full Name of person.
@@ -70,6 +71,7 @@ namespace Snack_Shack.Models
         }
     }
 
-    //Need to fix IsCustomer
-    //Expression for phone number and email?
+    // Need to fix IsCustomer
+    // Expression for phone number and email?
+    // Navigation property?
 }

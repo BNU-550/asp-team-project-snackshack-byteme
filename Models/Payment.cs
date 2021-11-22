@@ -53,7 +53,10 @@ namespace Snack_Shack.Models
         /// </summary>
         [DisplayName("CVC"), Required, MinLength(3), MaxLength(4)]
         public int CardCVV { get; set; }
-    }
+
+        // Navigation properties 
+        public virtual Order Order { get; set; }
+}
 }
 
 // Added payment card number
