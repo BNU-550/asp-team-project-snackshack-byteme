@@ -9,7 +9,7 @@ namespace Snack_Shack.Models
     /// send a feedback message which will be timestamped and
     /// stored in the database.
     /// 
-    /// Created by Isabelle Thorpe and Kayley Styrett
+    /// Created by Isabelle Thorpe and Kayley Styrett (22/11/2021)
     /// Modified by Isabelle Thorpe (22/11/2021)
     /// </summary>
     public class Feedback

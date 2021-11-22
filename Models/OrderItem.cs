@@ -12,7 +12,7 @@ namespace Snack_Shack.Models
     /// This will link to the Order and Product classes to act as an item/s within the
     /// Order/Basket.
     /// 
-    /// Created by Isabelle Thorpe and Kayley Syrett
+    /// Created by Isabelle Thorpe and Kayley Syrett (22/11/2021)
     /// Modified by Isabelle Thorpe (22/11/2021)
     /// </summary>
     public class OrderItem
@@ -25,7 +25,8 @@ namespace Snack_Shack.Models
         public int ProductID { get; set; }
 
         /// <summary>
-        /// The price of a single item
+        /// The price of a single item. 
+        /// Is this taken from product?
         /// </summary>
         // Do we need a limit?
         [DisplayName("Item Price (£)"), Required]

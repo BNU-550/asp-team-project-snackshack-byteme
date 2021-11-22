@@ -11,7 +11,7 @@ namespace Snack_Shack.Models
     /// Each product has an associated ID. This class stores the product's
     /// name, description, price, availability and image.
     /// 
-    /// Created by Isabelle Thorpe and Kayley Syrett
+    /// Created by Isabelle Thorpe and Kayley Syrett (22/11/2021)
     /// Modified by Isabelle Thorpe (22/11/2021)
     /// </summary>
     public class Product

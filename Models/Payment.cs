@@ -14,7 +14,7 @@ namespace Snack_Shack.Models
     /// Customers will be able to add multiple cards and save them securely
     /// on our database. They are also able to update already saved cards.
     /// 
-    /// Created by Isabelle Thorpe and Kayley Styrett
+    /// Created by Isabelle Thorpe and Kayley Styrett (22/11/2021)
     /// Modified by Isabelle Thorpe (22/11/2021)
     /// </summary>
     public class Payment : Order

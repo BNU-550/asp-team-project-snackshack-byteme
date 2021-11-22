@@ -10,7 +10,7 @@ namespace Snack_Shack.Models
     /// name, email address, phone number, 18+ verification, and indicates whether the
     /// individual is a customer or staff member.
     /// 
-    /// Created by Isabelle Thorpe and Kayley Syrett
+    /// Created by Isabelle Thorpe and Kayley Syrett (22/11/2021)
     /// Modified by Isabelle Thorpe (22/11/2021)
     /// </summary>
     public class Person

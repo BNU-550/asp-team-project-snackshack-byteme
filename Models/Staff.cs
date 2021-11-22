@@ -16,7 +16,7 @@ namespace Snack_Shack.Models
     /// This class also includes the staff members job title and 
     /// their salary.
     /// 
-    /// Created Isabelle Thorpe and Kayley Syrett
+    /// Created Isabelle Thorpe and Kayley Syrett (22/11/2021)
     /// Modified by Isabelle Thorpe (22/11/2021)
     /// </summary>
     public class Staff : Person
