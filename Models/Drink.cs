@@ -52,10 +52,11 @@ namespace Snack_Shack.Models
         /// </summary>
         [DisplayName("Brand"), Required]
         public string DrinkBrand { get; set; }
-        
-        // ToDo: Add brand
+       
 
-        // Add range - 50%
+        // Added range - 50%
+        // Added Brand
+        // Added Category and Subcategroy
         // Navigation properties
     }
     // Contains Alcohol here? Or seperate Classes for alcohol and non alcoholic drinks
