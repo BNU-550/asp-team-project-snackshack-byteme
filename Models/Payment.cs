@@ -17,7 +17,7 @@ namespace Snack_Shack.Models
     /// Created by Isabelle Thorpe and Kayley Styrett (22/11/2021)
     /// Modified by Isabelle Thorpe (22/11/2021)
     /// </summary>
-    public class Payment : Order
+    public class Payment
     {
         /// <summary>
         /// Utilising the card number's 
@@ -26,8 +26,8 @@ namespace Snack_Shack.Models
         /// </summary>
         [Key]
         // Can you have annotations on a primary key?
-        [DisplayName("Card number"), Required, MinLength(16), MaxLength(16)]
-        public string CardNumber { get; set; }
+        [DisplayName("Card Number"), Required, StringLength(16), MinLength(16)]
+        public string PaymentID { get; set; }
 
         /// <summary>
         /// The cardholders name.
@@ -51,11 +51,11 @@ namespace Snack_Shack.Models
         /// Customer's card CVC. This
         /// can either be 3 or 4 numbers
         /// </summary>
-        [DisplayName("CVC"), Required, MinLength(3), MaxLength(4)]
+        [DisplayName("CVV"), Required, MinLength(3), MaxLength(4)]
         public int CardCVV { get; set; }
 
         // Navigation properties 
-        public virtual Order Order { get; set; }
+
 }
 }
 

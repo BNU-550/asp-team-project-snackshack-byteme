@@ -74,4 +74,5 @@ namespace Snack_Shack.Models
     // Need to fix IsCustomer
     // Expression for phone number and email?
     // Navigation property?
+    // ToDo:Add IsStaff
 }

@@ -21,8 +21,6 @@ namespace Snack_Shack.Models
     /// </summary>
     public class Staff : Person
     {
-        [Key]
-        public int StaffID { get; set; }
 
         /// <summary>
         /// The staff member's current job title.
@@ -35,4 +33,5 @@ namespace Snack_Shack.Models
         /// </summary>
         public decimal Salary { get; set; }
     }
+    // Removed staff ID as using person inheritance 
 }

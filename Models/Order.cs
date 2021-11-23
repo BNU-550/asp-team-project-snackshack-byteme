@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
@@ -26,7 +27,7 @@ namespace Snack_Shack.Models
         // Foreign Key
         // How do we get Customer ID?
         // Do we need to add Payment Card number?
-        public int  CustomerID { get; set; }
+        public int  PersonID { get; set; }
         public int StaffID { get; set; }
 
         /// <summary>
@@ -44,8 +45,12 @@ namespace Snack_Shack.Models
 
         // Navigation properites
         public virtual Person Person { get; set; }
+        public virtual Payment Payment { get; set; }
+
+        public virtual ICollection<OrderItem> OrderItems { get; set; }
     }
     // Enum?
+
     // Payment card attached to the order?
     // Order confirmation?
 }

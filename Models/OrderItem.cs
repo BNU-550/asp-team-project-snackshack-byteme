@@ -36,7 +36,7 @@ namespace Snack_Shack.Models
         /// The quantity of items in the order.
         /// </summary>
         [DisplayName("Item Quantity"), Required]
-        public  int Quantity { get; set; }
+        public int Quantity { get; set; }
 
         // Navigation properties
         public virtual Product Product { get; set; }
@@ -44,4 +44,5 @@ namespace Snack_Shack.Models
     }
     // Does it need a primary key? Has been added.
     // Would need to add that to the ERD if kept.
+    // ToDo: List of items
 }
