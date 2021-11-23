@@ -6,6 +6,8 @@
 #### Designer: Atish Appadu 
 #### Lead Programmer: Isabelle Thorpe
 
+<br>
+<br>
 
 Snack Shack is a Web Application created using ASP.NET MVC using a three-layered architecture. 
 
