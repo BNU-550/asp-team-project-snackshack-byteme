@@ -1,7 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Snack_Shack.Models
 {
@@ -37,8 +38,9 @@ namespace Snack_Shack.Models
         /// <summary>
         /// The product's price.
         /// </summary>
-        [DisplayName("Price"), Required]
-        public decimal Price { get; set; }
+        [DisplayName("Price"), Required, DataType(DataType.Currency)]
+        [Column(TypeName = "money")]
+        public decimal ProductPrice { get; set; }
 
         /// <summary>
         /// If the product is available or not.
@@ -56,6 +58,7 @@ namespace Snack_Shack.Models
         [DisplayName("Image"), StringLength(150)]
         public string ImageURL { get; set; }
 
-        // Use of enums?
+        // Navigation Property 
+        public virtual ICollection<Order> Order { get; set; }
     }
 }

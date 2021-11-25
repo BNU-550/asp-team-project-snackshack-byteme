@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Snack_Shack.Models
 {
@@ -19,24 +19,24 @@ namespace Snack_Shack.Models
     {
         // Primary key
         [Key]
-        public int OrderItemID { get; set; }
-        // Foreign keys
-        public int OrderID { get; set; }
-        public int ProductID { get; set; }
+        // public int OrderItemID { get; set; }
+        // Foreign keys - Don't need foreign keys because navigation property will assign the foreign key
+        // public int ProductID { get; set; }
 
         /// <summary>
         /// The price of a single item. 
         /// Is this taken from product?
         /// </summary>
         // Do we need a limit?
-        [DisplayName("Item Price (£)"), Required]
-        public decimal SalePrice { get; set; }
+        [DisplayName("Item Price (£)"), Required, DataType(DataType.Currency)]
+        [Column(TypeName = "money")]
+        public decimal UnitPrice { get; set; }
 
         /// <summary>
         /// The quantity of items in the order.
         /// </summary>
-        [DisplayName("Item Quantity"), Required]
-        public int Quantity { get; set; }
+        [DisplayName("Item Quantity"), StringLength(6), Required]
+        public int Quantity { get; set; } = 1;
 
         // Navigation properties
         public virtual Product Product { get; set; }

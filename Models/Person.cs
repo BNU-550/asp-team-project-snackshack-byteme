@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
@@ -63,16 +64,18 @@ namespace Snack_Shack.Models
 
         /// <summary>
         /// Returns full Name of person.
-        /// (Calculated property) 
         /// </summary>
-        /// 
+        
+        // Calculated property 
         public string FullName
         {
             get
             {
-                return LastName + ("") + FirstName;
+                return LastName + (" ") + FirstName;
             }
         }
+
+        // public ICollection<Payment> Cards { get; set; }
     }
 
     // Need to fix IsCustomer
