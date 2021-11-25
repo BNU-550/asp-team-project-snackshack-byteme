@@ -61,5 +61,4 @@ namespace Snack_Shack.Models
     }
     // Contains Alcohol here? Or seperate Classes for alcohol and non alcoholic drinks
 
-    // ToDo: Add to report that there was no perfect solution for how to enter branding and product names into databse
 }

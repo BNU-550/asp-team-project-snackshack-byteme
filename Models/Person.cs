@@ -40,7 +40,6 @@ namespace Snack_Shack.Models
         [DisplayName("Email Address"), Required, StringLength(60)]
         public string EmailAddress { get; set; }
 
-
         /// <summary>
         /// The person's mobile number.
         /// </summary>
@@ -64,10 +63,15 @@ namespace Snack_Shack.Models
 
         /// <summary>
         /// Returns full Name of person.
+        /// (Calculated property) 
         /// </summary>
-        public string FullName()
+        /// 
+        public string FullName
         {
-            return FirstName + " " + LastName;
+            get
+            {
+                return LastName + ("") + FirstName;
+            }
         }
     }
 

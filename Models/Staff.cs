@@ -33,5 +33,6 @@ namespace Snack_Shack.Models
         /// </summary>
         public decimal Salary { get; set; }
     }
-    // Removed staff ID as using person inheritance 
+    // Removed staff ID as using Person inheritance 
+    // Staff and Person will be put into one column
 }

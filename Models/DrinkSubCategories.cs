@@ -26,6 +26,5 @@ namespace Snack_Shack.Models
         /// White Wine, Lager etc.
         /// </summary>
         public string SubCategory { get; set; }
-        
     }
 }
