@@ -17,6 +17,7 @@ namespace Snack_Shack.Models
     /// 
     /// Created by Isabelle Thorpe and Kayley Styrett (22/11/2021)
     /// Modified by Isabelle Thorpe (22/11/2021)
+    /// Modified by Isabelle Thorpe (25/11/2021)
     /// </summary>
     public class Order
     {
@@ -48,7 +49,7 @@ namespace Snack_Shack.Models
         public virtual Payment Payment { get; set; }
 
         public virtual ICollection<OrderItem> OrderItems { get; set; }
-        public virtual ICollection<Product> Products { get; set; }
+        // public virtual ICollection<Product> Products { get; set; }
     }
     // Enum?
 

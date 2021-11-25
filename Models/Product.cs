@@ -14,6 +14,8 @@ namespace Snack_Shack.Models
     /// 
     /// Created by Isabelle Thorpe and Kayley Syrett (22/11/2021)
     /// Modified by Isabelle Thorpe (22/11/2021)
+    /// Modified by Isabelle Thorpe (25/11/2021)
+
     /// </summary>
     public class Product
     {
@@ -59,6 +61,6 @@ namespace Snack_Shack.Models
         public string ImageURL { get; set; }
 
         // Navigation Property 
-        public virtual ICollection<Order> Order { get; set; }
+        public virtual ICollection<OrderItem> OrderItems { get; set; }
     }
 }

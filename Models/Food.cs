@@ -34,7 +34,7 @@ namespace Snack_Shack.Models
         /// 
         /// Does this need to be nullable?
         /// </summary>
-        [DisplayName("Nut Allergy"), Required]
+        [DisplayName("Nut Allergy")]
 
         public  bool ContainsNuts { get; set; }
 
@@ -45,7 +45,7 @@ namespace Snack_Shack.Models
         /// 
         /// Does this need to be nullable?
         /// </summary>
-        [DisplayName("Gluten Allergy"), Required]
+        [DisplayName("Gluten Allergy")]
 
         public bool ContainsGluten { get; set; }
 
@@ -56,7 +56,7 @@ namespace Snack_Shack.Models
         /// 
         /// Does this need to be nullable?
         /// </summary>
-        [DisplayName("Vegetarian"), Required]
+        [DisplayName("Vegetarian")]
 
         public bool IsVegetarian { get; set; }
 
@@ -67,7 +67,7 @@ namespace Snack_Shack.Models
         /// 
         /// Does this need to be nullable?
         /// </summary>
-        [DisplayName("Vegetarian"), Required]
+        [DisplayName("Vegetarian")]
 
         public bool IsVegan { get; set; }
     }

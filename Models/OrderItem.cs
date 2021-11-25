@@ -19,7 +19,7 @@ namespace Snack_Shack.Models
     {
         // Primary key
         [Key]
-        // public int OrderItemID { get; set; }
+        public int OrderItemID { get; set; }
         // Foreign keys - Don't need foreign keys because navigation property will assign the foreign key
         // public int ProductID { get; set; }
 

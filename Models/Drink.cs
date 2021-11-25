@@ -43,7 +43,7 @@ namespace Snack_Shack.Models
         /// The amount in of alcohol (%) in
         /// a drink. Cannot be above 50.
         /// </summary>
-        [DisplayName("ABV %"), Range(0,50)]
+        [DisplayName("ABV %"), Range(0,100)]
         public double AlcoholPercentage { get; set; }
         
         /// <summary>

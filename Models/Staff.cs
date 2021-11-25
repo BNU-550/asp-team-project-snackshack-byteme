@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Snack_Shack.Models
 {
@@ -31,7 +31,11 @@ namespace Snack_Shack.Models
         /// <summary>
         /// The staff members current salary.
         /// </summary>
+        
+        [Column(TypeName = "money"), DataType(DataType.Currency)]
         public decimal Salary { get; set; }
+        
+        // Add monies
     }
     // Removed staff ID as using Person inheritance 
     // Staff and Person will be put into one column

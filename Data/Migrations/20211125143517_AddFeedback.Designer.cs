@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Snack_Shack.Data;
 
 namespace Snack_Shack.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211125143517_AddFeedback")]
+    partial class AddFeedback
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -219,6 +221,21 @@ namespace Snack_Shack.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("OrderProduct", b =>
+                {
+                    b.Property<int>("OrderID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductsProductID")
+                        .HasColumnType("int");
+
+                    b.HasKey("OrderID", "ProductsProductID");
+
+                    b.HasIndex("ProductsProductID");
+
+                    b.ToTable("OrderProduct");
+                });
+
             modelBuilder.Entity("Snack_Shack.Models.Feedback", b =>
                 {
                     b.Property<int>("FeedbackID")
@@ -277,10 +294,8 @@ namespace Snack_Shack.Data.Migrations
 
             modelBuilder.Entity("Snack_Shack.Models.OrderItem", b =>
                 {
-                    b.Property<int>("OrderItemID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<decimal>("UnitPrice")
+                        .HasColumnType("money");
 
                     b.Property<int?>("OrderID")
                         .HasColumnType("int");
@@ -292,10 +307,7 @@ namespace Snack_Shack.Data.Migrations
                         .HasMaxLength(6)
                         .HasColumnType("int");
 
-                    b.Property<decimal>("UnitPrice")
-                        .HasColumnType("money");
-
-                    b.HasKey("OrderItemID");
+                    b.HasKey("UnitPrice");
 
                     b.HasIndex("OrderID");
 
@@ -524,6 +536,21 @@ namespace Snack_Shack.Data.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("OrderProduct", b =>
+                {
+                    b.HasOne("Snack_Shack.Models.Order", null)
+                        .WithMany()
+                        .HasForeignKey("OrderID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Snack_Shack.Models.Product", null)
+                        .WithMany()
+                        .HasForeignKey("ProductsProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Snack_Shack.Models.Feedback", b =>
                 {
                     b.HasOne("Snack_Shack.Models.Order", "Order")
@@ -559,7 +586,7 @@ namespace Snack_Shack.Data.Migrations
                         .HasForeignKey("OrderID");
 
                     b.HasOne("Snack_Shack.Models.Product", "Product")
-                        .WithMany("OrderItems")
+                        .WithMany()
                         .HasForeignKey("ProductID");
 
                     b.Navigation("Order");
@@ -568,11 +595,6 @@ namespace Snack_Shack.Data.Migrations
                 });
 
             modelBuilder.Entity("Snack_Shack.Models.Order", b =>
-                {
-                    b.Navigation("OrderItems");
-                });
-
-            modelBuilder.Entity("Snack_Shack.Models.Product", b =>
                 {
                     b.Navigation("OrderItems");
                 });

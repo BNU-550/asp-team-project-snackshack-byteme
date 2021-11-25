@@ -43,6 +43,7 @@ namespace Snack_Shack.Models
         /// Customer's card expiration date
         /// This is month and year and can
         /// only be up to 4 numbers.
+        /// 
         /// </summary>
         [DisplayName("Expiration Date"), Required, MinLength(4), MaxLength(4)]
         public int ExpiryDate { get; set; }
@@ -50,6 +51,7 @@ namespace Snack_Shack.Models
         /// <summary>
         /// Customer's card CVC. This
         /// can either be 3 or 4 numbers
+        /// 
         /// </summary>
         [DisplayName("CVV"), Required, MinLength(3), MaxLength(4)]
         public int CardCVV { get; set; }
