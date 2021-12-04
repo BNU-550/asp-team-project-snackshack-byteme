@@ -29,7 +29,11 @@ namespace Snack_Shack.Models
         // How do we get Customer ID?
         // Do we need to add Payment Card number?
         public int  PersonID { get; set; }
-        public int StaffID { get; set; }
+        public int PaymentID { get; set; }
+
+
+        [DisplayName("Staff Name"), StringLength(20)]
+        public string StaffName { get; set; }
 
         /// <summary>
         /// The table at which the customer
@@ -46,6 +50,7 @@ namespace Snack_Shack.Models
 
         // Navigation properites
         public virtual Person Person { get; set; }
+
         public virtual Payment Payment { get; set; }
 
         public virtual ICollection<OrderItem> OrderItems { get; set; }

@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Snack_Shack.Data;
 
-namespace Snack_Shack.Data.Migrations
+namespace Snack_Shack.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20211125143849_RemoveOrderProduct")]
-    partial class RemoveOrderProduct
+    [Migration("20211204150629_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -255,14 +255,18 @@ namespace Snack_Shack.Data.Migrations
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("PaymentID")
-                        .HasColumnType("nvarchar(16)");
+                    b.Property<int>("PaymentID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("PaymentID1")
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<int>("PersonID")
                         .HasColumnType("int");
 
-                    b.Property<int>("StaffID")
-                        .HasColumnType("int");
+                    b.Property<string>("StaffName")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<int>("TableNo")
                         .HasMaxLength(2)
@@ -270,7 +274,7 @@ namespace Snack_Shack.Data.Migrations
 
                     b.HasKey("OrderID");
 
-                    b.HasIndex("PaymentID");
+                    b.HasIndex("PaymentID1");
 
                     b.HasIndex("PersonID");
 
@@ -309,16 +313,17 @@ namespace Snack_Shack.Data.Migrations
             modelBuilder.Entity("Snack_Shack.Models.Payment", b =>
                 {
                     b.Property<string>("PaymentID")
-                        .HasMaxLength(16)
-                        .HasColumnType("nvarchar(16)");
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<int>("CardCVV")
                         .HasMaxLength(4)
                         .HasColumnType("int");
 
-                    b.Property<int>("CardHolderName")
+                    b.Property<string>("CardHolderName")
+                        .IsRequired()
                         .HasMaxLength(20)
-                        .HasColumnType("int");
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<int>("ExpiryDate")
                         .HasMaxLength(4)
@@ -326,7 +331,7 @@ namespace Snack_Shack.Data.Migrations
 
                     b.HasKey("PaymentID");
 
-                    b.ToTable("Payment");
+                    b.ToTable("Payments");
                 });
 
             modelBuilder.Entity("Snack_Shack.Models.Person", b =>
@@ -541,7 +546,7 @@ namespace Snack_Shack.Data.Migrations
                 {
                     b.HasOne("Snack_Shack.Models.Payment", "Payment")
                         .WithMany()
-                        .HasForeignKey("PaymentID");
+                        .HasForeignKey("PaymentID1");
 
                     b.HasOne("Snack_Shack.Models.Person", "Person")
                         .WithMany()

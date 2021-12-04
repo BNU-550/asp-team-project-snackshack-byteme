@@ -3,17 +3,15 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Snack_Shack.Data;
 
-namespace Snack_Shack.Data.Migrations
+namespace Snack_Shack.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20211125142605_AddProducts")]
-    partial class AddProducts
+    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -221,19 +219,28 @@ namespace Snack_Shack.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("OrderProduct", b =>
+            modelBuilder.Entity("Snack_Shack.Models.Feedback", b =>
                 {
+                    b.Property<int>("FeedbackID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CustomerReviewDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FeedbackMessage")
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
                     b.Property<int>("OrderID")
                         .HasColumnType("int");
 
-                    b.Property<int>("ProductsProductID")
-                        .HasColumnType("int");
+                    b.HasKey("FeedbackID");
 
-                    b.HasKey("OrderID", "ProductsProductID");
+                    b.HasIndex("OrderID");
 
-                    b.HasIndex("ProductsProductID");
-
-                    b.ToTable("OrderProduct");
+                    b.ToTable("Feedback");
                 });
 
             modelBuilder.Entity("Snack_Shack.Models.Order", b =>
@@ -246,14 +253,18 @@ namespace Snack_Shack.Data.Migrations
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("PaymentID")
-                        .HasColumnType("nvarchar(16)");
+                    b.Property<int>("PaymentID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("PaymentID1")
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<int>("PersonID")
                         .HasColumnType("int");
 
-                    b.Property<int>("StaffID")
-                        .HasColumnType("int");
+                    b.Property<string>("StaffName")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<int>("TableNo")
                         .HasMaxLength(2)
@@ -261,7 +272,7 @@ namespace Snack_Shack.Data.Migrations
 
                     b.HasKey("OrderID");
 
-                    b.HasIndex("PaymentID");
+                    b.HasIndex("PaymentID1");
 
                     b.HasIndex("PersonID");
 
@@ -270,8 +281,10 @@ namespace Snack_Shack.Data.Migrations
 
             modelBuilder.Entity("Snack_Shack.Models.OrderItem", b =>
                 {
-                    b.Property<decimal>("UnitPrice")
-                        .HasColumnType("money");
+                    b.Property<int>("OrderItemID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int?>("OrderID")
                         .HasColumnType("int");
@@ -283,7 +296,10 @@ namespace Snack_Shack.Data.Migrations
                         .HasMaxLength(6)
                         .HasColumnType("int");
 
-                    b.HasKey("UnitPrice");
+                    b.Property<decimal>("UnitPrice")
+                        .HasColumnType("money");
+
+                    b.HasKey("OrderItemID");
 
                     b.HasIndex("OrderID");
 
@@ -295,16 +311,17 @@ namespace Snack_Shack.Data.Migrations
             modelBuilder.Entity("Snack_Shack.Models.Payment", b =>
                 {
                     b.Property<string>("PaymentID")
-                        .HasMaxLength(16)
-                        .HasColumnType("nvarchar(16)");
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<int>("CardCVV")
                         .HasMaxLength(4)
                         .HasColumnType("int");
 
-                    b.Property<int>("CardHolderName")
+                    b.Property<string>("CardHolderName")
+                        .IsRequired()
                         .HasMaxLength(20)
-                        .HasColumnType("int");
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<int>("ExpiryDate")
                         .HasMaxLength(4)
@@ -312,7 +329,7 @@ namespace Snack_Shack.Data.Migrations
 
                     b.HasKey("PaymentID");
 
-                    b.ToTable("Payment");
+                    b.ToTable("Payments");
                 });
 
             modelBuilder.Entity("Snack_Shack.Models.Person", b =>
@@ -512,26 +529,22 @@ namespace Snack_Shack.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("OrderProduct", b =>
+            modelBuilder.Entity("Snack_Shack.Models.Feedback", b =>
                 {
-                    b.HasOne("Snack_Shack.Models.Order", null)
+                    b.HasOne("Snack_Shack.Models.Order", "Order")
                         .WithMany()
                         .HasForeignKey("OrderID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Snack_Shack.Models.Product", null)
-                        .WithMany()
-                        .HasForeignKey("ProductsProductID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("Order");
                 });
 
             modelBuilder.Entity("Snack_Shack.Models.Order", b =>
                 {
                     b.HasOne("Snack_Shack.Models.Payment", "Payment")
                         .WithMany()
-                        .HasForeignKey("PaymentID");
+                        .HasForeignKey("PaymentID1");
 
                     b.HasOne("Snack_Shack.Models.Person", "Person")
                         .WithMany()
@@ -551,7 +564,7 @@ namespace Snack_Shack.Data.Migrations
                         .HasForeignKey("OrderID");
 
                     b.HasOne("Snack_Shack.Models.Product", "Product")
-                        .WithMany()
+                        .WithMany("OrderItems")
                         .HasForeignKey("ProductID");
 
                     b.Navigation("Order");
@@ -560,6 +573,11 @@ namespace Snack_Shack.Data.Migrations
                 });
 
             modelBuilder.Entity("Snack_Shack.Models.Order", b =>
+                {
+                    b.Navigation("OrderItems");
+                });
+
+            modelBuilder.Entity("Snack_Shack.Models.Product", b =>
                 {
                     b.Navigation("OrderItems");
                 });

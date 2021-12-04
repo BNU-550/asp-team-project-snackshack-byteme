@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Snack_Shack.Models
 {
@@ -26,7 +27,8 @@ namespace Snack_Shack.Models
         /// </summary>
         [Key]
         // Can you have annotations on a primary key?
-        [DisplayName("Card Number"), Required, StringLength(16), MinLength(16)]
+        [DisplayName("Card Number"), Required, StringLength(20), MinLength(16)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public string PaymentID { get; set; }
 
         /// <summary>
@@ -35,9 +37,12 @@ namespace Snack_Shack.Models
         /// someone else card to pay
         /// we have not used their
         /// name given in Person class.
+        /// 
+        /// HAVE CHANGED THIS TO A STRING
+        /// (04/12/21) - Izzy
         /// </summary>
         [DisplayName("Cardholder Name"), Required, StringLength(20)]
-        public int CardHolderName { get; set; }
+        public string CardHolderName { get; set; }
 
         /// <summary>
         /// Customer's card expiration date
