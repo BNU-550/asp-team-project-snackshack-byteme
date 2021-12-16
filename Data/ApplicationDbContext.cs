@@ -18,9 +18,13 @@ namespace Snack_Shack.Data
         public DbSet<Staff> Staff { get; set; }
         // Added payment (04/12/21) - Izzy
         public DbSet<Payment> Payments { get; set; }
+        public DbSet<DrinkSubCategories> DrinkSubCategories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Food> Food { get; set; }
         public DbSet<Drink> Drinks { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet <OrderItem> OrderItems { get; set; }
         public DbSet<Feedback> Feedback { get; set; }
+        
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
-
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Snack_Shack.Models
 {
@@ -14,17 +15,25 @@ namespace Snack_Shack.Models
     /// </summary>
     public class DrinkSubCategories
     {
+        
+
+        [Key]
+        public int ID { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         /// <summary>
         /// The Drink's Category type i.e.,
         /// wine, beer, spirits, soft drinks,
         /// hot drinks.
         /// </summary>
+
         public DrinkCategory MainCategory { get; set; }
 
         /// <summary>
         /// A drinks SubCategory i.e., Red Wine,
         /// White Wine, Lager etc.
         /// </summary>
+        /// 
+
         public string SubCategory { get; set; }
     }
 }

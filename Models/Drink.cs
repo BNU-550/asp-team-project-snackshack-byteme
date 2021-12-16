@@ -14,8 +14,10 @@ namespace Snack_Shack.Models
     /// Created by Isabelle Thorpe and Kayley Syrett (22/11/21)
     /// Modified by Isabelle Thorpe (23/11/21)
     /// </summary>
-    public class Drink : Product
+    public class Drink
     {
+        [Key]
+        public int DrinkID { get; set; }
         /// <summary>
         /// The Drink's Category type i.e.,
         /// wine, beer, spirits, soft drinks,
@@ -52,7 +54,12 @@ namespace Snack_Shack.Models
         /// </summary>
         [DisplayName("Brand"), Required]
         public string DrinkBrand { get; set; }
-       
+
+        public int ProductID { get; set; }
+        public virtual DrinkSubCategories DrinkSubCategories { get; set; }
+        public virtual Product Product { get; set; }
+
+
 
         // Added range - 50%
         // Added Brand

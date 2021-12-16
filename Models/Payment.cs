@@ -27,7 +27,8 @@ namespace Snack_Shack.Models
         /// </summary>
         [Key]
         // Can you have annotations on a primary key?
-        [DisplayName("Card Number"), Required, StringLength(20), MinLength(16)]
+        [DisplayName("Card Number"), Required, MaxLength(20), MinLength(16)]
+        //[DataType(DataType.CreditCard)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public string PaymentID { get; set; }
 
@@ -41,7 +42,7 @@ namespace Snack_Shack.Models
         /// HAVE CHANGED THIS TO A STRING
         /// (04/12/21) - Izzy
         /// </summary>
-        [DisplayName("Cardholder Name"), Required, StringLength(20)]
+        [DisplayName("Cardholder Name"), Required, MaxLength(30)]
         public string CardHolderName { get; set; }
 
         /// <summary>
@@ -50,7 +51,7 @@ namespace Snack_Shack.Models
         /// only be up to 4 numbers.
         /// 
         /// </summary>
-        [DisplayName("Expiration Date"), Required, MinLength(4), MaxLength(4)]
+        [DisplayName("Expiration Date"), Required, MaxLength(4)]
         public int ExpiryDate { get; set; }
 
         /// <summary>

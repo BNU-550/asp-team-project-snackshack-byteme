@@ -11,8 +11,11 @@ namespace Snack_Shack.Models
     /// Created by Isabelle Thorpe and Kayley Syrett (22/11/21)
     /// Modified by Isabelle Thorpe (23/11/21)
     /// </summary>
-    public class Food : Product 
+    public class Food 
     {
+
+        [Key]
+        public int FoodID { get; set; }
         /// <summary>
         /// The Drink's Category type.
         /// </summary>
@@ -70,7 +73,13 @@ namespace Snack_Shack.Models
         [DisplayName("Vegetarian")]
 
         public bool IsVegan { get; set; }
+
+        public int ProductID { get; set; }
+        public virtual Product Product { get; set; }
     }
+
+    
+
 
     // ToDo: Add Inheritance from product to ERD / Class diagram
     // ToDo: Update ERD to remove extra categories. but keep food cat

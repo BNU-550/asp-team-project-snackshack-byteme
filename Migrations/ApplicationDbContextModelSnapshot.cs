@@ -219,6 +219,62 @@ namespace Snack_Shack.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("Snack_Shack.Models.Drink", b =>
+                {
+                    b.Property<int>("DrinkID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<double>("AlcoholPercentage")
+                        .HasColumnType("float");
+
+                    b.Property<bool>("ContainsAlcohol")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("DrinkBrand")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("DrinkCategory")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("DrinkSubCategoriesID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("SubCategory")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("DrinkID");
+
+                    b.HasIndex("DrinkSubCategoriesID");
+
+                    b.HasIndex("ProductID");
+
+                    b.ToTable("Drinks");
+                });
+
+            modelBuilder.Entity("Snack_Shack.Models.DrinkSubCategories", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("MainCategory")
+                        .HasColumnType("int");
+
+                    b.Property<string>("SubCategory")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("DrinkSubCategories");
+                });
+
             modelBuilder.Entity("Snack_Shack.Models.Feedback", b =>
                 {
                     b.Property<int>("FeedbackID")
@@ -241,6 +297,42 @@ namespace Snack_Shack.Migrations
                     b.HasIndex("OrderID");
 
                     b.ToTable("Feedback");
+                });
+
+            modelBuilder.Entity("Snack_Shack.Models.Food", b =>
+                {
+                    b.Property<int>("FoodID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Calories")
+                        .HasMaxLength(4)
+                        .HasColumnType("int");
+
+                    b.Property<bool>("ContainsGluten")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("ContainsNuts")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("FoodCategory")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsVegan")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsVegetarian")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ProductID")
+                        .HasColumnType("int");
+
+                    b.HasKey("FoodID");
+
+                    b.HasIndex("ProductID");
+
+                    b.ToTable("Food");
                 });
 
             modelBuilder.Entity("Snack_Shack.Models.Order", b =>
@@ -276,7 +368,7 @@ namespace Snack_Shack.Migrations
 
                     b.HasIndex("PersonID");
 
-                    b.ToTable("Order");
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("Snack_Shack.Models.OrderItem", b =>
@@ -305,7 +397,7 @@ namespace Snack_Shack.Migrations
 
                     b.HasIndex("ProductID");
 
-                    b.ToTable("OrderItem");
+                    b.ToTable("OrderItems");
                 });
 
             modelBuilder.Entity("Snack_Shack.Models.Payment", b =>
@@ -320,8 +412,8 @@ namespace Snack_Shack.Migrations
 
                     b.Property<string>("CardHolderName")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<int>("ExpiryDate")
                         .HasMaxLength(4)
@@ -384,13 +476,8 @@ namespace Snack_Shack.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("ImageURL")
                         .HasMaxLength(150)
@@ -402,8 +489,8 @@ namespace Snack_Shack.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
 
                     b.Property<decimal>("ProductPrice")
                         .HasColumnType("money");
@@ -411,8 +498,6 @@ namespace Snack_Shack.Migrations
                     b.HasKey("ProductID");
 
                     b.ToTable("Products");
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("Product");
                 });
 
             modelBuilder.Entity("Snack_Shack.Models.Staff", b =>
@@ -427,55 +512,6 @@ namespace Snack_Shack.Migrations
                         .HasColumnType("money");
 
                     b.HasDiscriminator().HasValue("Staff");
-                });
-
-            modelBuilder.Entity("Snack_Shack.Models.Drink", b =>
-                {
-                    b.HasBaseType("Snack_Shack.Models.Product");
-
-                    b.Property<double>("AlcoholPercentage")
-                        .HasColumnType("float");
-
-                    b.Property<bool>("ContainsAlcohol")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("DrinkBrand")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("DrinkCategory")
-                        .HasColumnType("int");
-
-                    b.Property<string>("SubCategory")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasDiscriminator().HasValue("Drink");
-                });
-
-            modelBuilder.Entity("Snack_Shack.Models.Food", b =>
-                {
-                    b.HasBaseType("Snack_Shack.Models.Product");
-
-                    b.Property<int>("Calories")
-                        .HasMaxLength(4)
-                        .HasColumnType("int");
-
-                    b.Property<bool>("ContainsGluten")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("ContainsNuts")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("FoodCategory")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("IsVegan")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsVegetarian")
-                        .HasColumnType("bit");
-
-                    b.HasDiscriminator().HasValue("Food");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -529,6 +565,23 @@ namespace Snack_Shack.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Snack_Shack.Models.Drink", b =>
+                {
+                    b.HasOne("Snack_Shack.Models.DrinkSubCategories", "DrinkSubCategories")
+                        .WithMany()
+                        .HasForeignKey("DrinkSubCategoriesID");
+
+                    b.HasOne("Snack_Shack.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("DrinkSubCategories");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("Snack_Shack.Models.Feedback", b =>
                 {
                     b.HasOne("Snack_Shack.Models.Order", "Order")
@@ -538,6 +591,17 @@ namespace Snack_Shack.Migrations
                         .IsRequired();
 
                     b.Navigation("Order");
+                });
+
+            modelBuilder.Entity("Snack_Shack.Models.Food", b =>
+                {
+                    b.HasOne("Snack_Shack.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("Snack_Shack.Models.Order", b =>

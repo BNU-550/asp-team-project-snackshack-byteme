@@ -28,13 +28,13 @@ namespace Snack_Shack.Models
         /// <summary>
         /// The product's name.
         /// </summary>
-        [DisplayName("Name"), Required, StringLength(20)]
+        [DisplayName("Name"), Required, StringLength(40)]
         public string Name { get; set; }
 
         /// <summary>
         /// Description of the product.
         /// </summary>
-        [DisplayName("More details"), Required, StringLength(100)]
+        [DisplayName("More details"), StringLength(200)]
         public string Description { get; set; }
 
         /// <summary>
@@ -57,10 +57,11 @@ namespace Snack_Shack.Models
         /// into database.
         /// </summary>
         // Kayley and I don't think it's required
-        [DisplayName("Image"), StringLength(150)]
+        [DisplayName("Image"), StringLength(150), DataType(DataType.Url)]
         public string ImageURL { get; set; }
 
         // Navigation Property 
+
         public virtual ICollection<OrderItem> OrderItems { get; set; }
     }
 }

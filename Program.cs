@@ -31,7 +31,9 @@ namespace Snack_Shack
                 try
                 {
                     var context = services.GetRequiredService<ApplicationDbContext>();
+                    context.Database.EnsureCreated();
                     DbInitialiser.Initialise(context);
+                    
                 }
                 catch (Exception ex)
                 {
