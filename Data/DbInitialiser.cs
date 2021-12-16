@@ -203,8 +203,8 @@ namespace Snack_Shack.Data
                 new Person
                 {
                     //PersonID = 31,
-                    FirstName = "Izzy",
-                    LastName = "Thorpe",
+                    FirstName = "Richard",
+                    LastName = "Jones",
                     IsCustomer = true,
                     EmailAddress = "richardjones21@outlook.com",
                     MobileNumber ="07677345520",
@@ -214,8 +214,8 @@ namespace Snack_Shack.Data
                 new Person
                 {
                     //PersonID = 33,
-                    FirstName = "Izzy",
-                    LastName = "Thorpe",
+                    FirstName = "Prathna",
+                    LastName = "Singh",
                     IsCustomer = true,
                     EmailAddress = "pratha.s@yahoo.com",
                     MobileNumber ="07362775902",
@@ -350,10 +350,10 @@ namespace Snack_Shack.Data
                     //ProductID = 22,
                     Name = "Chicken Wings",
                     Description = "Succulent chicken wings" +
-                    "smothered in a medium spicy homemade bbq sauce",
+                    "smothered in a medium spicy homemade BBQ sauce",
                     ProductPrice = 4.20m,
                     IsActive = true,
-                    ImageURL = "fdjsfksdjfshdsf.com"
+                    ImageURL = "fdjsfffdfdksdjfshdsf.com"
                 },
 
                 new Product
@@ -536,15 +536,7 @@ namespace Snack_Shack.Data
                     IsActive = true,
                     ImageURL = "fdjsfksdjfshdsf.com"
                 },
-                new Product
-                {
-                    //ProductID = 58,
-                    Name = "Homemade Slaw",
-                    Description = "",
-                    ProductPrice = 5.20m,
-                    IsActive = true,
-                    ImageURL = "fdjsfksdjfshdsf.com"
-                },
+
                 new Product
 
                 {
