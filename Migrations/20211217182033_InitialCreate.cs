@@ -47,20 +47,6 @@ namespace Snack_Shack.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "DrinkSubCategories",
-                columns: table => new
-                {
-                    ID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    MainCategory = table.Column<int>(type: "int", nullable: false),
-                    SubCategory = table.Column<string>(type: "nvarchar(max)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_DrinkSubCategories", x => x.ID);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Payments",
                 columns: table => new
                 {
@@ -255,22 +241,15 @@ namespace Snack_Shack.Migrations
                     DrinkID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     DrinkCategory = table.Column<int>(type: "int", nullable: false),
-                    SubCategory = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SubCategory = table.Column<int>(type: "int", nullable: false),
                     ContainsAlcohol = table.Column<bool>(type: "bit", nullable: false),
                     AlcoholPercentage = table.Column<double>(type: "float", nullable: false),
                     DrinkBrand = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ProductID = table.Column<int>(type: "int", nullable: false),
-                    DrinkSubCategoriesID = table.Column<int>(type: "int", nullable: true)
+                    ProductID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Drinks", x => x.DrinkID);
-                    table.ForeignKey(
-                        name: "FK_Drinks_DrinkSubCategories_DrinkSubCategoriesID",
-                        column: x => x.DrinkSubCategoriesID,
-                        principalTable: "DrinkSubCategories",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Drinks_Products_ProductID",
                         column: x => x.ProductID,
@@ -393,11 +372,6 @@ namespace Snack_Shack.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Drinks_DrinkSubCategoriesID",
-                table: "Drinks",
-                column: "DrinkSubCategoriesID");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Drinks_ProductID",
                 table: "Drinks",
                 column: "ProductID");
@@ -467,9 +441,6 @@ namespace Snack_Shack.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
-
-            migrationBuilder.DropTable(
-                name: "DrinkSubCategories");
 
             migrationBuilder.DropTable(
                 name: "Orders");

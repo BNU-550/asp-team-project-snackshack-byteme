@@ -32,8 +32,7 @@ namespace Snack_Shack.Models
         /// </summary>
         /// 
 
-        public string SubCategory { get; set; }
-
+        public DrinkSubCategory SubCategory { get; set; }
         /// <summary>
         /// Whether or not the drink
         /// contains alcohol. True if it
@@ -58,7 +57,6 @@ namespace Snack_Shack.Models
         public string DrinkBrand { get; set; }
 
         public int ProductID { get; set; }
-        public virtual DrinkSubCategories DrinkSubCategories { get; set; }
         public virtual Product Product { get; set; }
 
 

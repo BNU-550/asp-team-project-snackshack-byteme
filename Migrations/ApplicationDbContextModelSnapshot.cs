@@ -239,40 +239,17 @@ namespace Snack_Shack.Migrations
                     b.Property<int>("DrinkCategory")
                         .HasColumnType("int");
 
-                    b.Property<int?>("DrinkSubCategoriesID")
-                        .HasColumnType("int");
-
                     b.Property<int>("ProductID")
                         .HasColumnType("int");
 
-                    b.Property<string>("SubCategory")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("SubCategory")
+                        .HasColumnType("int");
 
                     b.HasKey("DrinkID");
-
-                    b.HasIndex("DrinkSubCategoriesID");
 
                     b.HasIndex("ProductID");
 
                     b.ToTable("Drinks");
-                });
-
-            modelBuilder.Entity("Snack_Shack.Models.DrinkSubCategories", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("MainCategory")
-                        .HasColumnType("int");
-
-                    b.Property<string>("SubCategory")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("DrinkSubCategories");
                 });
 
             modelBuilder.Entity("Snack_Shack.Models.Feedback", b =>
@@ -567,17 +544,11 @@ namespace Snack_Shack.Migrations
 
             modelBuilder.Entity("Snack_Shack.Models.Drink", b =>
                 {
-                    b.HasOne("Snack_Shack.Models.DrinkSubCategories", "DrinkSubCategories")
-                        .WithMany()
-                        .HasForeignKey("DrinkSubCategoriesID");
-
                     b.HasOne("Snack_Shack.Models.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("DrinkSubCategories");
 
                     b.Navigation("Product");
                 });

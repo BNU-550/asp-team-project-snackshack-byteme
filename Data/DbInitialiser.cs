@@ -25,7 +25,7 @@ namespace Snack_Shack.Data
             AddStaff(context);
 
             AddProduct(context);
-            AddDrinkSubCategories(context);
+            // AddDrinkSubCategories(context);
             AddDrink(context);
             AddFood(context);
 
@@ -595,7 +595,7 @@ namespace Snack_Shack.Data
                     " flavours of melon and hints of citrus",
                     ProductPrice = 4.40m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "GalloPinotGrigio.jpg"
                 },
 
                 new Product
@@ -606,7 +606,7 @@ namespace Snack_Shack.Data
                     "stone fruit, layered with toasted oak",
                     ProductPrice = 5.10m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "DarkHorseChardonnay.jpg"
                 },
 
                 new Product
@@ -618,7 +618,7 @@ namespace Snack_Shack.Data
                     "refreshingly zesty finish",
                     ProductPrice = 5.90m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "OysterBaySauvignon.jpg"
                 },
 
                 new Product
@@ -630,7 +630,7 @@ namespace Snack_Shack.Data
                     "a silky smooth finish",
                     ProductPrice = 5.20m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "BarefootMerlot.jpg"
                 },
 
                 new Product
@@ -641,7 +641,7 @@ namespace Snack_Shack.Data
                     "berries and hints of liquorice and spice",
                     ProductPrice = 5.40m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "YellowTailShiraz.jpg"
                 },
 
                 new Product
@@ -653,7 +653,7 @@ namespace Snack_Shack.Data
                     "and a slight vanilla and spice character",
                     ProductPrice = 6.10m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "CampoViejoRioja.jpg"
                 },
 
                 new Product
@@ -664,7 +664,7 @@ namespace Snack_Shack.Data
                     "minerality and flavours of forest fruits",
                     ProductPrice = 5.60m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "MondelliPinotBlush.jpg"
                 },
 
                 new Product
@@ -675,7 +675,7 @@ namespace Snack_Shack.Data
                     "the flavours of red, ripe watermelon",
                     ProductPrice = 4.10m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "BlossomHillWhiteZinfandel.jpg"
                 },
 
                 new Product
@@ -687,7 +687,7 @@ namespace Snack_Shack.Data
                     "and even a touch of ginger",
                     ProductPrice = 5.60m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "FreixenetCava.jpg"
                 },
 
                 new Product
@@ -698,7 +698,7 @@ namespace Snack_Shack.Data
                     "on the nose and rich creamy complexity on the palate",
                     ProductPrice = 29.90m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "GrahamBeckBrut.jpg"
                 },
 
                 new Product
@@ -709,7 +709,7 @@ namespace Snack_Shack.Data
                     "and raisins develop into notes of brioche and vanilla",
                     ProductPrice = 79.90m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "VeuveClicquotBrut.jpg"
                 },
 
                 new Product
@@ -719,7 +719,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 5.40m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "PeroniNastro.jpg"
                 },
 
                 new Product
@@ -729,7 +729,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 4.10m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "DesperadosLager.jpg"
                 },
 
                 new Product
@@ -739,7 +739,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 5.10m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "SharpsDoomBar.jpg"
                 },
 
                 new Product
@@ -749,47 +749,52 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 5.20m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "HobgoblinRubyAle.jpg"
                 },
 
                 new Product
                 {
                     //ProductID = 98,
                     Name = "London Dry",
-                    Description = "",
+                    Description = "Wild juniper berries," +
+                    "coriander, angelica and liquorice",
                     ProductPrice = 3.40m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "GordonsGin.jpg"
                 },
 
                 new Product
                 {
                     //ProductID = 100,
                     Name = "Flor de Sevilla",
-                    Description = "",
+                    Description = "Bittersweet Seville oranges" +
+                    "to deliver a fruitful and zesty taste",
                     ProductPrice = 3.90m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "TanquerySevilla.jpg"
                 },
 
                 new Product
                 {
                     //ProductID = 101,
                     Name = "Red Label",
-                    Description = "",
+                    Description = "Triple distilled from different" +
+                    "blended grains, filtered ten times through" +
+                    "seven columns of charcoal",
                     ProductPrice = 3.30m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "SmirnoffRedLabel.jpg"
                 },
 
                 new Product
                 {
                     //ProductID = 102,
                     Name = "Black Lavel Blended Scotch",
-                    Description = "",
+                    Description = "Deep layers of sweet fruit," +
+                    "spice and vanilla",
                     ProductPrice = 3.60m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "JohnnieWalkerBlackLabel.jpg"
                 },
 
                 new Product
@@ -799,7 +804,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 2.40m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "BritvicOrange.jpg"
                 },
 
                 new Product
@@ -809,7 +814,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 2.40m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "BritvicApple.jpg"
                 },
 
                 new Product
@@ -819,7 +824,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 1.90m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "HarrogateStill.jpg"
                 },
 
                 new Product
@@ -829,7 +834,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 2.40m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "HarrogateSparkling.jpg"
                 },
 
                 new Product
@@ -839,7 +844,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 2.60m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "DietCoke.jpg"
                 },
 
                 new Product
@@ -849,7 +854,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 2.60m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "CocaCola.jpg"
                 },
 
                 new Product
@@ -859,7 +864,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 2.67m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "FeverTreeIndian.jpg"
                 },
 
                 new Product
@@ -869,7 +874,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 2.70m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "Americano.jpg"
                 },
 
                 new Product
@@ -879,7 +884,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 3.20m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "Latte.jpg"
                 },
 
                 new Product
@@ -889,7 +894,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 3.20m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "Cappacino.jpg"
                 },
 
                 new Product
@@ -899,7 +904,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 3.40m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "Mocha.jpg"
                 },
 
                 new Product
@@ -909,7 +914,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 2.40m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "EnglishBreakfastTea.jpg"
                 },
 
                 new Product
@@ -919,7 +924,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 2.40m,
                     IsActive = true,
-                    ImageURL = ""
+                    ImageURL = "PukkaEarlyGrey.jpg"
                 },
 
             };
@@ -929,133 +934,133 @@ namespace Snack_Shack.Data
         }
 
 
-        private static void AddDrinkSubCategories(ApplicationDbContext context)
-        {
-            if (context.DrinkSubCategories.Any())
-            {
-                return;
-            }
+        //private static void AddDrinkSubCategories(ApplicationDbContext context)
+        //{
+        //    if (context.DrinkSubCategories.Any())
+        //    {
+        //        return;
+        //    }
 
-            var drinkSubCategories = new DrinkSubCategories[]
-            {
-                new DrinkSubCategories
-                {
-                    // ID = 999,
-                    MainCategory = DrinkCategory.Wines,
-                    SubCategory = "White"
-                },
+        //    var drinkSubCategories = new DrinkSubCategory[]
+        //    {
+        //        new DrinkSubCategory
+        //        {
+        //            // ID = 999,
+        //            MainCategory = DrinkCategory.Wines,
+        //            SubCategory = "White"
+        //        },
 
-                new DrinkSubCategories
-                {
-                    // ID = 998,
-                    MainCategory = DrinkCategory.Wines,
-                    SubCategory = "Red"
-                },
+        //        new DrinkSubCategory
+        //        {
+        //            // ID = 998,
+        //            MainCategory = DrinkCategory.Wines,
+        //            SubCategory = "Red"
+        //        },
 
-                new DrinkSubCategories
-                {
-                    // ID = 997,
-                    MainCategory = DrinkCategory.Wines,
-                    SubCategory = "Rosé"
-                },
+        //        new DrinkSubCategory
+        //        {
+        //            // ID = 997,
+        //            MainCategory = DrinkCategory.Wines,
+        //            SubCategory = "Rosé"
+        //        },
 
-                new DrinkSubCategories
-                {
-                    // ID = 996,
-                    MainCategory = DrinkCategory.Wines,
-                    SubCategory = "Sparkling"
-                },
+        //        new DrinkSubCategory
+        //        {
+        //            // ID = 996,
+        //            MainCategory = DrinkCategory.Wines,
+        //            SubCategory = "Sparkling"
+        //        },
 
-                new DrinkSubCategories
-                {
-                    // ID = 995,
-                    MainCategory = DrinkCategory.Wines,
-                    SubCategory = "Champagne"
-                },
+        //        new DrinkSubCategory
+        //        {
+        //            // ID = 995,
+        //            MainCategory = DrinkCategory.Wines,
+        //            SubCategory = "Champagne"
+        //        },
 
-                new DrinkSubCategories
-                {
-                    // ID = 994,
-                    MainCategory = DrinkCategory.Beers,
-                    SubCategory = "Lager"
-                },
+        //        new DrinkSubCategory
+        //        {
+        //            // ID = 994,
+        //            MainCategory = DrinkCategory.Beers,
+        //            SubCategory = "Lager"
+        //        },
 
-                new DrinkSubCategories
-                {
-                    // ID = 993,
-                    MainCategory = DrinkCategory.Beers,
-                    SubCategory = "Ale"
-                },
+        //        new DrinkSubCategory
+        //        {
+        //            // ID = 993,
+        //            MainCategory = DrinkCategory.Beers,
+        //            SubCategory = "Ale"
+        //        },
 
-                new DrinkSubCategories
-                {
-                    // ID = 992,
-                    MainCategory = DrinkCategory.Spirits,
-                    SubCategory = "Gin"
-                },
+        //        new DrinkSubCategory
+        //        {
+        //            // ID = 992,
+        //            MainCategory = DrinkCategory.Spirits,
+        //            SubCategory = "Gin"
+        //        },
 
-                new DrinkSubCategories
-                {
-                    // ID = 991,
-                    MainCategory = DrinkCategory.Spirits,
-                    SubCategory = "Vodka"
-                },
+        //        new DrinkSubCategory
+        //        {
+        //            // ID = 991,
+        //            MainCategory = DrinkCategory.Spirits,
+        //            SubCategory = "Vodka"
+        //        },
 
-                new DrinkSubCategories
-                {
-                    // ID = 990,
-                    MainCategory = DrinkCategory.Spirits,
-                    SubCategory = "Whisky"
-                },
+        //        new DrinkSubCategory
+        //        {
+        //            // ID = 990,
+        //            MainCategory = DrinkCategory.Spirits,
+        //            SubCategory = "Whisky"
+        //        },
 
-                new DrinkSubCategories
-                {
-                    // ID = 899,
-                    MainCategory = DrinkCategory.SoftDrinks,
-                    SubCategory = "Juice"
-                },
+        //        new DrinkSubCategory
+        //        {
+        //            // ID = 899,
+        //            MainCategory = DrinkCategory.SoftDrinks,
+        //            SubCategory = "Juice"
+        //        },
 
-                new DrinkSubCategories
-                {
-                    // ID = 898,
-                    MainCategory = DrinkCategory.SoftDrinks,
-                    SubCategory = "Water"
-                },
+        //        new DrinkSubCategory
+        //        {
+        //            // ID = 898,
+        //            MainCategory = DrinkCategory.SoftDrinks,
+        //            SubCategory = "Water"
+        //        },
 
-                new DrinkSubCategories
-                {
-                    // ID = 897,
-                    MainCategory = DrinkCategory.SoftDrinks,
-                    SubCategory = "Fizzy"
-                },
+        //        new DrinkSubCategory
+        //        {
+        //            // ID = 897,
+        //            MainCategory = DrinkCategory.SoftDrinks,
+        //            SubCategory = "Fizzy"
+        //        },
 
-                new DrinkSubCategories
-                {
-                    // ID = 896,
-                    MainCategory = DrinkCategory.SoftDrinks,
-                    SubCategory = "Tonic"
-                },
+        //        new DrinkSubCategory
+        //        {
+        //            // ID = 896,
+        //            MainCategory = DrinkCategory.SoftDrinks,
+        //            SubCategory = "Tonic"
+        //        },
 
-                new DrinkSubCategories
-                {
-                    // ID = 895,
-                    MainCategory = DrinkCategory.SoftDrinks,
-                    SubCategory = "Coffee"
-                },
+        //        new DrinkSubCategory
+        //        {
+        //            // ID = 895,
+        //            MainCategory = DrinkCategory.SoftDrinks,
+        //            SubCategory = "Coffee"
+        //        },
 
-                new DrinkSubCategories
-                {
-                    // ID = 894,
-                    MainCategory = DrinkCategory.SoftDrinks,
-                    SubCategory = "Tea"
-                },
-            };
+        //        new DrinkSubCategory
+        //        {
+        //            // ID = 894,
+        //            MainCategory = DrinkCategory.SoftDrinks,
+        //            SubCategory = "Tea"
+        //        },
+        //    };
 
 
 
-            context.DrinkSubCategories.AddRange(drinkSubCategories);
-            context.SaveChanges();
-        }
+        //    context.DrinkSubCategories.AddRange(drinkSubCategories);
+        //    context.SaveChanges();
+        //}
 
 
         private static void AddDrink(ApplicationDbContext context)
@@ -1071,10 +1076,9 @@ namespace Snack_Shack.Data
                 {
                     ProductID = 2,
                     DrinkCategory = DrinkCategory.Wines,
-                    DrinkSubCategories = 999,
-                    SubCategory = "Rose",
+                    SubCategory = DrinkSubCategory.Rosé,
                     ContainsAlcohol = true,
-                    AlcoholPercentage = 10.00,
+                    AlcoholPercentage = 10,
                     DrinkBrand = "Blossom Hill"
                 },
             };
