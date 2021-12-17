@@ -322,10 +322,7 @@ namespace Snack_Shack.Migrations
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("PaymentID")
-                        .HasColumnType("int");
-
-                    b.Property<string>("PaymentID1")
+                    b.Property<string>("PaymentID")
                         .HasColumnType("nvarchar(20)");
 
                     b.Property<int>("PersonID")
@@ -341,7 +338,7 @@ namespace Snack_Shack.Migrations
 
                     b.HasKey("OrderID");
 
-                    b.HasIndex("PaymentID1");
+                    b.HasIndex("PaymentID");
 
                     b.HasIndex("PersonID");
 
@@ -355,10 +352,10 @@ namespace Snack_Shack.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("OrderID")
+                    b.Property<int>("OrderID")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ProductID")
+                    b.Property<int>("ProductID")
                         .HasColumnType("int");
 
                     b.Property<int>("Quantity")
@@ -579,7 +576,7 @@ namespace Snack_Shack.Migrations
                 {
                     b.HasOne("Snack_Shack.Models.Payment", "Payment")
                         .WithMany()
-                        .HasForeignKey("PaymentID1");
+                        .HasForeignKey("PaymentID");
 
                     b.HasOne("Snack_Shack.Models.Person", "Person")
                         .WithMany()
@@ -596,11 +593,15 @@ namespace Snack_Shack.Migrations
                 {
                     b.HasOne("Snack_Shack.Models.Order", "Order")
                         .WithMany("OrderItems")
-                        .HasForeignKey("OrderID");
+                        .HasForeignKey("OrderID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Snack_Shack.Models.Product", "Product")
                         .WithMany("OrderItems")
-                        .HasForeignKey("ProductID");
+                        .HasForeignKey("ProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Order");
 

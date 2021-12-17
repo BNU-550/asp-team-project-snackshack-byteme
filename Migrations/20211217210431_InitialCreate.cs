@@ -211,18 +211,17 @@ namespace Snack_Shack.Migrations
                     OrderID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     PersonID = table.Column<int>(type: "int", nullable: false),
-                    PaymentID = table.Column<int>(type: "int", nullable: false),
+                    PaymentID = table.Column<string>(type: "nvarchar(20)", nullable: true),
                     StaffName = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true),
                     TableNo = table.Column<int>(type: "int", maxLength: 2, nullable: false),
-                    OrderDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    PaymentID1 = table.Column<string>(type: "nvarchar(20)", nullable: true)
+                    OrderDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Orders", x => x.OrderID);
                     table.ForeignKey(
-                        name: "FK_Orders_Payments_PaymentID1",
-                        column: x => x.PaymentID1,
+                        name: "FK_Orders_Payments_PaymentID",
+                        column: x => x.PaymentID,
                         principalTable: "Payments",
                         principalColumn: "PaymentID",
                         onDelete: ReferentialAction.Restrict);
@@ -310,10 +309,10 @@ namespace Snack_Shack.Migrations
                 {
                     OrderItemID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    OrderID = table.Column<int>(type: "int", nullable: false),
+                    ProductID = table.Column<int>(type: "int", nullable: false),
                     UnitPrice = table.Column<decimal>(type: "money", nullable: false),
-                    Quantity = table.Column<int>(type: "int", maxLength: 6, nullable: false),
-                    ProductID = table.Column<int>(type: "int", nullable: true),
-                    OrderID = table.Column<int>(type: "int", nullable: true)
+                    Quantity = table.Column<int>(type: "int", maxLength: 6, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -323,13 +322,13 @@ namespace Snack_Shack.Migrations
                         column: x => x.OrderID,
                         principalTable: "Orders",
                         principalColumn: "OrderID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_OrderItems_Products_ProductID",
                         column: x => x.ProductID,
                         principalTable: "Products",
                         principalColumn: "ProductID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -397,9 +396,9 @@ namespace Snack_Shack.Migrations
                 column: "ProductID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Orders_PaymentID1",
+                name: "IX_Orders_PaymentID",
                 table: "Orders",
-                column: "PaymentID1");
+                column: "PaymentID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Orders_PersonID",

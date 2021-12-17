@@ -28,8 +28,8 @@ namespace Snack_Shack.Data
             AddDrink(context);
             AddFood(context);
 
-            // AddOrder(context);
-            // AddOrderItems(context)
+            AddOrder(context);
+            AddOrderItem(context);
 
             // AddFeedback(context);
 
@@ -186,6 +186,7 @@ namespace Snack_Shack.Data
                     EmailAddress = "jluker@gmail.com",
                     MobileNumber ="07486709356",
                     IsMinor = true
+ 
                 },
 
                 new Person
@@ -207,7 +208,7 @@ namespace Snack_Shack.Data
                     IsCustomer = true,
                     EmailAddress = "richardjones21@outlook.com",
                     MobileNumber ="07677345520",
-                    IsMinor = false
+                    IsMinor = false,
                 },
 
                 new Person
@@ -1265,7 +1266,7 @@ namespace Snack_Shack.Data
             }
 
             var food = new Food[]
-            {
+{
                 new Food
                 {
                     ProductID = 1,
@@ -1287,11 +1288,238 @@ namespace Snack_Shack.Data
                     IsVegetarian = true,
                     IsVegan = false,
                 },
+
+                new Food
+                {
+                    ProductID = 30,
+                    FoodCategory = FoodCategory.Mains,
+                    Calories = 700,
+                    ContainsNuts = false,
+                    ContainsGluten = true,
+                    IsVegetarian = false,
+                    IsVegan = false,
+                },
+
+                new Food
+                {
+                    ProductID = 31,
+                    FoodCategory = FoodCategory.Mains,
+                    Calories = 850,
+                    ContainsNuts = false,
+                    ContainsGluten = true,
+                    IsVegetarian = false,
+                    IsVegan = false,
+                },
+
+                new Food
+                {
+                    ProductID = 32,
+                    FoodCategory = FoodCategory.Mains,
+                    Calories = 1300,
+                    ContainsNuts = false,
+                    ContainsGluten = true,
+                    IsVegetarian = false,
+                    IsVegan = false,
+                },
+
+                new Food
+                {
+                    ProductID = 33,
+                    FoodCategory = FoodCategory.Starters,
+                    Calories = 300,
+                    ContainsNuts = false,
+                    ContainsGluten = true,
+                    IsVegetarian = false,
+                    IsVegan = false,
+                },
+
+                new Food
+                {
+                    ProductID = 34,
+                    FoodCategory = FoodCategory.Starters,
+                    Calories = 330,
+                    ContainsNuts = false,
+                    ContainsGluten = true,
+                    IsVegetarian = true,
+                    IsVegan = true,
+                },
+
+                new Food
+                {
+                    ProductID = 35,
+                    FoodCategory = FoodCategory.Starters,
+                    Calories = 250,
+                    ContainsNuts = false,
+                    ContainsGluten = true,
+                    IsVegetarian = false,
+                    IsVegan = false,
+                },
+
+                new Food
+                {
+                    ProductID = 36,
+                    FoodCategory = FoodCategory.Starters,
+                    Calories = 600,
+                    ContainsNuts = false,
+                    ContainsGluten = false,
+                    IsVegetarian = true,
+                    IsVegan = false,
+                },
+
+                new Food
+                {
+                    ProductID = 37,
+                    FoodCategory = FoodCategory.Starters,
+                    Calories = 450,
+                    ContainsNuts = false,
+                    ContainsGluten = false,
+                    IsVegetarian = false,
+                    IsVegan = false,
+                },
+
+                new Food
+                {
+                    ProductID = 38,
+                    FoodCategory = FoodCategory.Mains,
+                    Calories = 525,
+                    ContainsNuts = false,
+                    ContainsGluten = false,
+                    IsVegetarian = false,
+                    IsVegan = false,
+                },
+
+                new Food
+                {
+                    ProductID = 39,
+                    FoodCategory = FoodCategory.Mains,
+                    Calories = 500,
+                    ContainsNuts = false,
+                    ContainsGluten = false,
+                    IsVegetarian = true,
+                    IsVegan = true,
+                },
+
+                new Food
+                {
+                    ProductID = 41,
+                    FoodCategory = FoodCategory.Mains,
+                    Calories = 575,
+                    ContainsNuts = false,
+                    ContainsGluten = false,
+                    IsVegetarian = true,
+                    IsVegan = false,
+                },
+
+                new Food
+                {
+                    ProductID = 42,
+                    FoodCategory = FoodCategory.Sides,
+                    Calories = 350,
+                    ContainsNuts = false,
+                    ContainsGluten = false,
+                    IsVegetarian = true,
+                    IsVegan = true,
+                },
+
+                new Food
+                {
+                    ProductID = 43,
+                    FoodCategory = FoodCategory.Starters,
+                    Calories = 300,
+                    ContainsNuts = false,
+                    ContainsGluten = false,
+                    IsVegetarian = true,
+                    IsVegan = true,
+                },
+
+                new Food
+                {
+                    ProductID = 44,
+                    FoodCategory = FoodCategory.Starters,
+                    Calories = 375,
+                    ContainsNuts = false,
+                    ContainsGluten = true,
+                    IsVegetarian = true,
+                    IsVegan = true,
+                },
+
+                new Food
+                {
+                    ProductID = 45,
+                    FoodCategory = FoodCategory.Starters,
+                    Calories = 400,
+                    ContainsNuts = false,
+                    ContainsGluten = false,
+                    IsVegetarian = true,
+                    IsVegan = false,
+                },
+
+                new Food
+                {
+                    ProductID = 46,
+                    FoodCategory = FoodCategory.Desserts,
+                    Calories = 450,
+                    ContainsNuts = false,
+                    ContainsGluten = true,
+                    IsVegetarian = true,
+                    IsVegan = false,
+                },
+
+                new Food
+                {
+                    ProductID = 47,
+                    FoodCategory = FoodCategory.Desserts,
+                    Calories = 500,
+                    ContainsNuts = false,
+                    ContainsGluten = false,
+                    IsVegetarian = true,
+                    IsVegan = true,
+                },
+
+                new Food
+                {
+                    ProductID = 48,
+                    FoodCategory = FoodCategory.Desserts,
+                    Calories = 470,
+                    ContainsNuts = false,
+                    ContainsGluten = true,
+                    IsVegetarian = true,
+                    IsVegan = false,
+                },
+
+                new Food
+                {
+                    ProductID = 49,
+                    FoodCategory = FoodCategory.Desserts,
+                    Calories = 500,
+                    ContainsNuts = false,
+                    ContainsGluten = true,
+                    IsVegetarian = true,
+                    IsVegan = false,
+                },
+
+                new Food
+                {
+                    ProductID = 53,
+                    FoodCategory = FoodCategory.Mains,
+                    Calories = 600,
+                    ContainsNuts = false,
+                    ContainsGluten = false,
+                    IsVegetarian = false,
+                    IsVegan = false,
+                },
             };
 
             context.Food.AddRange(food);
             context.SaveChanges();
         }
+
+
+
+
+
+
+
 
 
         private static void AddOrder(ApplicationDbContext context)
@@ -1305,8 +1533,95 @@ namespace Snack_Shack.Data
             {
                 new Order
                 {
-
+                    PersonID = 1,
+                    PaymentID = "0444 2345 2849 4825",
+                    StaffName = "Mark",
+                    TableNo = 10,
+                    OrderDate = DateTime.Parse("2021-12-01"),
                 },
+
+                new Order
+                {
+                    PersonID = 2,
+                    PaymentID = "1111 2345 2849 4825",
+                    StaffName = "Elon",
+                    TableNo = 21,
+                    OrderDate = DateTime.Parse("2021-12-02"),
+                },
+
+                new Order
+                {
+                    PersonID = 3,
+                    PaymentID = "0999 2345 2849 4825",
+                    StaffName = "Mark",
+                    TableNo = 8,
+                    OrderDate = DateTime.Parse("2021-12-03"),
+                },
+
+                new Order
+                {
+                    PersonID = 4,
+                    PaymentID = "0888 2345 2849 4825",
+                    StaffName = "Bill",
+                    TableNo = 34,
+                    OrderDate = DateTime.Parse("2021-12-04"),
+                },
+
+                new Order
+                {
+                    PersonID = 5,
+                    PaymentID = "0777 2345 2849 4825",
+                    StaffName = "Bill",
+                    TableNo = 11,
+                    OrderDate = DateTime.Parse("2021-12-05"),
+                },
+
+                new Order
+                {
+                    PersonID = 6,
+                    PaymentID = "0666 2345 2849 4825",
+                    StaffName = "Jeff",
+                    TableNo = 32,
+                    OrderDate = DateTime.Parse("2021-12-06"),
+                },
+
+                new Order
+                {
+                    PersonID = 7,
+                    PaymentID = "0555 2345 2849 4825",
+                    StaffName = "Elon",
+                    TableNo = 43,
+                    OrderDate = DateTime.Parse("2021-12-07"),
+                },
+
+                new Order
+                {
+                    PersonID = 8,
+                    PaymentID = "0333 2345 2849 4825",
+                    StaffName = "Jeff",
+                    TableNo = 3,
+                    OrderDate = DateTime.Parse("2021-12-08"),
+                },
+
+                new Order
+
+                {
+                    PersonID = 9,
+                    PaymentID = "0111 4387 3298 2848",
+                    StaffName = "Bill",
+                    TableNo = 49,
+                    OrderDate = DateTime.Parse("2021-12-09"),
+                },
+
+                new Order
+                {
+                    PersonID = 10,
+                    PaymentID = "0222 5487 4398 2094",
+                    StaffName = "Mark",
+                    TableNo = 9,
+                    OrderDate = DateTime.Parse("2021-12-10"),
+                },
+
             };
 
             context.Orders.AddRange(orders);
@@ -1323,9 +1638,254 @@ namespace Snack_Shack.Data
 
             var order_items = new OrderItem[]
             {
+                // A single order(1)
                 new OrderItem
                 {
+                    OrderID = 1,
+                    ProductID = 3,
+                    UnitPrice = 5.60m,
+                    Quantity = 2,
+                    
+                },
 
+                new OrderItem
+                {
+                    OrderID = 1,
+                    ProductID = 29,
+                    UnitPrice = 10.50m,
+                    Quantity = 2,
+                },
+                new OrderItem
+                {
+                    OrderID = 1,
+                    ProductID = 47,
+                    UnitPrice = 5.50m,
+                    Quantity = 2,
+                },
+
+                // A single Order(2)
+                new OrderItem
+                {
+                    OrderID = 0,
+                    ProductID = 0,
+                    UnitPrice = 0,
+                    Quantity = 0,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 0,
+                    ProductID = 0,
+                    UnitPrice = 0,
+                    Quantity = 0,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 0,
+                    ProductID = 0,
+                    UnitPrice = 0,
+                    Quantity = 0,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 0,
+                    ProductID = 0,
+                    UnitPrice = 0,
+                    Quantity = 0,
+                },
+
+                // A single Order(3)
+                new OrderItem
+                {
+                    OrderID = 0,
+                    ProductID = 0,
+                    UnitPrice = 0,
+                    Quantity = 0,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 0,
+                    ProductID = 0,
+                    UnitPrice = 0,
+                    Quantity = 0,
+                },
+
+                // A single Order(4)
+                new OrderItem
+                {
+                    OrderID = 0,
+                    ProductID = 0,
+                    UnitPrice = 0,
+                    Quantity = 0,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 0,
+                    ProductID = 0,
+                    UnitPrice = 0,
+                    Quantity = 0,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 0,
+                    ProductID = 0,
+                    UnitPrice = 0,
+                    Quantity = 0,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 0,
+                    ProductID = 0,
+                    UnitPrice = 0,
+                    Quantity = 0,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 0,
+                    ProductID = 0,
+                    UnitPrice = 0,
+                    Quantity = 0,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 0,
+                    ProductID = 0,
+                    UnitPrice = 0,
+                    Quantity = 0,
+                },
+
+                // A single Order(5)
+                new OrderItem
+                {
+                    OrderID = 0,
+                    ProductID = 0,
+                    UnitPrice = 0,
+                    Quantity = 0,
+                },
+
+                // A single Order(6)
+                new OrderItem
+                {
+                    OrderID = 0,
+                    ProductID = 0,
+                    UnitPrice = 0,
+                    Quantity = 0,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 0,
+                    ProductID = 0,
+                    UnitPrice = 0,
+                    Quantity = 0,
+                },
+
+                // A single Order(7)
+                new OrderItem
+                {
+                    OrderID = 0,
+                    ProductID = 0,
+                    UnitPrice = 0,
+                    Quantity = 0,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 0,
+                    ProductID = 0,
+                    UnitPrice = 0,
+                    Quantity = 0,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 0,
+                    ProductID = 0,
+                    UnitPrice = 0,
+                    Quantity = 0,
+                },
+
+                // A single Order(8)
+                new OrderItem
+                {
+                    OrderID = 0,
+                    ProductID = 0,
+                    UnitPrice = 0,
+                    Quantity = 0,
+                },
+
+                // A single Order(9)
+                new OrderItem
+                {
+                    OrderID = 0,
+                    ProductID = 0,
+                    UnitPrice = 0,
+                    Quantity = 0,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 0,
+                    ProductID = 0,
+                    UnitPrice = 0,
+                    Quantity = 0,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 0,
+                    ProductID = 0,
+                    UnitPrice = 0,
+                    Quantity = 0,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 0,
+                    ProductID = 0,
+                    UnitPrice = 0,
+                    Quantity = 0,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 0,
+                    ProductID = 0,
+                    UnitPrice = 0,
+                    Quantity = 0,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 0,
+                    ProductID = 0,
+                    UnitPrice = 0,
+                    Quantity = 0,
+                },
+
+                // A single Order(10)
+                new OrderItem
+                {
+                    OrderID = 0,
+                    ProductID = 0,
+                    UnitPrice = 0,
+                    Quantity = 0,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 0,
+                    ProductID = 0,
+                    UnitPrice = 0,
+                    Quantity = 0,
                 },
             };
 
@@ -1345,7 +1905,72 @@ namespace Snack_Shack.Data
             {
                 new Feedback
                 {
+                    OrderID = 1,
+                    FeedbackMessage = "Best Veggie I've ever had",
+                    CustomerReviewDate = DateTime.Parse("2021-12-01"),
+                },
 
+                new Feedback
+                {
+                    OrderID = 0,
+                    FeedbackMessage = "",
+                    CustomerReviewDate = DateTime.Parse("")
+                },
+
+                new Feedback
+                {
+                    OrderID = 0,
+                    FeedbackMessage = "",
+                    CustomerReviewDate = DateTime.Parse("")
+                },
+
+                new Feedback
+                {
+                    OrderID = 0,
+                    FeedbackMessage = "",
+                    CustomerReviewDate = DateTime.Parse("")
+                },
+
+                new Feedback
+                {
+                    OrderID = 0,
+                    FeedbackMessage = "",
+                    CustomerReviewDate = DateTime.Parse("")
+                },
+
+                new Feedback
+                {
+                    OrderID = 0,
+                    FeedbackMessage = "",
+                    CustomerReviewDate = DateTime.Parse("")
+                },
+
+                new Feedback
+                {
+                    OrderID = 0,
+                    FeedbackMessage = "",
+                    CustomerReviewDate = DateTime.Parse("")
+                },
+
+                new Feedback
+                {
+                    OrderID = 0,
+                    FeedbackMessage = "",
+                    CustomerReviewDate = DateTime.Parse("")
+                },
+
+                new Feedback
+                {
+                    OrderID = 0,
+                    FeedbackMessage = "",
+                    CustomerReviewDate = DateTime.Parse("")
+                },
+
+                new Feedback
+                {
+                    OrderID = 0,
+                    FeedbackMessage = "",
+                    CustomerReviewDate = DateTime.Parse("")
                 },
             };
 

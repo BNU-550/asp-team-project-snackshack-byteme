@@ -23,6 +23,11 @@ namespace Snack_Shack.Models
         // Foreign keys - Don't need foreign keys because navigation property will assign the foreign key
         // public int ProductID { get; set; }
 
+        // Foreign keys
+        public int OrderID { get; set; }
+        public int ProductID { get; set; }
+
+        
         /// <summary>
         /// The price of a single item. 
         /// Is this taken from product?
@@ -37,6 +42,16 @@ namespace Snack_Shack.Models
         /// </summary>
         [DisplayName("Item Quantity"), StringLength(6), Required]
         public int Quantity { get; set; } = 1;
+
+
+
+        public int SalePrice
+        {
+            get
+            {
+                return (int)(Quantity * UnitPrice);
+            }
+        }
 
         // Navigation properties
         public virtual Product Product { get; set; }

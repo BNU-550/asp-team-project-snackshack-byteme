@@ -29,7 +29,7 @@ namespace Snack_Shack.Models
         // How do we get Customer ID?
         // Do we need to add Payment Card number?
         public int  PersonID { get; set; }
-        public int PaymentID { get; set; }
+        public string PaymentID { get; set; }
 
 
         [DisplayName("Staff Name"), StringLength(20)]
