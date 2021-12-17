@@ -30,6 +30,8 @@ namespace Snack_Shack.Models
         /// A drinks SubCategory i.e., Red Wine,
         /// White Wine, Lager etc.
         /// </summary>
+        /// 
+
         public string SubCategory { get; set; }
 
         /// <summary>
