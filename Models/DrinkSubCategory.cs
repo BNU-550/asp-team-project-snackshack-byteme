@@ -8,6 +8,7 @@ namespace Snack_Shack.Models
     /// item can belong to.
     /// 
     /// Created by Isabelle Thorpe (22/11/21)
+    /// Updated to an Enum (17/12/21) Isabelle Thorpe
     /// </summary>
     public enum DrinkSubCategory
     {
