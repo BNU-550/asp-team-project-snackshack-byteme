@@ -25,7 +25,6 @@ namespace Snack_Shack.Data
             AddStaff(context);
 
             AddProduct(context);
-            // AddDrinkSubCategories(context);
             AddDrink(context);
             AddFood(context);
 
@@ -332,7 +331,6 @@ namespace Snack_Shack.Data
         }
 
 
-        // ToDo: Add image URL's
 
         private static void AddProduct(ApplicationDbContext context)
         {
@@ -934,135 +932,6 @@ namespace Snack_Shack.Data
         }
 
 
-        //private static void AddDrinkSubCategories(ApplicationDbContext context)
-        //{
-        //    if (context.DrinkSubCategories.Any())
-        //    {
-        //        return;
-        //    }
-
-        //    var drinkSubCategories = new DrinkSubCategory[]
-        //    {
-        //        new DrinkSubCategory
-        //        {
-        //            // ID = 999,
-        //            MainCategory = DrinkCategory.Wines,
-        //            SubCategory = "White"
-        //        },
-
-        //        new DrinkSubCategory
-        //        {
-        //            // ID = 998,
-        //            MainCategory = DrinkCategory.Wines,
-        //            SubCategory = "Red"
-        //        },
-
-        //        new DrinkSubCategory
-        //        {
-        //            // ID = 997,
-        //            MainCategory = DrinkCategory.Wines,
-        //            SubCategory = "Rosé"
-        //        },
-
-        //        new DrinkSubCategory
-        //        {
-        //            // ID = 996,
-        //            MainCategory = DrinkCategory.Wines,
-        //            SubCategory = "Sparkling"
-        //        },
-
-        //        new DrinkSubCategory
-        //        {
-        //            // ID = 995,
-        //            MainCategory = DrinkCategory.Wines,
-        //            SubCategory = "Champagne"
-        //        },
-
-        //        new DrinkSubCategory
-        //        {
-        //            // ID = 994,
-        //            MainCategory = DrinkCategory.Beers,
-        //            SubCategory = "Lager"
-        //        },
-
-        //        new DrinkSubCategory
-        //        {
-        //            // ID = 993,
-        //            MainCategory = DrinkCategory.Beers,
-        //            SubCategory = "Ale"
-        //        },
-
-        //        new DrinkSubCategory
-        //        {
-        //            // ID = 992,
-        //            MainCategory = DrinkCategory.Spirits,
-        //            SubCategory = "Gin"
-        //        },
-
-        //        new DrinkSubCategory
-        //        {
-        //            // ID = 991,
-        //            MainCategory = DrinkCategory.Spirits,
-        //            SubCategory = "Vodka"
-        //        },
-
-        //        new DrinkSubCategory
-        //        {
-        //            // ID = 990,
-        //            MainCategory = DrinkCategory.Spirits,
-        //            SubCategory = "Whisky"
-        //        },
-
-        //        new DrinkSubCategory
-        //        {
-        //            // ID = 899,
-        //            MainCategory = DrinkCategory.SoftDrinks,
-        //            SubCategory = "Juice"
-        //        },
-
-        //        new DrinkSubCategory
-        //        {
-        //            // ID = 898,
-        //            MainCategory = DrinkCategory.SoftDrinks,
-        //            SubCategory = "Water"
-        //        },
-
-        //        new DrinkSubCategory
-        //        {
-        //            // ID = 897,
-        //            MainCategory = DrinkCategory.SoftDrinks,
-        //            SubCategory = "Fizzy"
-        //        },
-
-        //        new DrinkSubCategory
-        //        {
-        //            // ID = 896,
-        //            MainCategory = DrinkCategory.SoftDrinks,
-        //            SubCategory = "Tonic"
-        //        },
-
-        //        new DrinkSubCategory
-        //        {
-        //            // ID = 895,
-        //            MainCategory = DrinkCategory.SoftDrinks,
-        //            SubCategory = "Coffee"
-        //        },
-
-        //        new DrinkSubCategory
-        //        {
-        //            // ID = 894,
-        //            MainCategory = DrinkCategory.SoftDrinks,
-        //            SubCategory = "Tea"
-        //        },
-        //    };
-
-
-
-        //    context.DrinkSubCategories.AddRange(drinkSubCategories);
-        //    context.SaveChanges();
-        //}
-
-
         private static void AddDrink(ApplicationDbContext context)
         {
             if (context.Drinks.Any())
@@ -1078,8 +947,308 @@ namespace Snack_Shack.Data
                     DrinkCategory = DrinkCategory.Wines,
                     SubCategory = DrinkSubCategory.Rosé,
                     ContainsAlcohol = true,
-                    AlcoholPercentage = 10,
+                    AlcoholPercentage = 8.5,
                     DrinkBrand = "Blossom Hill"
+                },
+
+                new Drink
+                {
+                    ProductID = 3,
+                    DrinkCategory = DrinkCategory.Wines,
+                    SubCategory = DrinkSubCategory.Sparkling,
+                    ContainsAlcohol = true,
+                    AlcoholPercentage = 11.5,
+                    DrinkBrand = "Freixenet"
+                },
+
+                new Drink
+                {
+                    ProductID = 4,
+                    DrinkCategory = DrinkCategory.Wines,
+                    SubCategory = DrinkSubCategory.Sparkling,
+                    ContainsAlcohol = true,
+                    AlcoholPercentage = 12,
+                    DrinkBrand = "Graham Beck"
+                },
+
+                new Drink
+                {
+                    ProductID = 5,
+                    DrinkCategory = DrinkCategory.Wines,
+                    SubCategory = DrinkSubCategory.Champagne,
+                    ContainsAlcohol = true,
+                    AlcoholPercentage = 12,
+                    DrinkBrand = "Veuve Clicquot"
+                },
+
+                new Drink
+                {
+                    ProductID = 6,
+                    DrinkCategory = DrinkCategory.Beers,
+                    SubCategory = DrinkSubCategory.Lager,
+                    ContainsAlcohol = true,
+                    AlcoholPercentage = 5.1,
+                    DrinkBrand = "Peroni"
+                },
+
+                new Drink
+                {
+                    ProductID = 7,
+                    DrinkCategory = DrinkCategory.Beers,
+                    SubCategory = DrinkSubCategory.Lager,
+                    ContainsAlcohol = true,
+                    AlcoholPercentage = 5.9,
+                    DrinkBrand = "Desperados"
+                },
+
+                new Drink
+                {
+                    ProductID = 8,
+                    DrinkCategory = DrinkCategory.Beers,
+                    SubCategory = DrinkSubCategory.Lager,
+                    ContainsAlcohol = true,
+                    AlcoholPercentage = 4.3,
+                    DrinkBrand = "Sharps"
+                },
+
+                new Drink
+                {
+                    ProductID = 9,
+                    DrinkCategory = DrinkCategory.Beers,
+                    SubCategory = DrinkSubCategory.Lager,
+                    ContainsAlcohol = true,
+                    AlcoholPercentage = 5.2,
+                    DrinkBrand = "Hobgoblin"
+                },
+
+                new Drink
+                {
+                    ProductID = 11,
+                    DrinkCategory = DrinkCategory.Spirits,
+                    SubCategory = DrinkSubCategory.Gin,
+                    ContainsAlcohol = true,
+                    AlcoholPercentage = 41.3,
+                    DrinkBrand = "Tanquery"
+                },
+
+                new Drink
+                {
+                    ProductID = 12,
+                    DrinkCategory = DrinkCategory.Spirits,
+                    SubCategory = DrinkSubCategory.Vodka,
+                    ContainsAlcohol = true,
+                    AlcoholPercentage = 37.5,
+                    DrinkBrand = "Smirnoff"
+                },
+
+                new Drink
+                {
+                    ProductID = 12,
+                    DrinkCategory = DrinkCategory.Spirits,
+                    SubCategory = DrinkSubCategory.Whisky,
+                    ContainsAlcohol = true,
+                    AlcoholPercentage = 40,
+                    DrinkBrand = "Johnnie Walker"
+                },
+
+                new Drink
+                {
+                    ProductID = 14,
+                    DrinkCategory = DrinkCategory.SoftDrinks,
+                    SubCategory = DrinkSubCategory.Juice,
+                    ContainsAlcohol = false,
+                    AlcoholPercentage = 0,
+                    DrinkBrand = "Britvic"
+                },
+
+                new Drink
+                {
+                    ProductID = 15,
+                    DrinkCategory = DrinkCategory.SoftDrinks,
+                    SubCategory = DrinkSubCategory.Juice,
+                    ContainsAlcohol = false,
+                    AlcoholPercentage = 0,
+                    DrinkBrand = "Britvic"
+                },
+
+                new Drink
+                {
+                    ProductID = 16,
+                    DrinkCategory = DrinkCategory.SoftDrinks,
+                    SubCategory = DrinkSubCategory.Water,
+                    ContainsAlcohol = false,
+                    AlcoholPercentage = 0,
+                    DrinkBrand = "Harrogate"
+                },
+
+                new Drink
+                {
+                    ProductID = 17,
+                    DrinkCategory = DrinkCategory.SoftDrinks,
+                    SubCategory = DrinkSubCategory.Water,
+                    ContainsAlcohol = false,
+                    AlcoholPercentage = 0,
+                    DrinkBrand = "Harrogate"
+                },
+
+                new Drink
+                {
+                    ProductID = 18,
+                    DrinkCategory = DrinkCategory.SoftDrinks,
+                    SubCategory = DrinkSubCategory.Pop,
+                    ContainsAlcohol = false,
+                    AlcoholPercentage = 0,
+                    DrinkBrand = "CocaCola"
+                },
+
+                new Drink
+                {
+                    ProductID = 19,
+                    DrinkCategory = DrinkCategory.SoftDrinks,
+                    SubCategory = DrinkSubCategory.Pop,
+                    ContainsAlcohol = false,
+                    AlcoholPercentage = 0,
+                    DrinkBrand = "CocaCola"
+                },
+
+                new Drink
+                {
+                    ProductID = 20,
+                    DrinkCategory = DrinkCategory.SoftDrinks,
+                    SubCategory = DrinkSubCategory.Tonic,
+                    ContainsAlcohol = false,
+                    AlcoholPercentage = 0,
+                    DrinkBrand = "Fever Tree"
+                },
+
+                new Drink
+                {
+                    ProductID = 21,
+                    DrinkCategory = DrinkCategory.SoftDrinks,
+                    SubCategory = DrinkSubCategory.Coffee,
+                    ContainsAlcohol = false,
+                    AlcoholPercentage = 0,
+                    DrinkBrand = "Illy"
+                },
+
+                new Drink
+                {
+                    ProductID = 22,
+                    DrinkCategory = DrinkCategory.SoftDrinks,
+                    SubCategory = DrinkSubCategory.Coffee,
+                    ContainsAlcohol = false,
+                    AlcoholPercentage = 0,
+                    DrinkBrand = "Illy"
+                },
+
+                new Drink
+                {
+                    ProductID = 23,
+                    DrinkCategory = DrinkCategory.SoftDrinks,
+                    SubCategory = DrinkSubCategory.Coffee,
+                    ContainsAlcohol = false,
+                    AlcoholPercentage = 0,
+                    DrinkBrand = "Illy"
+                },
+
+                new Drink
+                {
+                    ProductID = 24,
+                    DrinkCategory = DrinkCategory.SoftDrinks,
+                    SubCategory = DrinkSubCategory.Coffee,
+                    ContainsAlcohol = false,
+                    AlcoholPercentage = 0,
+                    DrinkBrand = "Illy"
+                },
+
+                new Drink
+                {
+                    ProductID = 25,
+                    DrinkCategory = DrinkCategory.Wines,
+                    SubCategory = DrinkSubCategory.White,
+                    ContainsAlcohol = true,
+                    AlcoholPercentage = 12,
+                    DrinkBrand = "Mondelli"
+                },
+
+                new Drink
+                {
+                    ProductID = 26,
+                    DrinkCategory = DrinkCategory.Wines,
+                    SubCategory = DrinkSubCategory.Red,
+                    ContainsAlcohol = true,
+                    AlcoholPercentage = 14,
+                    DrinkBrand = "Campo Viejo"
+                },
+
+                new Drink
+                {
+                    ProductID = 27,
+                    DrinkCategory = DrinkCategory.Wines,
+                    SubCategory = DrinkSubCategory.Red,
+                    ContainsAlcohol = true,
+                    AlcoholPercentage = 13.5,
+                    DrinkBrand = "Yellow Tail"
+                },
+
+                new Drink
+                {
+                    ProductID = 28,
+                    DrinkCategory = DrinkCategory.Wines,
+                    SubCategory = DrinkSubCategory.Red,
+                    ContainsAlcohol = true,
+                    AlcoholPercentage = 13.5,
+                    DrinkBrand = "Barefoot"
+                },
+
+                new Drink
+                {
+                    ProductID = 40,
+                    DrinkCategory = DrinkCategory.SoftDrinks,
+                    SubCategory = DrinkSubCategory.Tea,
+                    ContainsAlcohol = false,
+                    AlcoholPercentage = 0,
+                    DrinkBrand = "Pukka"
+                },
+
+                new Drink
+                {
+                    ProductID = 50,
+                    DrinkCategory = DrinkCategory.Wines,
+                    SubCategory = DrinkSubCategory.White,
+                    ContainsAlcohol = true,
+                    AlcoholPercentage = 11.5,
+                    DrinkBrand = "Gallo"
+                },
+
+                new Drink
+                {
+                    ProductID = 51,
+                    DrinkCategory = DrinkCategory.Wines,
+                    SubCategory = DrinkSubCategory.White,
+                    ContainsAlcohol = true,
+                    AlcoholPercentage = 14.5,
+                    DrinkBrand = "Dark Horse"
+                },
+
+                new Drink
+                {
+                    ProductID = 52,
+                    DrinkCategory = DrinkCategory.Wines,
+                    SubCategory = DrinkSubCategory.White,
+                    ContainsAlcohol = true,
+                    AlcoholPercentage = 13,
+                    DrinkBrand = "Oyster Bay"
+                },
+
+                new Drink
+                {
+                    ProductID = 54,
+                    DrinkCategory = DrinkCategory.SoftDrinks,
+                    SubCategory = DrinkSubCategory.Tea,
+                    ContainsAlcohol = false,
+                    AlcoholPercentage = 0,
+                    DrinkBrand = "Pukka"
                 },
             };
 
@@ -1103,9 +1272,20 @@ namespace Snack_Shack.Data
                     FoodCategory = FoodCategory.Mains,
                     Calories = 600,
                     ContainsNuts = true,
-                    ContainsGluten = false,
+                    ContainsGluten = true,
                     IsVegetarian = true,
                     IsVegan = true,
+                },
+
+                new Food
+                {
+                    ProductID = 29,
+                    FoodCategory = FoodCategory.Mains,
+                    Calories = 550,
+                    ContainsNuts = false,
+                    ContainsGluten = true,
+                    IsVegetarian = true,
+                    IsVegan = false,
                 },
             };
 
