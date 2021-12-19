@@ -1666,226 +1666,226 @@ namespace Snack_Shack.Data
                 // A single Order(2)
                 new OrderItem
                 {
-                    OrderID = 0,
-                    ProductID = 0,
-                    UnitPrice = 0,
-                    Quantity = 0,
+                    OrderID = 2,
+                    ProductID = 29,
+                    UnitPrice = 10.50m,
+                    Quantity = 1,
                 },
 
                 new OrderItem
                 {
-                    OrderID = 0,
-                    ProductID = 0,
-                    UnitPrice = 0,
-                    Quantity = 0,
+                    OrderID = 3,
+                    ProductID = 22,
+                    UnitPrice = 3.20m,
+                    Quantity = 4,
                 },
 
                 new OrderItem
                 {
-                    OrderID = 0,
-                    ProductID = 0,
-                    UnitPrice = 0,
-                    Quantity = 0,
+                    OrderID = 4,
+                    ProductID = 16,
+                    UnitPrice = 1.90m,
+                    Quantity = 2,
                 },
 
                 new OrderItem
                 {
-                    OrderID = 0,
-                    ProductID = 0,
-                    UnitPrice = 0,
-                    Quantity = 0,
+                    OrderID = 5,
+                    ProductID = 35,
+                    UnitPrice = 7.10m,
+                    Quantity = 1,
                 },
 
                 // A single Order(3)
                 new OrderItem
                 {
-                    OrderID = 0,
-                    ProductID = 0,
-                    UnitPrice = 0,
-                    Quantity = 0,
+                    OrderID = 6,
+                    ProductID = 37,
+                    UnitPrice = 4.20m,
+                    Quantity = 1,
                 },
 
                 new OrderItem
                 {
-                    OrderID = 0,
-                    ProductID = 0,
-                    UnitPrice = 0,
-                    Quantity = 0,
+                    OrderID = 7,
+                    ProductID = 38,
+                    UnitPrice = 6.90m,
+                    Quantity = 2,
                 },
 
                 // A single Order(4)
                 new OrderItem
                 {
-                    OrderID = 0,
-                    ProductID = 0,
-                    UnitPrice = 0,
-                    Quantity = 0,
+                    OrderID = 8,
+                    ProductID = 41,
+                    UnitPrice = 5.90m,
+                    Quantity = 1,
                 },
 
                 new OrderItem
                 {
-                    OrderID = 0,
-                    ProductID = 0,
-                    UnitPrice = 0,
-                    Quantity = 0,
+                    OrderID = 9,
+                    ProductID = 49,
+                    UnitPrice = 6.10m,
+                    Quantity = 2,
                 },
 
                 new OrderItem
                 {
-                    OrderID = 0,
-                    ProductID = 0,
-                    UnitPrice = 0,
-                    Quantity = 0,
+                    OrderID = 10,
+                    ProductID = 50,
+                    UnitPrice = 4.40m,
+                    Quantity = 2,
                 },
 
                 new OrderItem
                 {
-                    OrderID = 0,
-                    ProductID = 0,
-                    UnitPrice = 0,
-                    Quantity = 0,
+                    OrderID = 11,
+                    ProductID = 39,
+                    UnitPrice = 5.90m,
+                    Quantity = 1,
                 },
 
                 new OrderItem
                 {
-                    OrderID = 0,
-                    ProductID = 0,
-                    UnitPrice = 0,
-                    Quantity = 0,
+                    OrderID = 12,
+                    ProductID = 53,
+                    UnitPrice = 7.90m,
+                    Quantity = 1,
                 },
 
                 new OrderItem
                 {
-                    OrderID = 0,
-                    ProductID = 0,
-                    UnitPrice = 0,
-                    Quantity = 0,
+                    OrderID = 13,
+                    ProductID = 40,
+                    UnitPrice = 2.40m,
+                    Quantity = 1,
                 },
 
                 // A single Order(5)
                 new OrderItem
                 {
-                    OrderID = 0,
-                    ProductID = 0,
-                    UnitPrice = 0,
-                    Quantity = 0,
+                    OrderID = 14,
+                    ProductID = 32,
+                    UnitPrice = 11.90m,
+                    Quantity = 2,
                 },
 
                 // A single Order(6)
                 new OrderItem
                 {
-                    OrderID = 0,
-                    ProductID = 0,
-                    UnitPrice = 0,
-                    Quantity = 0,
+                    OrderID = 15,
+                    ProductID = 43,
+                    UnitPrice = 2.70m,
+                    Quantity = 2,
                 },
 
                 new OrderItem
                 {
-                    OrderID = 0,
-                    ProductID = 0,
-                    UnitPrice = 0,
-                    Quantity = 0,
+                    OrderID = 16,
+                    ProductID = 30,
+                    UnitPrice = 10.90m,
+                    Quantity = 3,
                 },
 
                 // A single Order(7)
                 new OrderItem
                 {
-                    OrderID = 0,
-                    ProductID = 0,
-                    UnitPrice = 0,
-                    Quantity = 0,
+                    OrderID = 17,
+                    ProductID = 14,
+                    UnitPrice = 2.40m,
+                    Quantity = 2,
                 },
 
                 new OrderItem
                 {
-                    OrderID = 0,
-                    ProductID = 0,
-                    UnitPrice = 0,
-                    Quantity = 0,
+                    OrderID = 18,
+                    ProductID = 7,
+                    UnitPrice = 4.10m,
+                    Quantity = 6,
                 },
 
                 new OrderItem
                 {
-                    OrderID = 0,
-                    ProductID = 0,
-                    UnitPrice = 0,
-                    Quantity = 0,
+                    OrderID = 19,
+                    ProductID = 3,
+                    UnitPrice = 5.60m,
+                    Quantity = 3,
                 },
 
                 // A single Order(8)
                 new OrderItem
                 {
-                    OrderID = 0,
-                    ProductID = 0,
-                    UnitPrice = 0,
-                    Quantity = 0,
+                    OrderID = 20,
+                    ProductID = 33,
+                    UnitPrice = 5.60m,
+                    Quantity = 1,
                 },
 
                 // A single Order(9)
                 new OrderItem
                 {
-                    OrderID = 0,
-                    ProductID = 0,
-                    UnitPrice = 0,
-                    Quantity = 0,
+                    OrderID = 21,
+                    ProductID = 34,
+                    UnitPrice = 5.90m,
+                    Quantity = 2,
                 },
 
                 new OrderItem
                 {
-                    OrderID = 0,
-                    ProductID = 0,
-                    UnitPrice = 0,
-                    Quantity = 0,
+                    OrderID = 22,
+                    ProductID = 44,
+                    UnitPrice = 3.30m,
+                    Quantity = 1,
                 },
 
                 new OrderItem
                 {
-                    OrderID = 0,
-                    ProductID = 0,
-                    UnitPrice = 0,
-                    Quantity = 0,
+                    OrderID = 23,
+                    ProductID = 36,
+                    UnitPrice = 8.40m,
+                    Quantity = 1,
                 },
 
                 new OrderItem
                 {
-                    OrderID = 0,
-                    ProductID = 0,
-                    UnitPrice = 0,
-                    Quantity = 0,
+                    OrderID = 24,
+                    ProductID = 51,
+                    UnitPrice = 5.10m,
+                    Quantity = 2,
                 },
 
                 new OrderItem
                 {
-                    OrderID = 0,
-                    ProductID = 0,
-                    UnitPrice = 0,
-                    Quantity = 0,
+                    OrderID = 25,
+                    ProductID = 52,
+                    UnitPrice = 5.90m,
+                    Quantity = 2,
                 },
 
                 new OrderItem
                 {
-                    OrderID = 0,
-                    ProductID = 0,
-                    UnitPrice = 0,
-                    Quantity = 0,
+                    OrderID = 26,
+                    ProductID = 42,
+                    UnitPrice = 2.90m,
+                    Quantity = 1,
                 },
 
                 // A single Order(10)
                 new OrderItem
                 {
-                    OrderID = 0,
-                    ProductID = 0,
-                    UnitPrice = 0,
-                    Quantity = 0,
+                    OrderID = 27,
+                    ProductID = 38,
+                    UnitPrice = 6.90m,
+                    Quantity = 2,
                 },
 
                 new OrderItem
                 {
-                    OrderID = 0,
-                    ProductID = 0,
-                    UnitPrice = 0,
-                    Quantity = 0,
+                    OrderID = 28,
+                    ProductID = 48,
+                    UnitPrice = 5.90m,
+                    Quantity = 2,
                 },
             };
 
