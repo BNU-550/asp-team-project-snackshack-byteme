@@ -45,7 +45,7 @@ namespace Snack_Shack.Models
 
 
         // Calculated property 
-        public int SalePrice
+        public int TotalPrice
         {
             get
             {

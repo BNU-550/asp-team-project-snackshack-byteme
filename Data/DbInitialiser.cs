@@ -186,7 +186,6 @@ namespace Snack_Shack.Data
                     EmailAddress = "jluker@gmail.com",
                     MobileNumber ="07486709356",
                     IsMinor = true
- 
                 },
 
                 new Person

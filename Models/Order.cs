@@ -54,11 +54,6 @@ namespace Snack_Shack.Models
         public virtual Payment Payment { get; set; }
 
         public virtual ICollection<OrderItem> OrderItems { get; set; }
-        // public virtual ICollection<Product> Products { get; set; }
     }
-    // Enum?
-
-    // Payment card attached to the order?
-    // Order confirmation?
 }
 

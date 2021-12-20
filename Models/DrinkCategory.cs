@@ -15,7 +15,7 @@ namespace Snack_Shack.Models
         Wines,
         [Display(Name = "Beers")]
         Beers,
-        [Display(Name = "Spritis")]
+        [Display(Name = "Spirits")]
         Spirits,
         [Display(Name = "Soft Drinks")]
         SoftDrinks,
