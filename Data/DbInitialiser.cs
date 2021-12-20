@@ -31,7 +31,7 @@ namespace Snack_Shack.Data
             AddOrder(context);
             AddOrderItem(context);
 
-            // AddFeedback(context);
+            AddFeedback(context);
 
         }
 
@@ -861,7 +861,7 @@ namespace Snack_Shack.Data
                     //ProductID = 116,
                     Name = "Indian Tonic water",
                     Description = "",
-                    ProductPrice = 2.67m,
+                    ProductPrice = 2.60m,
                     IsActive = true,
                     ImageURL = "FeverTreeIndian.jpg"
                 },
@@ -1546,7 +1546,7 @@ namespace Snack_Shack.Data
                     PaymentID = "1111 2345 2849 4825",
                     StaffName = "Elon",
                     TableNo = 21,
-                    OrderDate = DateTime.Parse("2021-12-02"),
+                    OrderDate = DateTime.Parse("2021-12-01"),
                 },
 
                 new Order
@@ -1555,7 +1555,7 @@ namespace Snack_Shack.Data
                     PaymentID = "0999 2345 2849 4825",
                     StaffName = "Mark",
                     TableNo = 8,
-                    OrderDate = DateTime.Parse("2021-12-03"),
+                    OrderDate = DateTime.Parse("2021-12-01"),
                 },
 
                 new Order
@@ -1564,7 +1564,7 @@ namespace Snack_Shack.Data
                     PaymentID = "0888 2345 2849 4825",
                     StaffName = "Bill",
                     TableNo = 34,
-                    OrderDate = DateTime.Parse("2021-12-04"),
+                    OrderDate = DateTime.Parse("2021-12-01"),
                 },
 
                 new Order
@@ -1573,7 +1573,7 @@ namespace Snack_Shack.Data
                     PaymentID = "0777 2345 2849 4825",
                     StaffName = "Bill",
                     TableNo = 11,
-                    OrderDate = DateTime.Parse("2021-12-05"),
+                    OrderDate = DateTime.Parse("2021-12-01"),
                 },
 
                 new Order
@@ -1582,7 +1582,7 @@ namespace Snack_Shack.Data
                     PaymentID = "0666 2345 2849 4825",
                     StaffName = "Jeff",
                     TableNo = 32,
-                    OrderDate = DateTime.Parse("2021-12-06"),
+                    OrderDate = DateTime.Parse("2021-12-01"),
                 },
 
                 new Order
@@ -1591,7 +1591,7 @@ namespace Snack_Shack.Data
                     PaymentID = "0555 2345 2849 4825",
                     StaffName = "Elon",
                     TableNo = 43,
-                    OrderDate = DateTime.Parse("2021-12-07"),
+                    OrderDate = DateTime.Parse("2021-12-02"),
                 },
 
                 new Order
@@ -1600,7 +1600,7 @@ namespace Snack_Shack.Data
                     PaymentID = "0333 2345 2849 4825",
                     StaffName = "Jeff",
                     TableNo = 3,
-                    OrderDate = DateTime.Parse("2021-12-08"),
+                    OrderDate = DateTime.Parse("2021-12-02"),
                 },
 
                 new Order
@@ -1610,7 +1610,7 @@ namespace Snack_Shack.Data
                     PaymentID = "0111 4387 3298 2848",
                     StaffName = "Bill",
                     TableNo = 49,
-                    OrderDate = DateTime.Parse("2021-12-09"),
+                    OrderDate = DateTime.Parse("2021-12-02"),
                 },
 
                 new Order
@@ -1619,7 +1619,7 @@ namespace Snack_Shack.Data
                     PaymentID = "0222 5487 4398 2094",
                     StaffName = "Mark",
                     TableNo = 9,
-                    OrderDate = DateTime.Parse("2021-12-10"),
+                    OrderDate = DateTime.Parse("2021-12-02"),
                 },
 
             };
@@ -1639,6 +1639,8 @@ namespace Snack_Shack.Data
             var order_items = new OrderItem[]
             {
                 // A single order(1)
+                // 2 x Prosecco
+                // 2 x The Veggie One
                 new OrderItem
                 {
                     OrderID = 1,
@@ -1664,200 +1666,13 @@ namespace Snack_Shack.Data
                 },
 
                 // A single Order(2)
+                // 2 x Sauvignon Blanc
+                // 1 x Coca Cola
+                // 2 x Chicken Wrap
+                // 1 x Big Bad Burger
                 new OrderItem
                 {
                     OrderID = 2,
-                    ProductID = 29,
-                    UnitPrice = 10.50m,
-                    Quantity = 1,
-                },
-
-                new OrderItem
-                {
-                    OrderID = 3,
-                    ProductID = 22,
-                    UnitPrice = 3.20m,
-                    Quantity = 4,
-                },
-
-                new OrderItem
-                {
-                    OrderID = 4,
-                    ProductID = 16,
-                    UnitPrice = 1.90m,
-                    Quantity = 2,
-                },
-
-                new OrderItem
-                {
-                    OrderID = 5,
-                    ProductID = 35,
-                    UnitPrice = 7.10m,
-                    Quantity = 1,
-                },
-
-                // A single Order(3)
-                new OrderItem
-                {
-                    OrderID = 6,
-                    ProductID = 37,
-                    UnitPrice = 4.20m,
-                    Quantity = 1,
-                },
-
-                new OrderItem
-                {
-                    OrderID = 7,
-                    ProductID = 38,
-                    UnitPrice = 6.90m,
-                    Quantity = 2,
-                },
-
-                // A single Order(4)
-                new OrderItem
-                {
-                    OrderID = 8,
-                    ProductID = 41,
-                    UnitPrice = 5.90m,
-                    Quantity = 1,
-                },
-
-                new OrderItem
-                {
-                    OrderID = 9,
-                    ProductID = 49,
-                    UnitPrice = 6.10m,
-                    Quantity = 2,
-                },
-
-                new OrderItem
-                {
-                    OrderID = 10,
-                    ProductID = 50,
-                    UnitPrice = 4.40m,
-                    Quantity = 2,
-                },
-
-                new OrderItem
-                {
-                    OrderID = 11,
-                    ProductID = 39,
-                    UnitPrice = 5.90m,
-                    Quantity = 1,
-                },
-
-                new OrderItem
-                {
-                    OrderID = 12,
-                    ProductID = 53,
-                    UnitPrice = 7.90m,
-                    Quantity = 1,
-                },
-
-                new OrderItem
-                {
-                    OrderID = 13,
-                    ProductID = 40,
-                    UnitPrice = 2.40m,
-                    Quantity = 1,
-                },
-
-                // A single Order(5)
-                new OrderItem
-                {
-                    OrderID = 14,
-                    ProductID = 32,
-                    UnitPrice = 11.90m,
-                    Quantity = 2,
-                },
-
-                // A single Order(6)
-                new OrderItem
-                {
-                    OrderID = 15,
-                    ProductID = 43,
-                    UnitPrice = 2.70m,
-                    Quantity = 2,
-                },
-
-                new OrderItem
-                {
-                    OrderID = 16,
-                    ProductID = 30,
-                    UnitPrice = 10.90m,
-                    Quantity = 3,
-                },
-
-                // A single Order(7)
-                new OrderItem
-                {
-                    OrderID = 17,
-                    ProductID = 14,
-                    UnitPrice = 2.40m,
-                    Quantity = 2,
-                },
-
-                new OrderItem
-                {
-                    OrderID = 18,
-                    ProductID = 7,
-                    UnitPrice = 4.10m,
-                    Quantity = 6,
-                },
-
-                new OrderItem
-                {
-                    OrderID = 19,
-                    ProductID = 3,
-                    UnitPrice = 5.60m,
-                    Quantity = 3,
-                },
-
-                // A single Order(8)
-                new OrderItem
-                {
-                    OrderID = 20,
-                    ProductID = 33,
-                    UnitPrice = 5.60m,
-                    Quantity = 1,
-                },
-
-                // A single Order(9)
-                new OrderItem
-                {
-                    OrderID = 21,
-                    ProductID = 34,
-                    UnitPrice = 5.90m,
-                    Quantity = 2,
-                },
-
-                new OrderItem
-                {
-                    OrderID = 22,
-                    ProductID = 44,
-                    UnitPrice = 3.30m,
-                    Quantity = 1,
-                },
-
-                new OrderItem
-                {
-                    OrderID = 23,
-                    ProductID = 36,
-                    UnitPrice = 8.40m,
-                    Quantity = 1,
-                },
-
-                new OrderItem
-                {
-                    OrderID = 24,
-                    ProductID = 51,
-                    UnitPrice = 5.10m,
-                    Quantity = 2,
-                },
-
-                new OrderItem
-                {
-                    OrderID = 25,
                     ProductID = 52,
                     UnitPrice = 5.90m,
                     Quantity = 2,
@@ -1865,16 +1680,15 @@ namespace Snack_Shack.Data
 
                 new OrderItem
                 {
-                    OrderID = 26,
-                    ProductID = 42,
-                    UnitPrice = 2.90m,
+                    OrderID = 2,
+                    ProductID = 19,
+                    UnitPrice = 2.60m,
                     Quantity = 1,
                 },
 
-                // A single Order(10)
                 new OrderItem
                 {
-                    OrderID = 27,
+                    OrderID = 2,
                     ProductID = 38,
                     UnitPrice = 6.90m,
                     Quantity = 2,
@@ -1882,10 +1696,228 @@ namespace Snack_Shack.Data
 
                 new OrderItem
                 {
-                    OrderID = 28,
+                    OrderID = 2,
+                    ProductID = 31,
+                    UnitPrice = 12.20m,
+                    Quantity = 1,
+                },
+
+                // A single Order(3)
+                // 1 x Champagne
+                // 2 x Waffles
+                new OrderItem
+                {
+                    OrderID = 3,
+                    ProductID = 5,
+                    UnitPrice = 79.90m,
+                    Quantity = 1,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 3,
+                    ProductID = 49,
+                    UnitPrice = 6.10m,
+                    Quantity = 2,
+                },
+
+                // A single Order(4)
+                // 3 x Latte
+                // 2 x Chicken Pops
+                // 1 x Zuckerburger
+                // 1 x Snack Shack Burger
+                // 1 x Apple Pie
+                // 1 x Churros
+                new OrderItem
+                {
+                    OrderID = 4,
+                    ProductID = 22,
+                    UnitPrice = 3.20m,
+                    Quantity = 3,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 4,
+                    ProductID = 32,
+                    UnitPrice = 5.60m,
+                    Quantity = 2,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 4,
+                    ProductID = 32,
+                    UnitPrice = 11.90m,
+                    Quantity = 1,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 4,
+                    ProductID = 30,
+                    UnitPrice = 10.90m,
+                    Quantity = 1,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 4,
                     ProductID = 48,
                     UnitPrice = 5.90m,
+                    Quantity = 1,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 4,
+                    ProductID = 46,
+                    UnitPrice = 5.20m,
+                    Quantity = 1,
+                },
+
+                // A single Order(5)
+                // 1 x Sparkling water
+                // 1 x Falafel Wrap
+                new OrderItem
+                {
+                    OrderID = 5,
+                    ProductID = 17,
+                    UnitPrice = 2.40m,
+                    Quantity = 1,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 5,
+                    ProductID = 39,
+                    UnitPrice = 5.90m,
+                    Quantity = 1,
+                },
+
+                // A single Order(6)
+                // 2 x Earl Grey Tea
+                // 2 x Hummus and Flatbread
+                new OrderItem
+                {
+                    OrderID = 6,
+                    ProductID = 54,
+                    UnitPrice = 2.40m,
                     Quantity = 2,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 6,
+                    ProductID = 34,
+                    UnitPrice = 5.90m,
+                    Quantity = 2,
+                },
+
+                // A single Order(7)
+                // 1 x Bottle Cava
+                // 3 x Big Bad Burger
+                // 2 x Homemade Slaw
+                new OrderItem
+                {
+                    OrderID = 7,
+                    ProductID = 4,
+                    UnitPrice = 29.90m,
+                    Quantity = 1,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 7,
+                    ProductID = 31,
+                    UnitPrice = 12.20m,
+                    Quantity = 3,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 7,
+                    ProductID = 45,
+                    UnitPrice = 3.20m,
+                    Quantity = 2,
+                },
+
+                // A single Order(8)
+                // 1 x English Breakfast Tea
+                new OrderItem
+                {
+                    OrderID = 8,
+                    ProductID = 40,
+                    UnitPrice = 2.40m,
+                    Quantity = 1,
+                },
+
+                // A single Order(9)
+                // 2 x Tonic Water
+                // 2 x Flor de Sevilla
+                // 2 x Halloumi Wrap
+                // 1 x Onion Rings
+                // 1 x Waffles
+                // 1 x Mocha
+                new OrderItem
+                {
+                    OrderID = 9,
+                    ProductID = 20,
+                    UnitPrice = 2.60m,
+                    Quantity = 2,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 9,
+                    ProductID = 11,
+                    UnitPrice = 3.90m,
+                    Quantity = 2,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 9,
+                    ProductID = 41,
+                    UnitPrice = 5.90m,
+                    Quantity = 2,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 9,
+                    ProductID = 44,
+                    UnitPrice = 3.30m,
+                    Quantity = 1,
+                },
+
+                
+
+                new OrderItem
+                {
+                    OrderID = 9,
+                    ProductID = 24,
+                    UnitPrice = 3.40m,
+                    Quantity = 1,
+                },
+
+                // A single Order(10)
+                // 1 x Pinot Blush
+                // 1 x Sharer Nachos
+                new OrderItem
+                {
+                    OrderID = 10,
+                    ProductID = 25,
+                    UnitPrice = 5.60m,
+                    Quantity = 2,
+                },
+
+                new OrderItem
+                {
+                    OrderID = 10,
+                    ProductID = 36,
+                    UnitPrice = 8.40m,
+                    Quantity = 1,
                 },
             };
 
@@ -1906,71 +1938,88 @@ namespace Snack_Shack.Data
                 new Feedback
                 {
                     OrderID = 1,
-                    FeedbackMessage = "Best Veggie I've ever had",
+                    FeedbackMessage = "Best Veggie burger I've ever had!!",
                     CustomerReviewDate = DateTime.Parse("2021-12-01"),
                 },
 
                 new Feedback
                 {
-                    OrderID = 0,
-                    FeedbackMessage = "",
-                    CustomerReviewDate = DateTime.Parse("")
+                    OrderID = 2,
+                    FeedbackMessage = "Good place, friendly staff. Chuffed " +
+                    "they had my favourite Oyster Bay Sauvignon Blanc. Would " +
+                    "recommend!",
+                    CustomerReviewDate = DateTime.Parse("2021-12-01")
                 },
 
                 new Feedback
                 {
-                    OrderID = 0,
-                    FeedbackMessage = "",
-                    CustomerReviewDate = DateTime.Parse("")
+                    OrderID = 3,
+                    FeedbackMessage = "Popped in for mine and my partners " +
+                    "one year anniversary for some fizz and desserts. " +
+                    "Have to say, Mark really went out his way to make it " +
+                    "special with getting the chefs to make the waffles into " +
+                    "love hearts! Can't wait to come back and try one of the " +
+                    "burgers.",
+                    CustomerReviewDate = DateTime.Parse("2021-12-01")
                 },
 
                 new Feedback
                 {
-                    OrderID = 0,
-                    FeedbackMessage = "",
-                    CustomerReviewDate = DateTime.Parse("")
+                    OrderID = 4,
+                    FeedbackMessage = "Good food, reasonable price. " +
+                    "The application makes ordering really easy.",
+                    CustomerReviewDate = DateTime.Parse("2021-12-01")
                 },
 
                 new Feedback
                 {
-                    OrderID = 0,
-                    FeedbackMessage = "",
-                    CustomerReviewDate = DateTime.Parse("")
+                    OrderID = 5,
+                    FeedbackMessage = "So happy to find such a tasty vegan " +
+                    "option. Will be recommending!",
+                    CustomerReviewDate = DateTime.Parse("2021-12-01")
                 },
 
                 new Feedback
                 {
-                    OrderID = 0,
-                    FeedbackMessage = "",
-                    CustomerReviewDate = DateTime.Parse("")
+                    OrderID = 6,
+                    FeedbackMessage = "Myself and a girlfriend popped in here. Nice " +
+                    "surroundings, food was okay - would have liked a bit more flat" +
+                    "bread with the hummus!",
+                    CustomerReviewDate = DateTime.Parse("2021-12-01")
                 },
 
                 new Feedback
                 {
-                    OrderID = 0,
-                    FeedbackMessage = "",
-                    CustomerReviewDate = DateTime.Parse("")
+                    OrderID = 7,
+                    FeedbackMessage = "Came here for the 3rd time in a month, we " +
+                    "love the Big Bad Burger. Sadly this time my sons came out a little " +
+                    "cold but the Manager, Elon, came out apologised and gave us a gift " +
+                    "card for next time. I still recommend - lovely staff!)",
+                    CustomerReviewDate = DateTime.Parse("2021-12-02")
                 },
 
                 new Feedback
                 {
-                    OrderID = 0,
-                    FeedbackMessage = "",
-                    CustomerReviewDate = DateTime.Parse("")
+                    OrderID = 8,
+                    FeedbackMessage = "Just popped in for a tea. Cosy decor.",
+                    CustomerReviewDate = DateTime.Parse("2021-12-02")
                 },
 
                 new Feedback
                 {
-                    OrderID = 0,
-                    FeedbackMessage = "",
-                    CustomerReviewDate = DateTime.Parse("")
+                    OrderID = 9,
+                    FeedbackMessage = "Good Veggie selection. Nice gin!",
+                    CustomerReviewDate = DateTime.Parse("2021-12-02")
                 },
 
                 new Feedback
                 {
-                    OrderID = 0,
-                    FeedbackMessage = "",
-                    CustomerReviewDate = DateTime.Parse("")
+                    OrderID = 10,
+                    FeedbackMessage = "Only came in for a quick wine and some " +
+                    "nachos but the staff were super friendly and chatted to me for " +
+                    "a while. I live on my own so it was great to talk! Will definitely" +
+                    "be coming back. Thanks guys!",
+                    CustomerReviewDate = DateTime.Parse("2021-12-02")
                 },
             };
 

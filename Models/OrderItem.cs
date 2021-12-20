@@ -44,7 +44,7 @@ namespace Snack_Shack.Models
         public int Quantity { get; set; } = 1;
 
 
-
+        // Calculated property 
         public int SalePrice
         {
             get
