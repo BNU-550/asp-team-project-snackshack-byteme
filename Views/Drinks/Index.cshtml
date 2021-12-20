@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Snack_Shack.Models.Drink>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DrinkCategory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubCategory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContainsAlcohol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AlcoholPercentage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DrinkBrand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DrinkCategory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubCategory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContainsAlcohol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AlcoholPercentage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DrinkBrand)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.Name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.DrinkID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.DrinkID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.DrinkID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
