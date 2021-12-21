@@ -10,11 +10,11 @@ using Snack_Shack.Models;
 
 namespace Snack_Shack.Controllers
 {
-    public class StaffsController : Controller
+    public class StaffController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public StaffsController(ApplicationDbContext context)
+        public StaffController(ApplicationDbContext context)
         {
             _context = context;
         }
