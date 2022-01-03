@@ -19,13 +19,13 @@ namespace Snack_Shack.Controllers
             _context = context;
         }
 
-        // GET: Staffs
+        // GET: Staff
         public async Task<IActionResult> Index()
         {
             return View(await _context.Staff.ToListAsync());
         }
 
-        // GET: Staffs/Details/5
+        // GET: Staff/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -43,13 +43,13 @@ namespace Snack_Shack.Controllers
             return View(staff);
         }
 
-        // GET: Staffs/Create
+        // GET: Staff/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Staffs/Create
+        // POST: Staff/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -65,7 +65,7 @@ namespace Snack_Shack.Controllers
             return View(staff);
         }
 
-        // GET: Staffs/Edit/5
+        // GET: Staff/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -81,7 +81,7 @@ namespace Snack_Shack.Controllers
             return View(staff);
         }
 
-        // POST: Staffs/Edit/5
+        // POST: Staff/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -116,7 +116,7 @@ namespace Snack_Shack.Controllers
             return View(staff);
         }
 
-        // GET: Staffs/Delete/5
+        // GET: Staff/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -134,7 +134,7 @@ namespace Snack_Shack.Controllers
             return View(staff);
         }
 
-        // POST: Staffs/Delete/5
+        // POST: Staff/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
