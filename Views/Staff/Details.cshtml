@@ -4,10 +4,16 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+@*  /// Created Kayley Syrett (17/12/2021)
+    /// Modified by Kayley Syrett (03/01/22)
+    /// </summary>
+    /// This view displays the staff details. 
+*@
+
+<h1>@Model.FullName</h1>
 
 <div>
-    <h4>Staff</h4>
+    <h4>Personal Details</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -52,15 +58,9 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.IsMinor)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IsCustomer)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IsCustomer)
-        </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.PersonID">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@Model.PersonID">Edit Personal Details</a> 
     <a asp-action="Index">Back to List</a>
 </div>
