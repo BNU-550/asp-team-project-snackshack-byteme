@@ -91,7 +91,7 @@ namespace Snack_Shack.Migrations
                     Description = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
                     ProductPrice = table.Column<decimal>(type: "money", nullable: false),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
-                    ImageURL = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: true)
+                    ImageURL = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

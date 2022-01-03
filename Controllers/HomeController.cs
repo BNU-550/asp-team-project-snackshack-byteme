@@ -4,8 +4,12 @@ using Snack_Shack.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+
+
+
 
 namespace Snack_Shack.Controllers
 {
@@ -19,9 +23,10 @@ namespace Snack_Shack.Controllers
         }
 
         public IActionResult Index()
-        {
+        { 
             return View();
         }
+
 
         public IActionResult Privacy()
         {

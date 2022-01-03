@@ -454,8 +454,7 @@ namespace Snack_Shack.Migrations
                         .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("ImageURL")
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool?>("IsActive")
                         .IsRequired()

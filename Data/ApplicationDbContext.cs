@@ -24,6 +24,6 @@ namespace Snack_Shack.Data
         public DbSet<Order> Orders { get; set; }
         public DbSet <OrderItem> OrderItems { get; set; }
         public DbSet<Feedback> Feedback { get; set; }
-        
+       
     }
 }

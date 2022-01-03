@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -28,7 +29,8 @@ namespace Snack_Shack.Models
         /// <summary>
         /// The product's name.
         /// </summary>
-        [DisplayName("Name"), Required, StringLength(40)]
+        [DisplayName("Name"), StringLength(40)]
+        [Required(ErrorMessage = "Please enter product's name")]
         public string Name { get; set; }
 
         /// <summary>
@@ -51,17 +53,32 @@ namespace Snack_Shack.Models
         [DisplayName("Available"), Required]
         public bool? IsActive { get; set; }
 
+
+        public string ImageURL { get; set; }
+
+
+        //public class FileUploadModel
+        //{
+        //    [DataType(DataType.Upload)]
+        //    [Display(Name = "Upload File")]
+        //    [Required(ErrorMessage = "Please choose file to upload.")]
+        //    public string file { get; set; }
+
+        //}
+
+
+
         /// <summary>
         /// An image of the product expressed as
         /// string - image filepath, not saved
         /// into database.
         /// </summary>
-        // Kayley and I don't think it's required
-        [DisplayName("Image"), StringLength(150), DataType(DataType.Url)]
-        public string ImageURL { get; set; }
+
+
+        //[DisplayName("Image"), StringLength(150), DataType(DataType.Url)]
+        //public string ImageURL { get; set; }
 
         // Navigation Property 
-
         public virtual ICollection<OrderItem> OrderItems { get; set; }
     }
 }
