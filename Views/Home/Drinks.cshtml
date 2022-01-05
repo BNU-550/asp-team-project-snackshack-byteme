@@ -13,6 +13,13 @@
     <h1>Drinks Menu</h1>
 </header>
 
+@*
+    CSS to shorten the descriptions in the cards. Users will need to open
+    the game open fully (viewing its details page) to see the full
+    description.
+    Reference: https://css-tricks.com/snippets/css/truncate-string-with-ellipsis/
+*@
+
 <section>
     <div class="row">
         @foreach (var item in Model)
@@ -24,10 +31,11 @@
 
             <div class="col-lg-4">
                 <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="/images/@item.Product.ImageURL" class="card-img-top"
+                         height=275 width=200 alt="ImageURL">
                     <div class="card-body">
                         <h5 class="card-title">@item.Product.Name</h5>
-                        <p class="card-text">@item.DrinkBrand</p>
+                        <p id="product-summary" class="card-text">@item.DrinkBrand</p>
                         <a href="#" class="btn btn-primary">View more</a>
                     </div>
                 </div>

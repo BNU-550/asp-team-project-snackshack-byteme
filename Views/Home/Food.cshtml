@@ -9,6 +9,7 @@
 
     string filter = (string)ViewData["Food"];
 }
+
 <header class="jumbotron">
     <h1>Food Menu</h1>
 </header>
@@ -24,10 +25,11 @@
 
             <div class="col-lg-4">
                 <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="/images/@item.Product.ImageURL" class="card-img-top"
+                         height=275 width=200 alt="ImageURL">
                     <div class="card-body">
                         <h5 class="card-title">@item.Product.Name</h5>
-                        <p class="card-text">@item.Product.Description</p>
+                        <p id="product-summary" class="card-text">@item.Product.Description</p>
                         <a href="#" class="btn btn-primary">View more</a>
                     </div>
                 </div>

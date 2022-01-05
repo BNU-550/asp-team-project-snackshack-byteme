@@ -352,7 +352,7 @@ namespace Snack_Shack.Data
                     "smothered in a medium spicy homemade BBQ sauce",
                     ProductPrice = 4.20m,
                     IsActive = true,
-                    //ImageURL = "ChickenWings.jpg"
+                    ImageURL = "ChickenWings.jpg"
                 },
 
                 new Product
@@ -363,7 +363,7 @@ namespace Snack_Shack.Data
                     "cream, guac, salsa, cheese and jalapeños",
                     ProductPrice = 8.40m,
                     IsActive = true,
-                    //ImageURL = "NachosToShare.jpg"
+                    ImageURL = "NachosToShare.jpg"
                 },
 
                 new Product
@@ -374,7 +374,7 @@ namespace Snack_Shack.Data
                     "served with garlic oil dipping sauce",
                     ProductPrice = 7.10m,
                     IsActive = true,
-                    //ImageURL = "ChargrilledShrimp.jpg"
+                    ImageURL = "ChargrilledShrimp.jpg"
                 },
 
                 new Product
@@ -384,7 +384,7 @@ namespace Snack_Shack.Data
                     Description = "Served with mixed olives",
                     ProductPrice = 5.90m,
                     IsActive = true,
-                    //ImageURL = "HummusAndFlatbread.jpg"
+                    ImageURL = "HummusAndFlatbread.jpg"
                 },
 
                 new Product
@@ -395,7 +395,7 @@ namespace Snack_Shack.Data
                     "served with homemade BBQ dipping sauce",
                     ProductPrice = 5.60m,
                     IsActive = true,
-                    //ImageURL = "ChickenPops.jpg"
+                    ImageURL = "ChickenPops.jpg"
                 },
 
                 new Product
@@ -407,7 +407,7 @@ namespace Snack_Shack.Data
                     "Served with fries",
                     ProductPrice = 11.90m,
                     IsActive = true,
-                    //ImageURL = "Zuckerburger.jpg"
+                    ImageURL = "Zuckerburger.jpg"
                 },
 
                 new Product
@@ -418,7 +418,7 @@ namespace Snack_Shack.Data
                     "with burger sauce, cheese, bacon, egg, pickles",
                     ProductPrice = 12.20m,
                     IsActive = true,
-                    //ImageURL = "BigBadBurger.jpg"
+                    ImageURL = "BigBadBurger.jpg"
                 },
 
                 new Product
@@ -429,7 +429,7 @@ namespace Snack_Shack.Data
                     "breast with BBQ sauce, cheddar cheese, and bacon",
                     ProductPrice = 10.90m,
                     IsActive = true,
-                    //ImageURL = "SnackShackBurger.jpg"
+                    ImageURL = "SnackShackBurger.jpg"
                 },
 
                 new Product
@@ -440,7 +440,7 @@ namespace Snack_Shack.Data
                     "with avocado, lettuce, and sweet chilli sauce",
                     ProductPrice = 10.50m,
                     IsActive = true,
-                    //ImageURL = "ChickpeaBurger.jpg"
+                    ImageURL = "ChickpeaBurger.jpg"
                 },
 
                 new Product
@@ -451,7 +451,7 @@ namespace Snack_Shack.Data
                     "with pickled red cabbage, and sweet chilli sauce ",
                     ProductPrice = 10.80m,
                     IsActive = true,
-                    //ImageURL = "PlantBurger.jpg"
+                    ImageURL = "PlantBurger.jpg"
                 },
 
                 new Product
@@ -462,7 +462,7 @@ namespace Snack_Shack.Data
                     "& tortilla bread",
                     ProductPrice = 6.90m,
                     IsActive = true,
-                    //ImageURL = "ChickenWrap.jpg"
+                    ImageURL = "ChickenWrap.jpg"
                 },
 
                 new Product
@@ -472,7 +472,7 @@ namespace Snack_Shack.Data
                     Description = "Falafel, hummus, tomato, gherkin, vegan mayo",
                     ProductPrice = 5.90m,
                     IsActive = true,
-                    //ImageURL = "FalafelWrap.jpg"
+                    ImageURL = "FalafelWrap.jpg"
                 },
 
                 new Product
@@ -483,7 +483,7 @@ namespace Snack_Shack.Data
                     "jam & tortilla bread",
                     ProductPrice = 5.90m,
                     IsActive = true,
-                    //ImageURL = "HalloumiWrap.jpg"
+                    ImageURL = "HalloumiWrap.jpg"
                 },
 
                 new Product
@@ -494,7 +494,7 @@ namespace Snack_Shack.Data
                     "chicken, anchovies, and ceaser dressing ",
                     ProductPrice = 7.90m,
                     IsActive = true,
-                    //ImageURL = "CeaserSalad.jpg"
+                    ImageURL = "CeaserSalad.jpg"
                 },
 
                 new Product
@@ -504,7 +504,7 @@ namespace Snack_Shack.Data
                     Description = "Served with garlic mayo",
                     ProductPrice = 2.90m,
                     IsActive = true,
-                    //ImageURL = "RosemaryFries.jpg"
+                    ImageURL = "RosemaryFries.jpg"
                 },
 
                 new Product
@@ -515,7 +515,7 @@ namespace Snack_Shack.Data
                     "BBQ sauce",
                     ProductPrice = 2.70m,
                     IsActive = true,
-                    //ImageURL = "ChunkyChips.jpg"
+                    ImageURL = "ChunkyChips.jpg"
                 },
 
                 new Product
@@ -525,7 +525,7 @@ namespace Snack_Shack.Data
                     Description = "Served with homemade BBQ sauce",
                     ProductPrice = 3.30m,
                     IsActive = true,
-                    //ImageURL = "OnionRings.jpg"
+                    ImageURL = "OnionRings.jpg"
                 },
 
                 new Product
@@ -536,7 +536,7 @@ namespace Snack_Shack.Data
                     "creamy paprika twist",
                     ProductPrice = 3.20m,
                     IsActive = true,
-                    //ImageURL = "HomemadeSlaw.jpg"
+                    ImageURL = "HomemadeSlaw.jpg"
                 },
 
                 new Product
@@ -548,7 +548,7 @@ namespace Snack_Shack.Data
                     "melted chocolate dip",
                     ProductPrice = 5.20m,
                     IsActive = true,
-                    //ImageURL = "Churros.jpg"
+                    ImageURL = "Churros.jpg"
                 },
 
                 new Product
@@ -559,7 +559,7 @@ namespace Snack_Shack.Data
                     "vanilla ice cream",
                     ProductPrice = 5.50m,
                     IsActive = true,
-                    //ImageURL = "ChocolateBrownie.jpg"
+                    ImageURL = "ChocolateBrownie.jpg"
                 },
 
                 new Product
@@ -570,7 +570,7 @@ namespace Snack_Shack.Data
                     "of Cornish vanilla ice cream",
                     ProductPrice = 5.90m,
                     IsActive = true,
-                    //ImageURL = "ApplePie.jpg"
+                    ImageURL = "ApplePie.jpg"
                 },
 
                 new Product
@@ -582,7 +582,7 @@ namespace Snack_Shack.Data
                     "and chocolate sauce",
                     ProductPrice = 6.10m,
                     IsActive = true,
-                    //ImageURL = "Waffles.jpg"
+                    ImageURL = "Waffles.jpg"
                 },
 
 
@@ -594,7 +594,7 @@ namespace Snack_Shack.Data
                     " flavours of melon and hints of citrus",
                     ProductPrice = 4.40m,
                     IsActive = true,
-                    //ImageURL = "GalloPinotGrigio.jpg"
+                    ImageURL = "GalloPinotGrigio.jpg"
                 },
 
                 new Product
@@ -605,7 +605,7 @@ namespace Snack_Shack.Data
                     "stone fruit, layered with toasted oak",
                     ProductPrice = 5.10m,
                     IsActive = true,
-                    //ImageURL = "DarkHorseChardonnay.jpg"
+                    ImageURL = "DarkHorseChardonnay.jpg"
                 },
 
                 new Product
@@ -617,7 +617,7 @@ namespace Snack_Shack.Data
                     "refreshingly zesty finish",
                     ProductPrice = 5.90m,
                     IsActive = true,
-                    //ImageURL = "OysterBaySauvignon.jpg"
+                    ImageURL = "OysterBaySauvignon.jpg"
                 },
 
                 new Product
@@ -640,7 +640,7 @@ namespace Snack_Shack.Data
                     "berries and hints of liquorice and spice",
                     ProductPrice = 5.40m,
                     IsActive = true,
-                    //ImageURL = "YellowTailShiraz.jpg"
+                    ImageURL = "YellowTailShiraz.jpg"
                 },
 
                 new Product
@@ -652,7 +652,7 @@ namespace Snack_Shack.Data
                     "and a slight vanilla and spice character",
                     ProductPrice = 6.10m,
                     IsActive = true,
-                    //ImageURL = "CampoViejoRioja.jpg"
+                    ImageURL = "CampoViejoRioja.jpg"
                 },
 
                 new Product
@@ -663,7 +663,7 @@ namespace Snack_Shack.Data
                     "minerality and flavours of forest fruits",
                     ProductPrice = 5.60m,
                     IsActive = true,
-                    //ImageURL = "MondelliPinotBlush.jpg"
+                    ImageURL = "MondelliPinotBlush.jpg"
                 },
 
                 new Product
@@ -674,7 +674,7 @@ namespace Snack_Shack.Data
                     "the flavours of red, ripe watermelon",
                     ProductPrice = 4.10m,
                     IsActive = true,
-                    //ImageURL = "BlossomHillWhiteZinfandel.jpg"
+                    ImageURL = "BlossomHillWhiteZinfandel.jpg"
                 },
 
                 new Product
@@ -686,7 +686,7 @@ namespace Snack_Shack.Data
                     "and even a touch of ginger",
                     ProductPrice = 5.60m,
                     IsActive = true,
-                    //ImageURL = "FreixenetCava.jpg"
+                    ImageURL = "FreixenetCava.jpg"
                 },
 
                 new Product
@@ -697,7 +697,7 @@ namespace Snack_Shack.Data
                     "on the nose and rich creamy complexity on the palate",
                     ProductPrice = 29.90m,
                     IsActive = true,
-                    //ImageURL = "GrahamBeckBrut.jpg"
+                    ImageURL = "GrahamBeckBrut.jpg"
                 },
 
                 new Product
@@ -708,7 +708,7 @@ namespace Snack_Shack.Data
                     "and raisins develop into notes of brioche and vanilla",
                     ProductPrice = 79.90m,
                     IsActive = true,
-                   // ImageURL = "VeuveClicquotBrut.jpg"
+                    ImageURL = "VeuveClicquotBrut.jpg"
                 },
 
                 new Product
@@ -718,7 +718,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 5.40m,
                     IsActive = true,
-                    //ImageURL = "PeroniNastro.jpg"
+                    ImageURL = "PeroniNastro.jpg"
                 },
 
                 new Product
@@ -728,7 +728,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 4.10m,
                     IsActive = true,
-                    //ImageURL = "DesperadosLager.jpg"
+                    ImageURL = "DesperadosLager.jpg"
                 },
 
                 new Product
@@ -738,7 +738,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 5.10m,
                     IsActive = true,
-                    //ImageURL = "SharpsDoomBar.jpg"
+                    ImageURL = "SharpsDoomBar.jpg"
                 },
 
                 new Product
@@ -748,7 +748,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 5.20m,
                     IsActive = true,
-                    //ImageURL = "HobgoblinRubyAle.jpg"
+                    ImageURL = "HobgoblinRubyAle.jpg"
                 },
 
                 new Product
@@ -759,7 +759,7 @@ namespace Snack_Shack.Data
                     "coriander, angelica and liquorice",
                     ProductPrice = 3.40m,
                     IsActive = true,
-                    //ImageURL = "GordonsGin.jpg"
+                    ImageURL = "GordonsGin.jpg"
                 },
 
                 new Product
@@ -770,7 +770,7 @@ namespace Snack_Shack.Data
                     "to deliver a fruitful and zesty taste",
                     ProductPrice = 3.90m,
                     IsActive = true,
-                    //ImageURL = "TanquerySevilla.jpg"
+                    ImageURL = "TanquerySevilla.jpg"
                 },
 
                 new Product
@@ -782,7 +782,7 @@ namespace Snack_Shack.Data
                     "seven columns of charcoal",
                     ProductPrice = 3.30m,
                     IsActive = true,
-                    //ImageURL = "SmirnoffRedLabel.jpg"
+                    ImageURL = "SmirnoffRedLabel.jpg"
                 },
 
                 new Product
@@ -793,7 +793,7 @@ namespace Snack_Shack.Data
                     "spice and vanilla",
                     ProductPrice = 3.60m,
                     IsActive = true,
-                    //ImageURL = "JohnnieWalkerBlackLabel.jpg"
+                    ImageURL = "JohnnieWalkerBlackLabel.jpg"
                 },
 
                 new Product
@@ -803,7 +803,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 2.40m,
                     IsActive = true,
-                    //ImageURL = "BritvicOrange.jpg"
+                    ImageURL = "BritvicOrange.jpg"
                 },
 
                 new Product
@@ -813,7 +813,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 2.40m,
                     IsActive = true,
-                    //ImageURL = "BritvicApple.jpg"
+                    ImageURL = "BritvicApple.jpg"
                 },
 
                 new Product
@@ -823,7 +823,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 1.90m,
                     IsActive = true,
-                    //ImageURL = "HarrogateStill.jpg"
+                    ImageURL = "HarrogateStill.jpg"
                 },
 
                 new Product
@@ -833,7 +833,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 2.40m,
                     IsActive = true,
-                    //ImageURL = "HarrogateSparkling.jpg"
+                    ImageURL = "HarrogateSparkling.jpg"
                 },
 
                 new Product
@@ -843,7 +843,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 2.60m,
                     IsActive = true,
-                    //ImageURL = "DietCoke.jpg"
+                    ImageURL = "DietCoke.jpg"
                 },
 
                 new Product
@@ -853,7 +853,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 2.60m,
                     IsActive = true,
-                    //ImageURL = "CocaCola.jpg"
+                    ImageURL = "CocaCola.jpg"
                 },
 
                 new Product
@@ -863,7 +863,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 2.60m,
                     IsActive = true,
-                    //ImageURL = "FeverTreeIndian.jpg"
+                    ImageURL = "FeverTreeIndian.jpg"
                 },
 
                 new Product
@@ -873,7 +873,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 2.70m,
                     IsActive = true,
-                    //ImageURL = "Americano.jpg"
+                    ImageURL = "Americano.jpg"
                 },
 
                 new Product
@@ -883,7 +883,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 3.20m,
                     IsActive = true,
-                   // ImageURL = "Latte.jpg"
+                    ImageURL = "Latte.jpg"
                 },
 
                 new Product
@@ -893,7 +893,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 3.20m,
                     IsActive = true,
-                   // ImageURL = "Cappacino.jpg"
+                    ImageURL = "Cappacino.jpg"
                 },
 
                 new Product
@@ -903,7 +903,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 3.40m,
                     IsActive = true,
-                   // ImageURL = "Mocha.jpg"
+                    ImageURL = "Mocha.jpg"
                 },
 
                 new Product
@@ -913,7 +913,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 2.40m,
                     IsActive = true,
-                   // ImageURL = "EnglishBreakfastTea.jpg"
+                    ImageURL = "EnglishBreakfastTea.jpg"
                 },
 
                 new Product
@@ -923,7 +923,7 @@ namespace Snack_Shack.Data
                     Description = "",
                     ProductPrice = 2.40m,
                     IsActive = true,
-                    //ImageURL = "PukkaEarlyGrey.jpg"
+                    ImageURL = "PukkaEarlyGrey.jpg"
                 },
 
             };
