@@ -9,6 +9,8 @@ using Snack_Shack.Data;
 using Snack_Shack.Models;
 
 // Isabelle & Kayley
+
+// ToDo: Add authorise to all controllers bar homecontroller
 namespace Snack_Shack.Controllers
 {
     public class DrinksController : Controller
