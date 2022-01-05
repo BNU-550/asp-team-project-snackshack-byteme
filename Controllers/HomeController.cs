@@ -28,12 +28,20 @@ namespace Snack_Shack.Controllers
             return View();
         }
 
-        // GET: Foods
+        // GET: Drinks
+        public async Task<IActionResult> Drinks()
+        {
+            var drinks = _context.Drinks.Include(f => f.Product);
+            return View(await drinks.ToListAsync());
+        }
+
+        // GET: Food
         public async Task<IActionResult> Food()
         {
-            var applicationDbContext = _context.Food.Include(f => f.Product);
-            return View(await applicationDbContext.ToListAsync());
+            var food = _context.Food.Include(f => f.Product);
+            return View(await food.ToListAsync());
         }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

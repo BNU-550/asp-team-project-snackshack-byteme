@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Snack_Shack.Models.Food>
+@using Snack_Shack.Models
+@using Snack_Shack.Data
+
+
+@{
+    ViewData["Title"] = "Food Menu";
+    int columnNo = 0;
+
+    string filter = (string)ViewData["Food"];
+}
+<header class="jumbotron">
+    <h1>Food Menu</h1>
+</header>
+
+<section>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            if (columnNo > 0 && columnNo % 3 == 0)
+            {
+            @:</div><div class="row">
+            }
+
+            <div class="col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Product.Name</h5>
+                        <p class="card-text">@item.Product.Description</p>
+                        <a href="#" class="btn btn-primary">View more</a>
+                    </div>
+                </div>
+            </div>
+            columnNo++;
+        }
+    </div>
+</section>
