@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Snack_Shack.Data;
 using Snack_Shack.Models;
@@ -19,11 +17,67 @@ namespace Snack_Shack.Controllers
             _context = context;
         }
 
+
+
+        // ADDED FILTERING 
         // GET: Products
-        public async Task<IActionResult> Index()
+        
+        public async Task<IActionResult> Index(
+       string sortOrder,
+       string currentFilter,
+       string searchString,
+       Nullable<int> pageNumber)
         {
-            return View(await _context.Products.ToListAsync());
+            ViewData["CurrentSort"] = sortOrder;
+            ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewData["PriceSortParm"] = sortOrder == "Price" ? "price_desc" : "Price";
+            ViewData["CurrentFilter"] = searchString;
+
+            // Restart page numbering at 1 if searching
+            if (searchString != null)
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
+            var products = from p in _context.Products
+                           select p;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                products = products.Where(p => p.Name.Contains(searchString)
+                                       || p.Name.Contains(searchString));
+            }
+
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    products = products.OrderByDescending(p => p.Name);
+                    break;
+
+                case "Price":
+                    products = products.OrderBy(p => p.ProductPrice);
+                    break;
+                case "price_desc":
+                    products = products.OrderByDescending(p => p.ProductPrice);
+                    break;
+
+                default:
+                    products = products.OrderBy(p => p.Name);
+                    break;
+            }
+
+            int pageSize = 4;
+
+            return View(await PaginatedList<Product>.CreateAsync(
+                products.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
+        
+
+
 
         // GET: Products/Details/5
         public async Task<IActionResult> Details(int? id)
