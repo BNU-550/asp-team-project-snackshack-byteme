@@ -32,8 +32,6 @@
                         <p id="product-summary" class="card-text">@item.Product.Description</p>
                         <a asp-controller="Products/Description" asp-action="Description"
                            class="btn btn-primary">View more</a>
-
-                        @*asp-controller="Home" asp-action="Food"*@
                     </div>
                 </div>
             </div>
@@ -42,51 +40,4 @@
     </div>
 </section>
 
-
-@*<section>
-    <div class="row">
-
-        @foreach (var item in Model)
-        {
-            bool isAvailable = false;
-
-            if (String.IsNullOrEmpty(filter))
-            {
-                isAvailable = true;
-            }
-
-            if (item.Product != null && !isAvailable)
-            {
-                foreach (Product foodcategory in item.FoodCategory)
-                {
-                    if (foodcategory.FoodID.StartsWith(filter))
-                    {
-                        isAvailable = true;
-                    }
-                }
-            }
-
-            if (isAvailable)
-            {
-                if (columnNo > 0 && columnNo % 3 == 0)
-                {
-                @:</div><div class="row">
-                }
-
-                <div class="col-lg-4">
-                    <div class="card" style="width: 18rem;">
-                        <img src="/images/@item.Product.ImageURL" class="card-img-top"
-                             height=275 width=200 alt="ImageURL">
-                        <div class="card-body">
-                            <h5 class="card-title">@item.Product.Name</h5>
-                            <p id="product-summary" class="card-text">@item.Product.Description</p>
-                            <a href="#" class="btn btn-primary">View more</a>
-                        </div>
-                    </div>
-                </div>
-                columnNo++;
-            }
-        }
-    </div>
-</section>*@
 
