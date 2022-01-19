@@ -70,7 +70,7 @@ namespace Snack_Shack.Controllers
                     break;
             }
 
-            int pageSize = 4;
+            int pageSize = 6;
 
             return View(await PaginatedList<Product>.CreateAsync(
                 products.AsNoTracking(), pageNumber ?? 1, pageSize));

@@ -11,11 +11,15 @@
     ViewData["Title"] = "Products";
 }
 
-<h1>Product Page</h1>
+<h1>
+    Product Page
+</h1>
+
 
 <h3>
     <a class="btn btn-success" asp-action="Create">Add new product</a>
 </h3>
+<br />
 <br />
 
 <form asp-action="Index" method="get">
@@ -23,7 +27,7 @@
         <p>
             Find by name: <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" />
             <input type="submit" value="Search" class="btn btn-success" />
-            <a class="btn btn-primary" asp-action="Index">Back to Full List</a>
+            <a class="btn btn-primary" asp-action="Index"> Back to list</a>
         </p>
     </div>
 </form>

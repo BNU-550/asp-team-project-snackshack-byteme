@@ -54,8 +54,10 @@
             <p>
                 &copy; 2021 - Snack Shack 
             </p>
-         <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="StaffLayout">Staff Portal</a>
-
+            <p>
+                @*ToDo: Should this not be linked to Staff/Index and not StaffLayout?*@
+                <a class="nav-link text-dark" asp-area="" asp-controller="Staff" asp-action="Index">Staff Portal</a>
+            </p>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
