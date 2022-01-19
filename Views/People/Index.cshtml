@@ -24,12 +24,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.MobileNumber)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.IsMinor)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.IsCustomer)
-            </th>
+            </th>*@
             <th></th>
         </tr>
     </thead>
@@ -48,12 +48,12 @@
             <td>
                 @Html.DisplayFor(modelItem => item.MobileNumber)
             </td>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.IsMinor)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IsCustomer)
-            </td>
+            </td>*@
             <td>
                 <a asp-action="Edit" asp-route-id="@item.PersonID">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.PersonID">Details</a> |

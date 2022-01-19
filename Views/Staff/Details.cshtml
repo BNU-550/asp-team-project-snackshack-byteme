@@ -6,6 +6,7 @@
 
 @*  /// Created Kayley Syrett (17/12/2021)
     /// Modified by Kayley Syrett (03/01/22)
+    /// Modified by Isabelle Thorpe (19/01/22)
     /// </summary>
     /// This view displays the staff details.
 *@
@@ -55,6 +56,7 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.PersonID">Edit Personal Details</a>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" class="btn btn-success" asp-route-id="@Model.PersonID">Edit Personal Details</a>
+    <br />
+    <a asp-action="Index" class="btn btn-success" >Back to List</a>
 </div>
