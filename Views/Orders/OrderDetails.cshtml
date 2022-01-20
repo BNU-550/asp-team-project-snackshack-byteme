@@ -1,0 +1,46 @@
+﻿@*Add order details, order items, Feedback*@
+
+@model Snack_Shack.Models.Order
+
+
+@{
+    ViewData["Title"] = "OrderDetails";
+}
+
+<h1>Order Details</h1>
+
+<div class="card-deck text-center  mx-auto ">
+    <div class="card-group">
+        <div class="card border-primary mb-3" style="max-width: 25rem;">
+            <div class="card-header">Order Details</div>
+            <div class="card-body text-primary">
+                <h5 class="card-title">
+                    Table No. @Html.DisplayFor(model => model.TableNo) |
+                    Guest: @Html.DisplayFor(model => model.Person.FirstName)
+                    <br />
+                    @Html.DisplayFor(model => model.OrderID)
+                </h5>
+                <p class="card-text">
+
+                        <br />
+
+                        Taken by:  @Html.DisplayFor(model => model.StaffName)
+                    <br />
+                        Order Date: @Html.DisplayFor(model => model.OrderDate)
+
+                </p>
+            </div>
+        </div>
+        <div class="card border-success mb-3" style="max-width: 25rem;">
+            <div class="card-header">Feedback</div>
+            <div class="card-body text-success">
+                <h5 class="card-title">
+                    @Html.DisplayFor(model => model.Feedback.FeedbackMessage)
+                </h5>
+                <p class="card-text">
+                    Review Date: @Html.DisplayFor(model => model.Feedback.CustomerReviewDate)
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

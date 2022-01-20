@@ -46,6 +46,27 @@ namespace Snack_Shack.Controllers
             return View(order);
         }
 
+
+        public async Task<IActionResult> OrderDetails(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var order = await _context.Orders
+                .Include(o => o.Person)
+                .Include(o => o.Feedback)
+                .Include (o => o.OrderItems)
+                .FirstOrDefaultAsync(m => m.OrderID == id);
+            if (order == null)
+            {
+                return NotFound();
+            }
+
+            return View(order);
+        }
+
         // GET: Orders/Create
         public IActionResult Create()
         {

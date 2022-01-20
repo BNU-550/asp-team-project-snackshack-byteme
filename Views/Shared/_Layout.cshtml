@@ -35,7 +35,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Contact" asp-action="Index">Contact Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="">My Account</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">My Account</a>
                         </li>
                     </ul>
 
@@ -60,10 +60,9 @@
         <div class="container">
             <p>
                 &copy; 2021 - Snack Shack
-            </p>
-            <p>
+                <br />
                 @*ToDo: Should this not be linked to Staff/Index and not StaffLayout?*@
-                <a class="nav-link text-dark" asp-area="" asp-controller="Staff" asp-action="Index">Staff Portal</a>
+                <a class="btn btn-outline-primary" asp-area="" asp-controller="Staff" asp-action="Index">Staff Portal</a>
             </p>
         </div>
     </footer>

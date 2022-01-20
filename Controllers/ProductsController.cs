@@ -18,11 +18,10 @@ namespace Snack_Shack.Controllers
         }
 
 
-
         // ADDED FILTERING 
         // GET: Products
         
-        public async Task<IActionResult> Index(
+       public async Task<IActionResult> Index(
        string sortOrder,
        string currentFilter,
        string searchString,

@@ -42,6 +42,45 @@ namespace Snack_Shack.Controllers
             return View(await food.ToListAsync());
         }
 
+        // GET: Foods/Details/5
+        public async Task<IActionResult> FoodDetails(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var food = await _context.Food
+                .Include(f => f.Product)
+                .FirstOrDefaultAsync(m => m.FoodID == id);
+            if (food == null)
+            {
+                return NotFound();
+            }
+
+            return View(food);
+        }
+
+
+        // GET: People/Details/5
+        public async Task<IActionResult> MyAccount()
+        {
+            //ToDo: Need to confirm staff identity before accessing person details
+
+            string name = User.Identity.Name;
+
+
+            var person = await _context.People
+                .FirstOrDefaultAsync(m => m.EmailAddress == name);
+            if (person == null)
+            {
+                return NotFound();
+            }
+
+            return View(person);
+        }
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

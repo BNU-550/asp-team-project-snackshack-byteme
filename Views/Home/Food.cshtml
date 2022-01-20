@@ -4,7 +4,7 @@
 
 
 @{
-    ViewData["Title"] = "Food Menu";
+    ViewData["Title"] = "FoodMenu";
     int columnNo = 0;
 
     string filter = (string)ViewData["Food"];
@@ -24,14 +24,24 @@
             }
 
             <div class="col-lg-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="/images/@item.Product.ImageURL" class="card-img-top"
-                         height=275 width=200 alt="ImageURL">
+                <div class="card-deck" style="width: 18rem;">
+
+                    <a asp-action="FoodDetails" asp-route-id="@item.FoodID"
+                       class="btn bnt-default card-img-top">
+                        <img src="/images/@item.Product.ImageURL" height=250 width=250 alt="ImageURL" />
+                    </a>
+
                     <div class="card-body">
                         <h5 class="card-title">@item.Product.Name</h5>
-                        <p id="product-summary" class="card-text">@item.Product.Description</p>
-                        <a asp-controller="Products/Description" asp-action="Description"
-                           class="btn btn-primary">View more</a>
+
+                        <p id="product-summary" class="font-weight-bolder">
+                            £@item.Product.ProductPrice.ToString("0.00") |
+
+                            <a asp-controller="Food" asp-action="Details"
+                               class="btn btn-success">
+                                Add to Order
+                            </a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -39,5 +49,7 @@
         }
     </div>
 </section>
+
+
 
 

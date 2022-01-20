@@ -1,0 +1,39 @@
+﻿@using Snack_Shack.Models
+@model Person
+
+<div class="card-body">
+    <h5 class="card-title">Personal Details</h5>
+    <hr />
+    <div class="card-text">
+        <strong>
+            @Html.DisplayNameFor(model => model.FirstName) -
+        </strong>
+        <span>
+            @Html.DisplayFor(model => model.FirstName)
+        </span><br />
+        <strong>
+            @Html.DisplayNameFor(model => model.LastName) -
+        </strong>
+        <span>
+            @Html.DisplayFor(model => model.LastName)
+        </span><br />
+        <strong>
+            Email Address -
+        </strong>
+        <span>
+            @Html.DisplayFor(model => model.EmailAddress)
+        </span><br />
+        <strong>
+            Contact Number -
+        </strong>
+        <span>
+            @Html.DisplayFor(model => model.MobileNumber)
+        </span><br />
+        <strong>
+            Over 18 -
+        </strong>
+        <span>
+            @Html.DisplayFor(model => model.IsMinor)
+        </span><br />
+    </div>
+</div>

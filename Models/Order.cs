@@ -54,6 +54,8 @@ namespace Snack_Shack.Models
         public virtual Payment Payment { get; set; }
 
         public virtual ICollection<OrderItem> OrderItems { get; set; }
+
+        public virtual Feedback Feedback { get;  set; }
     }
 }
 
