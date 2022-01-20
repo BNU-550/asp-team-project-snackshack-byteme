@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Snack_Shack.Data;
@@ -61,6 +62,23 @@ namespace Snack_Shack.Controllers
             return View(food);
         }
 
+        // ToDo: May need other create
+        // POST: Feedbacks/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("FeedbackID,OrderID,FeedbackMessage,CustomerReviewDate")] Feedback feedback)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(feedback);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            ViewData["OrderID"] = new SelectList(_context.Orders, "OrderID", "OrderID", feedback.OrderID);
+            return View(feedback);
+        }
 
         // GET: People/Details/5
         public async Task<IActionResult> MyAccount()
