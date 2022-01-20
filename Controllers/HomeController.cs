@@ -29,6 +29,13 @@ namespace Snack_Shack.Controllers
             return View();
         }
 
+
+        public IActionResult ContactUs()
+        {
+            return View();
+        }
+
+
         // GET: Drinks
         public async Task<IActionResult> Drinks()
         {
