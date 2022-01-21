@@ -50,6 +50,19 @@ namespace Snack_Shack.Controllers
             return View(await food.ToListAsync());
         }
 
+        // GET: FoodCatergories
+        public async Task<IActionResult> FoodCategory()
+        {
+            var applicationDbContext = _context.Food.Include(f => f.FoodCategory);
+            return View(await applicationDbContext.ToListAsync());
+        }
+
+        public IActionResult Starters()
+        {
+            return View();
+        }
+
+
         // GET: Foods/Details/5
         public async Task<IActionResult> FoodDetails(int? id)
         {
@@ -90,7 +103,6 @@ namespace Snack_Shack.Controllers
         // GET: People/Details/5
         public async Task<IActionResult> MyAccount()
         {
-            //ToDo: Need to confirm staff identity before accessing person details
 
             string name = User.Identity.Name;
 

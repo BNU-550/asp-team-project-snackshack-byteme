@@ -1,42 +1,44 @@
-﻿@*Add order details, order items, Feedback*@
-
+﻿
 @model Snack_Shack.Models.Order
 
 @{
     ViewData["Title"] = "OrderDetails";
 }
 
-<h1>Order Details</h1>
+<h2>Order Details</h2>
+<br />
 <br />
 
-
-@*<div class="row">
-    <div class="col-sm-6">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Order #@Html.DisplayFor(model => model.OrderID)</h5>
-                <p class="card-text">*@
-
-<h2>
+<h3>
     Table No. @Html.DisplayFor(model => model.TableNo) |
-    Guest: @Html.DisplayFor(model => model.Person.FirstName)
-</h2>
-<br />
+    Guest: @Html.DisplayFor(model => model.Person.FirstName) |
+    OrderNo: @Html.DisplayFor(model => model.OrderID)
+</h3>
+<p>
+    Taken by:  @Html.DisplayFor(model => model.StaffName)
+    <br />
+    Order Date: @Html.DisplayFor(model => model.OrderDate)
+</p>
 <br />
 
 @*ToDo: Add Product Name and OrderID*@
 <div class="container">
     <div class="row">
-        <div class="col-2">
-            <b>Product ID</b>
+        <div class="col-1 bg-success text-white">
+            <br /><br />
+            <b>Product</b>
             <br />
             <br />
             @foreach (var item in Model.OrderItems)
             {
-                @item.ProductID.ToString("")<br />
+                @item.ProductID<br />
             }
+            <br />
+            <br />
+            <br />
         </div>
-        <div class="col-2">
+        <div class="col-1 bg-success text-white">
+            <br /><br />
             <b>Price</b>
             <br />
             <br />
@@ -45,43 +47,48 @@
                 @item.UnitPrice.ToString("£0.00");<br />
             }
         </div>
-        <div class="col-2">
+        <div class="col-1 bg-success text-white">
+            <br /><br />
             <b>Quantity</b>
             <br />
             <br />
             @foreach (var item in Model.OrderItems)
             {
-                @item.Quantity.ToString("0");<br />
+                @item.Quantity.ToString("");<br />
             }
         </div>
-        <div class="col-2">
-            <b>Total Price</b>
+        <div class="col-1 bg-success text-white">
+            <br /><br />
+            <b>Subtotal</b>
             <br />
             <br />
             @foreach (var item in Model.OrderItems)
             {
                 @item.TotalPrice.ToString("£0.00");<br />
             }
-
-
-
         </div>
+
+        @*// ToDo: Add Total price*@
+
+        <div class=" col-2"></div>
         <div class="col-4">
-            <h4> @Html.DisplayFor(model => model.Feedback.FeedbackMessage)</h4>
+            <b>Feedback</b>
             <br />
-            <h5>Review Date: @Html.DisplayFor(model => model.Feedback.CustomerReviewDate)</h5>
+            <br />
+            <h5><i>"@Html.DisplayFor(model => model.Feedback.FeedbackMessage)"</i></h5>
+            <br />
+            <p>
+                Review Date: @Html.DisplayFor(model => model.Feedback.CustomerReviewDate)
+                <br />
+                <br />
+                Reivew by: @Html.DisplayFor(model => model.Person.FirstName)
+            </p>
         </div>
     </div>
 </div>
 
 
 
-<h4>
-    <br />
-    Taken by:  @Html.DisplayFor(model => model.StaffName)
-    <br />
-    Order Date: @Html.DisplayFor(model => model.OrderDate)
-</h4>
 
 
 

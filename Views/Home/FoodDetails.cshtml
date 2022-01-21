@@ -4,33 +4,28 @@
     ViewData["Title"] = "FoodDetails";
     string filter = (string)ViewData["Food"];
 }
+<br />
 
-<h1>Details</h1>
-
-
-<div class="card-deck text-center">
-
-        <div class="card-img-top text-center text-white bg-danger mb-3">
-            <img src="/images/@Model.Product.ImageURL" height=300 width=300 alt="ImageURL" class="" />
-        </div>
-        <div class="card-body text-center">
-            <h5 class="card-title card-body text-center text-white bg-danger mb-3">@Html.DisplayFor(model => model.Product.Name)</h5>
-            <p class="card-text card-body text-center text-white bg-danger mb-3">@Html.DisplayFor(model => model.Product.Description)</p>
-        </div>
-        <div class="card-footer text-center text-white bg-danger mb-3">
-            <small class="text-muted text-center">
-                Calories: @Html.DisplayFor(model => model.Calories)
-                
-                Contains Nuts: @Html.DisplayFor(model => model.ContainsNuts)
-
-                Contains Gluten: @Html.DisplayFor(model => model.ContainsGluten)
-
-                Vegetarian: @Html.DisplayFor(model => model.IsVegetarian)
-
-                Vegan: @Html.DisplayFor(model => model.IsVegan)
-            </small>
+<div class="container page-hero d-flex align-items-center justify-content-center card border-0">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card text-center" style="width: 40rem;">
+                <card-img-top>
+                    <img src="/images/@Model.Product.ImageURL" height=250 width=250 alt="ImageURL" />
+                    <div class="card-body">
+                        <h5 class="card-title page-hero d-flex align-items-center justify-content-center">@Html.DisplayFor(model => model.Product.Name)</h5>
+                        <p class="card-text page-hero d-flex align-items-center justify-content-center">@Html.DisplayFor(model => model.Product.Description)</p>
+                    </div>
+                    <ul class="list-group list-group-flush page-hero d-flex align-items-center justify-content-center">
+                        <li class="list-group-item">Calories: @Html.DisplayFor(model => model.Calories)</li>
+                        <li class="list-group-item">Contains Nuts: @Html.DisplayFor(c => c.ContainsNuts)</li>
+                        <li class="list-group-item">Contains Gluten: @Html.DisplayFor(c => c.ContainsGluten)</li>
+                        <li class="list-group-item">Suitable for Vegetarians: @Html.DisplayFor(c => c.IsVegetarian)</li>
+                        <li class="list-group-item">Suitable for Vegans: @Html.DisplayFor(c => c.IsVegan)</li>
+                    </ul>
+            </div>
         </div>
     </div>
-
+</div>
 
 

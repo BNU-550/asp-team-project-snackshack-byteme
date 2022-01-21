@@ -49,6 +49,8 @@ namespace Snack_Shack.Models
         [DisplayName("Order Time Stamp"), DataType(DataType.Date)]
         public DateTime OrderDate { get; set; }
 
+        // Calculated property 
+
         // Navigation properites
         public virtual Person Person { get; set; }
 

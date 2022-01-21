@@ -46,7 +46,6 @@ namespace Snack_Shack.Controllers
             return View(order);
         }
 
-
         public async Task<IActionResult> OrderDetails(int? id)
         {
             if (id == null)

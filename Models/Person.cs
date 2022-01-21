@@ -74,12 +74,5 @@ namespace Snack_Shack.Models
                 return LastName + (" ") + FirstName;
             }
         }
-
-        // public ICollection<Payment> Cards { get; set; }
     }
-
-    // Need to fix IsCustomer
-    // Expression for phone number and email?
-    // Navigation property?
-    // ToDo:Add IsStaff
 }

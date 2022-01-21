@@ -37,6 +37,8 @@ namespace Snack_Shack.Models
         /// 
         /// Does this need to be nullable?
         /// </summary>
+        /// 
+        [UIHint("_myTemplate")]
         [DisplayName("Nut Allergy")]
 
         public  bool ContainsNuts { get; set; }
@@ -48,6 +50,8 @@ namespace Snack_Shack.Models
         /// 
         /// Does this need to be nullable?
         /// </summary>
+        /// 
+        [UIHint("_myTemplate")]
         [DisplayName("Gluten Allergy")]
 
         public bool ContainsGluten { get; set; }
@@ -59,6 +63,8 @@ namespace Snack_Shack.Models
         /// 
         /// Does this need to be nullable?
         /// </summary>
+        /// 
+        [UIHint("_myTemplate")]
         [DisplayName("Vegetarian")]
 
         public bool IsVegetarian { get; set; }
@@ -70,19 +76,13 @@ namespace Snack_Shack.Models
         /// 
         /// Does this need to be nullable?
         /// </summary>
-        [DisplayName("Vegetarian")]
+        /// 
+        [UIHint("_myTemplate")]
+        [DisplayName("Vegan")]
 
         public bool IsVegan { get; set; }
 
         public int ProductID { get; set; }
         public virtual Product Product { get; set; }
     }
-
-    
-
-
-    // ToDo: Add Inheritance from product to ERD / Class diagram
-    // ToDo: Update ERD to remove extra categories. but keep food cat
-
-    // Seperate class for Allergies? Enum?
 }

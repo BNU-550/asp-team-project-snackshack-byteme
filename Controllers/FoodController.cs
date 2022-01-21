@@ -26,6 +26,7 @@ namespace Snack_Shack.Controllers
             return View(await applicationDbContext.ToListAsync());
         }
 
+
         // GET: Foods/Details/5
         public async Task<IActionResult> Details(int? id)
         {

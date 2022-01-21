@@ -4,14 +4,14 @@
 
 
 @{
-    ViewData["Title"] = "FoodMenu";
+    ViewData["Title"] = "Starters";
     int columnNo = 0;
 
-    string filter = (string)ViewData["Food"];
+    string filter = (string)ViewData["Starters"];
 }
 
 <header class="jumbotron">
-    <h1>Food Menu</h1>
+    <h1>Starters</h1>
 </header>
 
 <div class="dropdown">
@@ -19,21 +19,23 @@
         Dropdown button
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="Starters">Starters</a>
-        <a asp-controller="Home" asp-action="Starters"></a>
+        <a class="dropdown-item" asp-controller="Home" asp-action="Starters">Starters</a>
+
         <a class="dropdown-item" href="#">Another action</a>
         <a class="dropdown-item" href="#">Something else here</a>
     </div>
 </div>
 
+
 <section>
     <div class="row">
-        @foreach (var item in Model)
+        @foreach (var @item in Model)
         {
-            if (columnNo > 0 && columnNo % 3 == 0)
+            if (columnNo > 0 && columnNo % 3 == 0) 
             {
             @:</div><div class="row">
             }
+
             <div class="col-lg-4">
                 <div class="card-deck" style="width: 18rem;">
 
@@ -41,10 +43,13 @@
                        class="btn bnt-default card-img-top">
                         <img src="/images/@item.Product.ImageURL" height=250 width=250 alt="ImageURL" />
                     </a>
+
                     <div class="card-body">
                         <h5 class="card-title">@item.Product.Name</h5>
+
                         <p id="product-summary" class="font-weight-bolder">
                             £@item.Product.ProductPrice.ToString("0.00") |
+
                             <a asp-controller="Food" asp-action="Details"
                                class="btn btn-success">
                                 Add to Order
@@ -53,11 +58,8 @@
                     </div>
                 </div>
             </div>
-            columnNo++;
+                columnNo++;
+            }
         }
     </div>
 </section>
-
-
-
-

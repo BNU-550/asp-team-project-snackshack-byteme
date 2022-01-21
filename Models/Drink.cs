@@ -40,12 +40,16 @@ namespace Snack_Shack.Models
         /// 
         /// // If true then need to add a percentage?
         /// </summary>
+        /// 
+        [UIHint("_myTemplate")]
         public bool ContainsAlcohol { get; set; }
 
         /// <summary>
         /// The amount in of alcohol (%) in
         /// a drink. Cannot be above 50.
         /// </summary>
+        /// 
+
         [DisplayName("ABV %"), Range(0,100)]
         public double AlcoholPercentage { get; set; }
         

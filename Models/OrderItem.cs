@@ -56,21 +56,10 @@ namespace Snack_Shack.Models
             }
         }
 
-        public int SumTotalPrice
-        {
-            get
-            {
-                return (int)(TotalPrice * Quantity);
-            }
-        }
-
 
 
         // Navigation properties
         public virtual Product Product { get; set; }
         public virtual Order Order { get; set; }
     }
-    // Does it need a primary key? Has been added.
-    // Would need to add that to the ERD if kept.
-    // ToDo: List of items
 }

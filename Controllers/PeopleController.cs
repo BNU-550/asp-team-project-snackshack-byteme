@@ -32,12 +32,8 @@ namespace Snack_Shack.Controllers
         // GET: People/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            //ToDo: Need to confirm staff identity before accessing person details
 
             string name = User.Identity.Name;
-
-
-            //ToDo: Need to add in query for access
             
             if (id == null)
             {

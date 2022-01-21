@@ -44,7 +44,5 @@ namespace Snack_Shack.Models
         Coffee,
         [Display(Name = "Tea")]
         Tea,
-
-        // ToDo: Delete repeated enum
     }
 }

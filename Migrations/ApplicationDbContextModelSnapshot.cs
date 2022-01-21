@@ -271,7 +271,8 @@ namespace Snack_Shack.Migrations
 
                     b.HasKey("FeedbackID");
 
-                    b.HasIndex("OrderID");
+                    b.HasIndex("OrderID")
+                        .IsUnique();
 
                     b.ToTable("Feedback");
                 });
@@ -357,6 +358,9 @@ namespace Snack_Shack.Migrations
 
                     b.Property<int>("ProductID")
                         .HasColumnType("int");
+
+                    b.Property<string>("ProductName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Quantity")
                         .HasMaxLength(6)
@@ -552,8 +556,8 @@ namespace Snack_Shack.Migrations
             modelBuilder.Entity("Snack_Shack.Models.Feedback", b =>
                 {
                     b.HasOne("Snack_Shack.Models.Order", "Order")
-                        .WithMany()
-                        .HasForeignKey("OrderID")
+                        .WithOne("Feedback")
+                        .HasForeignKey("Snack_Shack.Models.Feedback", "OrderID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -609,6 +613,8 @@ namespace Snack_Shack.Migrations
 
             modelBuilder.Entity("Snack_Shack.Models.Order", b =>
                 {
+                    b.Navigation("Feedback");
+
                     b.Navigation("OrderItems");
                 });
 
