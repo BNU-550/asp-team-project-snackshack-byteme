@@ -2,57 +2,87 @@
 
 @model Snack_Shack.Models.Order
 
-    @{
-        ViewData["Title"] = "OrderDetails";
-    }
+@{
+    ViewData["Title"] = "OrderDetails";
+}
 
-    <h1>Order Details</h1>
-    <br />
-    <br />
+<h1>Order Details</h1>
+<br />
 
+
+@*<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Order #@Html.DisplayFor(model => model.OrderID)</h5>
+                <p class="card-text">*@
+
+<h2>
+    Table No. @Html.DisplayFor(model => model.TableNo) |
+    Guest: @Html.DisplayFor(model => model.Person.FirstName)
+</h2>
+<br />
+<br />
+
+@*ToDo: Add Product Name and OrderID*@
+<div class="container">
     <div class="row">
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Order #@Html.DisplayFor(model => model.OrderID)</h5>
-                    <p class="card-text">
-                        Table No. @Html.DisplayFor(model => model.TableNo) |
-                        Guest: @Html.DisplayFor(model => model.Person.FirstName)
-                        <br />
-
-                        @foreach (var item in Model.OrderItems)
-                        {
-
-                                //@item.Product.Name
-
-                                @item.Quantity
-                            <br />
-                                @item.UnitPrice
-
-                                //@item.TotalPrice
-
-                        }
-
-                        Taken by:  @Html.DisplayFor(model => model.StaffName)
-                        <br />
-                        Order Date: @Html.DisplayFor(model => model.OrderDate)
-                    </p>
-                    <a href="#" class="btn btn-primary">Print Order</a>
-                </div>
-            </div>
+        <div class="col-2">
+            <b>Product ID</b>
+            <br />
+            <br />
+            @foreach (var item in Model.OrderItems)
+            {
+                @item.ProductID.ToString("")<br />
+            }
         </div>
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Feedback</h5>
-                    <p class="card-text">
-                        @Html.DisplayFor(model => model.Feedback.FeedbackMessage)
-                        <br />
-                        Review Date: @Html.DisplayFor(model => model.Feedback.CustomerReviewDate)
-                    </p>
-                    <a href="#" class="btn btn-primary">Print Feedback</a>
-                </div>
-            </div>
+        <div class="col-2">
+            <b>Price</b>
+            <br />
+            <br />
+            @foreach (var item in Model.OrderItems)
+            {
+                @item.UnitPrice.ToString("£0.00");<br />
+            }
+        </div>
+        <div class="col-2">
+            <b>Quantity</b>
+            <br />
+            <br />
+            @foreach (var item in Model.OrderItems)
+            {
+                @item.Quantity.ToString("0");<br />
+            }
+        </div>
+        <div class="col-2">
+            <b>Total Price</b>
+            <br />
+            <br />
+            @foreach (var item in Model.OrderItems)
+            {
+                @item.TotalPrice.ToString("£0.00");<br />
+            }
+
+
+
+        </div>
+        <div class="col-4">
+            <h4> @Html.DisplayFor(model => model.Feedback.FeedbackMessage)</h4>
+            <br />
+            <h5>Review Date: @Html.DisplayFor(model => model.Feedback.CustomerReviewDate)</h5>
         </div>
     </div>
+</div>
+
+
+
+<h4>
+    <br />
+    Taken by:  @Html.DisplayFor(model => model.StaffName)
+    <br />
+    Order Date: @Html.DisplayFor(model => model.OrderDate)
+</h4>
+
+
+
 

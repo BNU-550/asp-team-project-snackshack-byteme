@@ -2,6 +2,8 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+
 
 namespace Snack_Shack.Models
 {
@@ -26,7 +28,8 @@ namespace Snack_Shack.Models
         // Foreign keys
         public int OrderID { get; set; }
         public int ProductID { get; set; }
-
+        
+        public String ProductName { get; set; }
         
         /// <summary>
         /// The price of a single item. 
@@ -52,6 +55,16 @@ namespace Snack_Shack.Models
                 return (int)(Quantity * UnitPrice);
             }
         }
+
+        public int SumTotalPrice
+        {
+            get
+            {
+                return (int)(TotalPrice * Quantity);
+            }
+        }
+
+
 
         // Navigation properties
         public virtual Product Product { get; set; }
