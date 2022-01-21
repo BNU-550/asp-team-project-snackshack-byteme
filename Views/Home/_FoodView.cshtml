@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Snack_Shack.Models.Food>
+@using Snack_Shack.Models
+@using Snack_Shack.Data
+
+@{
+    int columnNo = 0;
+}
+
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown button
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="Starters">Starters</a>
+        <a asp-controller="Home" asp-action="Starters"></a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+</div>
+
+<section>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            if (columnNo > 0 && columnNo % 3 == 0)
+            {
+            @:</div><div class="row">
+            }
+            <div class="col-lg-4">
+                <div class="card-deck text-center" style="width: 30rem;">
+                    <a asp-action="FoodDetails" asp-route-id="@item.FoodID"
+                       class="btn bnt-default card-img-top">
+                        <img src="/images/@item.Product.ImageURL" height=250 width=250 alt="ImageURL" />
+                    </a>
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center">@item.Product.Name / £@item.Product.ProductPrice.ToString("0.00")</h5>
+                        <br />
+                        <a asp-controller="Food" asp-action="Details"
+                           class="btn btn text-center">
+                            Add to Order
+                        </a>
+                    </div>
+                </div>
+            </div>
+            columnNo++;
+        }
+    </div>
+</section>

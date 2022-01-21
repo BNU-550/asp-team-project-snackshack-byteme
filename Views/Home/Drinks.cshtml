@@ -4,21 +4,27 @@
 
 
 @{
-    ViewData["Title"] = "Drink Menu";
+    ViewData["Title"] = "DrinkMenu";
     int columnNo = 0;
 
     string filter = (string)ViewData["Drink"];
 }
-<header class="jumbotron">
+
+<header class="jumbotron text-center">
     <h1>Drinks Menu</h1>
 </header>
 
-@*
-    CSS to shorten the descriptions in the cards. Users will need to open
-    the game open fully (viewing its details page) to see the full
-    description.
-    Reference: https://css-tricks.com/snippets/css/truncate-string-with-ellipsis/
-*@
+@*<div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="Starters">Starters</a>
+            <a asp-controller="Home" asp-action="Starters"></a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+    </div>*@
 
 <section>
     <div class="row">
@@ -28,15 +34,19 @@
             {
             @:</div><div class="row">
             }
-
             <div class="col-lg-4">
-                <div class="card-deck" style="width: 18rem;">
-                    <img src="/images/@item.Product.ImageURL" class="card-img-top"
-                         height=275 width=200 alt="ImageURL">
-                    <div class="card-body">
-                        <h5 class="card-title">@item.Product.Name</h5>
-                        <p id="product-summary" class="card-text">@item.DrinkBrand</p>
-                        <a href="#" class="btn btn-primary">View more</a>
+                <div class="card-deck text-center" style="width: 30rem;">
+                    <a asp-action="DrinksDetails" asp-route-id="@item.DrinkID"
+                       class="btn bnt-default card-img-top">
+                        <img src="/images/@item.Product.ImageURL" height=250 width=250 alt="ImageURL" />
+                    </a>
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center">@item.Product.Name / £@item.Product.ProductPrice.ToString("0.00")</h5>
+                        <br />
+                        <a asp-controller="Drinks" asp-action="Details"
+                           class="btn btn-success text-center ">
+                            Add to Order
+                        </a>
                     </div>
                 </div>
             </div>

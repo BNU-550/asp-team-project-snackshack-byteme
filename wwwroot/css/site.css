@@ -7,11 +7,16 @@ a.navbar-brand {
   word-break: break-all;
 }
 
+
 /* Provide sufficient contrast against white background */
 a {
   color: #0366d6;
 }
 
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;

@@ -75,6 +75,8 @@ namespace Snack_Shack.Controllers
         // GET: People/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            ReturnPage.Name = ReturnPage.PeopleIndex;
+
             if (id == null)
             {
                 return NotFound();

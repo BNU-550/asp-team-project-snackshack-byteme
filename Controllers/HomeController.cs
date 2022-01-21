@@ -51,15 +51,17 @@ namespace Snack_Shack.Controllers
         }
 
         // GET: FoodCatergories
-        public async Task<IActionResult> FoodCategory()
-        {
-            var applicationDbContext = _context.Food.Include(f => f.FoodCategory);
-            return View(await applicationDbContext.ToListAsync());
-        }
+        //public async Task<IActionResult> FoodCategory()
+        //{
+        //    var applicationDbContext = _context.Food.Include(f => f.FoodCategory);
+        //    return View(await applicationDbContext.ToListAsync());
+        //}
 
-        public IActionResult Starters()
+        public async Task<IActionResult> Starters()
         {
-            return View();
+
+            var food = _context.Food.Include(f => f.Product).Where(f => f.FoodCategory == FoodCategory.Starters);
+            return View(await food.ToListAsync());
         }
 
 
@@ -74,6 +76,25 @@ namespace Snack_Shack.Controllers
             var food = await _context.Food
                 .Include(f => f.Product)
                 .FirstOrDefaultAsync(m => m.FoodID == id);
+            if (food == null)
+            {
+                return NotFound();
+            }
+
+            return View(food);
+        }
+
+        // GET: Foods/Details/5
+        public async Task<IActionResult> DrinksDetails(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var food = await _context.Drinks
+                .Include(f => f.Product)
+                .FirstOrDefaultAsync(m => m.DrinkID == id);
             if (food == null)
             {
                 return NotFound();
@@ -103,7 +124,7 @@ namespace Snack_Shack.Controllers
         // GET: People/Details/5
         public async Task<IActionResult> MyAccount()
         {
-
+            ReturnPage.Name = ReturnPage.MyAccount;
             string name = User.Identity.Name;
 
 

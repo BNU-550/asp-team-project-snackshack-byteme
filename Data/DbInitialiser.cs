@@ -629,7 +629,7 @@ namespace Snack_Shack.Data
                     "a silky smooth finish",
                     ProductPrice = 5.20m,
                     IsActive = true,
-                    ImageURL = "wwwroot/uploads/BarefootMerlot.jpg"
+                    ImageURL = "BarefootMerlot.jpg"
                 },
 
                 new Product

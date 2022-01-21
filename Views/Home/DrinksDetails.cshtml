@@ -1,0 +1,28 @@
+﻿@model Snack_Shack.Models.Drink
+
+@{
+    ViewData["Title"] = "DrinksDetails";
+    string filter = (string)ViewData["Drink"];
+}
+<br />
+
+<div class="container page-hero d-flex align-items-center justify-content-center card border-0">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card text-center" style="width: 40rem;">
+                <card-img-top>
+                    <img src="/images/@Model.Product.ImageURL" height=250 width=250 alt="ImageURL" />
+                    <div class="card-body">
+                        <h5 class="card-title page-hero d-flex align-items-center justify-content-center">@Html.DisplayFor(model => model.Product.Name)</h5>
+                        <p class="card-text page-hero d-flex align-items-center justify-content-center">@Html.DisplayFor(model => model.Product.Description)</p>
+                    </div>
+                    <ul class="list-group list-group-flush page-hero d-flex align-items-center justify-content-center">
+                        <li class="list-group-item">Brand: @Html.DisplayFor(model => model.DrinkBrand)</li>
+                        <li class="list-group-item">ABV: @Html.DisplayFor(model => model.AlcoholPercentage)%</li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
