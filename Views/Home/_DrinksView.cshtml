@@ -6,6 +6,14 @@
 @{
     int columnNo = 0;
 }
+
+
+<style>
+    body {
+        background-color: #FFE8E8;
+    }
+</style>
+
 <div class="container">
     <div class="row text-center">
         <div class="dropdown">
@@ -38,40 +46,6 @@
 <br />
 <br />
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-
-<div class="container">
-        <div class="dropdown">
-            <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-light" data-target="#" href="#">
-                Menu <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
-                <li><a href="#">Option 1</a></li>
-
-
-                <li class="dropdown-submenu">
-                    <a tabindex="-1" href="#">Option 2</a>
-                    <ul class="dropdown-menu">
-                        <li><a tabindex="-1" href="#">Precise 1 </a></li>
-
-                        <li><a href="#">Precise 2</a></li>
-                        <li class="dropdown-submenu">
-                            <a href="#">More precise </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Precise 3</a></li>
-                                <li><a href="#">Precise 4</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-
-
 <section>
     <div class="row">
         @foreach (var item in Model)
@@ -81,16 +55,16 @@
             @:</div><div class="row">
             }
             <div class="col-lg-4">
-                <div class="card-deck text-center" style="width: 25rem;">
-                    <a asp-action="FoodDetails" asp-route-id="@item.DrinkID"
-                       class="btn bnt-default card-img-top">
-                        <img src="/images/@item.Product.ImageURL" height=250 width=250 alt="ImageURL" />
+                <div class="card-deck text-center" style="width: 20rem;">
+                    <a asp-action="DrinksDetails" asp-route-id="@item.DrinkID"
+                       class="btn bnt-default card-img-top ">
+                        <img src="/images/@item.Product.ImageURL" height=300 width=300 alt="ImageURL" style="border-radius: 10%" />
                     </a>
                     <div class="card-body text-center">
                         <h5 class="card-title text-center">@item.Product.Name / £@item.Product.ProductPrice.ToString("0.00")</h5>
                         <br />
-                        <a asp-controller="Food" asp-action="Details"
-                           class="btn btn-success text-center">
+                        <a asp-controller="Drinks" asp-action="Details"
+                           class="btn btn-success text-center" style="background-color: #FF5757; border:none;">
                             Add to Order
                         </a>
                     </div>
@@ -100,3 +74,4 @@
         }
     </div>
 </section>
+

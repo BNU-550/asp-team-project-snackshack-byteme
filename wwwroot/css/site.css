@@ -95,7 +95,7 @@ p#product-summary
 }
 
 
-
+/*
 .dropdown-submenu {
     position: relative;
 }
@@ -144,7 +144,7 @@ p#product-summary
             border-radius: 6px 0 6px 6px;
         }
 
-
+*/
 
 h1 {
     color: #FF5757;
@@ -153,6 +153,14 @@ h1 {
     font-family: 'Rubik Mono One';
 }
 
+h3 {
+    font-size: 200%;
+    font-family: 'Rubik Mono One';
+}
+
 .img {
     border-radius: 10%;
 }
+
+
+

@@ -6,7 +6,11 @@
     int columnNo = 0;
 }
 
-
+<style>
+    body {
+        background-color: #FFE8E8;
+    }
+</style>
 
 <div class="container">
     <div class="row text-center">
@@ -34,13 +38,9 @@
     </div>
 </div>
 
-<style>
-    body {
-        background-color: #FFE8E8;
-    }
-</style>
 <br />
 <br />
+
 <section>
     <div class="row">
         @foreach (var item in Model)
@@ -50,7 +50,7 @@
             @:</div><div class="row">
             }
             <div class="col-lg-4">
-                <div class="card-deck text-center" style="width: 20rem;" >
+                <div class="card-deck text-center" style="width: 20rem;">
                     <a asp-action="FoodDetails" asp-route-id="@item.FoodID"
                        class="btn bnt-default card-img-top ">
                         <img src="/images/@item.Product.ImageURL" height=300 width=300 alt="ImageURL" style="border-radius: 10%" />

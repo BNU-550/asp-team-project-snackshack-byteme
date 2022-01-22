@@ -179,12 +179,14 @@ namespace Snack_Shack.Controllers
             return View(feedback);
         }
 
+
+
+
         // GET: People/Details/5
         public async Task<IActionResult> MyAccount()
         {
             ReturnPage.Name = ReturnPage.MyAccount;
             string name = User.Identity.Name;
-
 
             var person = await _context.People
                 .FirstOrDefaultAsync(m => m.EmailAddress == name);
