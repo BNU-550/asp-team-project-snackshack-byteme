@@ -1,0 +1,102 @@
+﻿@model IEnumerable<Snack_Shack.Models.Drink>
+@using Snack_Shack.Models
+@using Snack_Shack.Data
+
+
+@{
+    int columnNo = 0;
+}
+<div class="container">
+    <div class="row text-center">
+        <div class="dropdown">
+            <button class="btn btn-light dropdown-toggle text-center" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Menu
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="Drinks">All</a>
+                <a asp-controller="Home" asp-action="Drinks"></a>
+
+                <a class="dropdown-item" href="Wines">Wines</a>
+                <a asp-controller="Home" asp-action="Wines"></a>
+
+                <a class="dropdown-item" href="Beers">Beers</a>
+                <a asp-controller="Home" asp-action="Beers"></a>
+
+                <a class="dropdown-item" href="Spirits">Spirits</a>
+                <a asp-controller="Home" asp-action="Spirits"></a>
+
+                <a class="dropdown-item" href="SoftDrinks">Soft Drinks</a>
+                <a asp-controller="Home" asp-action="SoftDrinks"></a>
+
+                <a class="dropdown-item" href="HotDrinks">Hot Drinks</a>
+                <a asp-controller="Home" asp-action="HotDrinks"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br />
+<br />
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<div class="container">
+        <div class="dropdown">
+            <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-light" data-target="#" href="#">
+                Menu <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                <li><a href="#">Option 1</a></li>
+
+
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Option 2</a>
+                    <ul class="dropdown-menu">
+                        <li><a tabindex="-1" href="#">Precise 1 </a></li>
+
+                        <li><a href="#">Precise 2</a></li>
+                        <li class="dropdown-submenu">
+                            <a href="#">More precise </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Precise 3</a></li>
+                                <li><a href="#">Precise 4</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+<section>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            if (columnNo > 0 && columnNo % 3 == 0)
+            {
+            @:</div><div class="row">
+            }
+            <div class="col-lg-4">
+                <div class="card-deck text-center" style="width: 25rem;">
+                    <a asp-action="FoodDetails" asp-route-id="@item.DrinkID"
+                       class="btn bnt-default card-img-top">
+                        <img src="/images/@item.Product.ImageURL" height=250 width=250 alt="ImageURL" />
+                    </a>
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center">@item.Product.Name / £@item.Product.ProductPrice.ToString("0.00")</h5>
+                        <br />
+                        <a asp-controller="Food" asp-action="Details"
+                           class="btn btn-success text-center">
+                            Add to Order
+                        </a>
+                    </div>
+                </div>
+            </div>
+            columnNo++;
+        }
+    </div>
+</section>

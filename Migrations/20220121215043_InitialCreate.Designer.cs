@@ -10,7 +10,7 @@ using Snack_Shack.Data;
 namespace Snack_Shack.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220121083745_InitialCreate")]
+    [Migration("20220121215043_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

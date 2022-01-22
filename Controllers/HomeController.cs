@@ -43,6 +43,44 @@ namespace Snack_Shack.Controllers
             return View(await drinks.ToListAsync());
         }
 
+        public async Task<IActionResult> Wines()
+        {
+
+            var drinks = _context.Drinks.Include(f => f.Product).Where(d => d.DrinkCategory == DrinkCategory.Wines);
+            return View(await drinks.ToListAsync());
+        }
+        public async Task<IActionResult> Beers()
+        {
+
+            var drinks = _context.Drinks.Include(f => f.Product).Where(d => d.DrinkCategory == DrinkCategory.Beers);
+            return View(await drinks.ToListAsync());
+        }
+
+        public async Task<IActionResult> Spirits()
+        {
+
+            var drinks = _context.Drinks.Include(f => f.Product).Where(d => d.DrinkCategory == DrinkCategory.Spirits);
+            return View(await drinks.ToListAsync());
+        }
+
+        public async Task<IActionResult> SoftDrinks()
+        {
+
+            var drinks = _context.Drinks.Include(f => f.Product).Where(d => d.DrinkCategory == DrinkCategory.SoftDrinks);
+            return View(await drinks.ToListAsync());
+        }
+
+        public async Task<IActionResult> HotDrinks()
+        {
+
+            var drinks = _context.Drinks.Include(f => f.Product).Where(d => d.DrinkCategory == DrinkCategory.HotDrinks);
+            return View(await drinks.ToListAsync());
+        }
+
+
+
+
+
         // GET: Food
         public async Task<IActionResult> Food()
         {
@@ -64,6 +102,26 @@ namespace Snack_Shack.Controllers
             return View(await food.ToListAsync());
         }
 
+        public async Task<IActionResult> Mains()
+        {
+
+            var food = _context.Food.Include(f => f.Product).Where(f => f.FoodCategory == FoodCategory.Mains);
+            return View(await food.ToListAsync());
+        }
+
+        public async Task<IActionResult> Desserts()
+        {
+
+            var food = _context.Food.Include(f => f.Product).Where(f => f.FoodCategory == FoodCategory.Desserts);
+            return View(await food.ToListAsync());
+        }
+
+        public async Task<IActionResult> Sides()
+        {
+
+            var food = _context.Food.Include(f => f.Product).Where(f => f.FoodCategory == FoodCategory.Sides);
+            return View(await food.ToListAsync());
+        }
 
         // GET: Foods/Details/5
         public async Task<IActionResult> FoodDetails(int? id)

@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Snack_Shack.Models.Drink>
+
+@{
+    ViewData["Title"] = "Beers";
+}
+
+<header class="jumbotron text-center">
+    <h1>Beers</h1>
+</header>
+
+
+<partial name="_DrinksView" model="@Model" />

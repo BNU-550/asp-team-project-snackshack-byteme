@@ -5,16 +5,15 @@
 
 @{
     ViewData["Title"] = "FoodMenu";
-    //int columnNo = 0;
 
     string filter = (string)ViewData["Food"];
 }
 
-<header class="jumbotron text-center">
+<br />
+<header class="menu-header">
     <h1>Food Menu</h1>
 </header>
-
-
+<br />
 
 <partial name="_FoodView" model="@Model"/>
 

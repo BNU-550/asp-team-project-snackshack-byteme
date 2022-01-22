@@ -348,7 +348,7 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 22,
                     Name = "Chicken Wings",
-                    Description = "Succulent chicken wings" +
+                    Description = "Succulent chicken wings " +
                     "smothered in a medium spicy homemade BBQ sauce",
                     ProductPrice = 4.20m,
                     IsActive = true,
@@ -359,7 +359,7 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 24,
                     Name = "Sharer Nachos",
-                    Description = "Crispy tortillas loaded with sour" +
+                    Description = "Crispy tortillas loaded with sour " +
                     "cream, guac, salsa, cheese and jalapeños",
                     ProductPrice = 8.40m,
                     IsActive = true,
@@ -370,7 +370,7 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 26,
                     Name = "Char-Grilled Shrimp",
-                    Description = "Our locally-caught shrimp" +
+                    Description = "Our locally-caught shrimp " +
                     "served with garlic oil dipping sauce",
                     ProductPrice = 7.10m,
                     IsActive = true,
@@ -391,7 +391,7 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 30,
                     Name = "Chicken Pops",
-                    Description = "8 deep friend chicken pieces" +
+                    Description = "8 deep friend chicken pieces " +
                     "served with homemade BBQ dipping sauce",
                     ProductPrice = 5.60m,
                     IsActive = true,
@@ -402,8 +402,8 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 32,
                     Name = "Zuckerburger",
-                    Description = "Tasty 8oz beef burger" +
-                    "with mayo, cheese, tomato, lettuce, and pickles." +
+                    Description = "Tasty 8oz beef burger " +
+                    "with mayo, cheese, tomato, lettuce, and pickles. " +
                     "Served with fries",
                     ProductPrice = 11.90m,
                     IsActive = true,
@@ -414,7 +414,7 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 34,
                     Name = "The Big Bad Burger",
-                    Description = "A double beef burger served" +
+                    Description = "A double beef burger served " +
                     "with burger sauce, cheese, bacon, egg, pickles",
                     ProductPrice = 12.20m,
                     IsActive = true,
@@ -425,7 +425,7 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 36,
                     Name = "Snack Shack Burger",
-                    Description = "Tender chicken" +
+                    Description = "Tender chicken " +
                     "breast with BBQ sauce, cheddar cheese, and bacon",
                     ProductPrice = 10.90m,
                     IsActive = true,
@@ -447,7 +447,7 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 40,
                     Name = "Plant Burger",
-                    Description = "Vegan Mayonnaise, Tofu patty" +
+                    Description = "Vegan Mayonnaise, Tofu patty " +
                     "with pickled red cabbage, and sweet chilli sauce ",
                     ProductPrice = 10.80m,
                     IsActive = true,
@@ -479,7 +479,7 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 46,
                     Name = "Halloumi Wrap",
-                    Description = "Rocket, grilled peppers, sweet chilli" +
+                    Description = "Rocket, grilled peppers, sweet chilli " +
                     "jam & tortilla bread",
                     ProductPrice = 5.90m,
                     IsActive = true,
@@ -489,8 +489,8 @@ namespace Snack_Shack.Data
                 new Product
                 {
                     //ProductID = 48,
-                    Name = "Ceaser Salad",
-                    Description = "Romaine lettuce, crunchy croutons," +
+                    Name = "Caeser Salad",
+                    Description = "Romaine lettuce, crunchy croutons, " +
                     "chicken, anchovies, and ceaser dressing ",
                     ProductPrice = 7.90m,
                     IsActive = true,
@@ -511,7 +511,7 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 52,
                     Name = "Chunky chips",
-                    Description = "Served with homemade" +
+                    Description = "Served with homemade " +
                     "BBQ sauce",
                     ProductPrice = 2.70m,
                     IsActive = true,
@@ -522,7 +522,7 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 54,
                     Name = "Onion rings",
-                    Description = "Served with homemade BBQ sauce",
+                    Description = "Served with homemade BBQ sauce ",
                     ProductPrice = 3.30m,
                     IsActive = true,
                     ImageURL = "OnionRings.jpg"
@@ -532,7 +532,7 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 56,
                     Name = "Homemade Slaw",
-                    Description = "Freshly made slaw with a" +
+                    Description = "Freshly made slaw with a " +
                     "creamy paprika twist",
                     ProductPrice = 3.20m,
                     IsActive = true,
@@ -544,7 +544,7 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 60,
                     Name = "Churros",
-                    Description = "Fresh Churros with" +
+                    Description = "Fresh Churros with " +
                     "melted chocolate dip",
                     ProductPrice = 5.20m,
                     IsActive = true,
@@ -555,7 +555,7 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 62,
                     Name = "Chocolate Brownie",
-                    Description = "Served warm with Cornish" +
+                    Description = "Served warm with Cornish " +
                     "vanilla ice cream",
                     ProductPrice = 5.50m,
                     IsActive = true,
@@ -566,7 +566,7 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 64,
                     Name = "Apple pie",
-                    Description = "Served with a big dollop" +
+                    Description = "Served with a big dollop " +
                     "of Cornish vanilla ice cream",
                     ProductPrice = 5.90m,
                     IsActive = true,
@@ -577,8 +577,8 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 66,
                     Name = "Waffles",
-                    Description = "Served with chocolate" +
-                    "ice cream, rasperries, fresh cream" +
+                    Description = "Served with chocolate " +
+                    "ice cream, rasperries, fresh cream " +
                     "and chocolate sauce",
                     ProductPrice = 6.10m,
                     IsActive = true,
@@ -590,8 +590,8 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 68,
                     Name = "Pinot Grigio",
-                    Description = "Crisp and fruity with" +
-                    " flavours of melon and hints of citrus",
+                    Description = "Crisp and fruity with " +
+                    "flavours of melon and hints of citrus",
                     ProductPrice = 4.40m,
                     IsActive = true,
                     ImageURL = "GalloPinotGrigio.jpg"
@@ -601,7 +601,7 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 70,
                     Name = "Chardonnay",
-                    Description = "Notes of apple and ripe" +
+                    Description = "Notes of apple and ripe " +
                     "stone fruit, layered with toasted oak",
                     ProductPrice = 5.10m,
                     IsActive = true,
@@ -612,8 +612,8 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 72,
                     Name = "Sauvignon Blanc",
-                    Description = "Stunningly aromatic tropical" +
-                    "fruits and bright citrus notes, with a" +
+                    Description = "Stunningly aromatic tropical " +
+                    "fruits and bright citrus notes, with a " +
                     "refreshingly zesty finish",
                     ProductPrice = 5.90m,
                     IsActive = true,
@@ -624,8 +624,8 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 74,
                     Name = "Merlot",
-                    Description = "packed with tempting flavours" +
-                    "of blackberry, raspberry and chocolate, with" +
+                    Description = "packed with tempting flavours " +
+                    "of blackberry, raspberry and chocolate, with " +
                     "a silky smooth finish",
                     ProductPrice = 5.20m,
                     IsActive = true,
@@ -636,7 +636,7 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 76,
                     Name = "Shiraz",
-                    Description = "Rich and smooth, with juicy red" +
+                    Description = "Rich and smooth, with juicy red " +
                     "berries and hints of liquorice and spice",
                     ProductPrice = 5.40m,
                     IsActive = true,
@@ -647,8 +647,8 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 78,
                     Name = "Rioja",
-                    Description = "The most vibrant expression of" +
-                    "Tempranillo, showing ripe red fruit characteristics" +
+                    Description = "The most vibrant expression of " +
+                    "Tempranillo, showing ripe red fruit characteristics " +
                     "and a slight vanilla and spice character",
                     ProductPrice = 6.10m,
                     IsActive = true,
@@ -659,7 +659,7 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 80,
                     Name = "Pinot Blush",
-                    Description = "Aromas of wild strawberries, zesty" +
+                    Description = "Aromas of wild strawberries, zesty " +
                     "minerality and flavours of forest fruits",
                     ProductPrice = 5.60m,
                     IsActive = true,
@@ -670,7 +670,7 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 82,
                     Name = "White Zinfandel",
-                    Description = "Delightful aroma of strawberries," +
+                    Description = "Delightful aroma of strawberries, " +
                     "the flavours of red, ripe watermelon",
                     ProductPrice = 4.10m,
                     IsActive = true,
@@ -680,9 +680,9 @@ namespace Snack_Shack.Data
                 new Product
                 {
                     //ProductID = 84,
-                    Name = "Cordon Negro Brut Cava",
-                    Description = "Crisp, clean and well balanced, with" +
-                    "distinctive apple, pear and bright citrus flavours" +
+                    Name = "Brut Cava",
+                    Description = "Crisp, clean and well balanced, with " +
+                    "distinctive apple, pear and bright citrus flavours " +
                     "and even a touch of ginger",
                     ProductPrice = 5.60m,
                     IsActive = true,
@@ -693,7 +693,7 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 86,
                     Name = "The Joshua Brut",
-                    Description = "Light yeasty aromas, limey fresh fruit" +
+                    Description = "Light yeasty aromas, limey fresh fruit " +
                     "on the nose and rich creamy complexity on the palate",
                     ProductPrice = 29.90m,
                     IsActive = true,
@@ -703,8 +703,8 @@ namespace Snack_Shack.Data
                 new Product
                 {
                     //ProductID = 88,
-                    Name = "Yellow Label Brut Non Vintage",
-                    Description = "Initial flavours of white fruits" +
+                    Name = "Brut Non Vintage",
+                    Description = "Initial flavours of white fruits " +
                     "and raisins develop into notes of brioche and vanilla",
                     ProductPrice = 79.90m,
                     IsActive = true,
@@ -755,7 +755,7 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 98,
                     Name = "London Dry",
-                    Description = "Wild juniper berries," +
+                    Description = "Wild juniper berries, " +
                     "coriander, angelica and liquorice",
                     ProductPrice = 3.40m,
                     IsActive = true,
@@ -766,7 +766,7 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 100,
                     Name = "Flor de Sevilla",
-                    Description = "Bittersweet Seville oranges" +
+                    Description = "Bittersweet Seville oranges " +
                     "to deliver a fruitful and zesty taste",
                     ProductPrice = 3.90m,
                     IsActive = true,
@@ -777,8 +777,8 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 101,
                     Name = "Red Label",
-                    Description = "Triple distilled from different" +
-                    "blended grains, filtered ten times through" +
+                    Description = "Triple distilled from different " +
+                    "blended grains, filtered ten times through " +
                     "seven columns of charcoal",
                     ProductPrice = 3.30m,
                     IsActive = true,
@@ -789,7 +789,7 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 102,
                     Name = "Black Lavel Blended Scotch",
-                    Description = "Deep layers of sweet fruit," +
+                    Description = "Deep layers of sweet fruit, " +
                     "spice and vanilla",
                     ProductPrice = 3.60m,
                     IsActive = true,
@@ -1133,7 +1133,7 @@ namespace Snack_Shack.Data
                 new Drink
                 {
                     ProductID = 21,
-                    DrinkCategory = DrinkCategory.SoftDrinks,
+                    DrinkCategory = DrinkCategory.HotDrinks,
                     SubCategory = DrinkSubCategory.Coffee,
                     ContainsAlcohol = false,
                     AlcoholPercentage = 0,
@@ -1143,7 +1143,7 @@ namespace Snack_Shack.Data
                 new Drink
                 {
                     ProductID = 22,
-                    DrinkCategory = DrinkCategory.SoftDrinks,
+                    DrinkCategory = DrinkCategory.HotDrinks,
                     SubCategory = DrinkSubCategory.Coffee,
                     ContainsAlcohol = false,
                     AlcoholPercentage = 0,
@@ -1153,7 +1153,7 @@ namespace Snack_Shack.Data
                 new Drink
                 {
                     ProductID = 23,
-                    DrinkCategory = DrinkCategory.SoftDrinks,
+                    DrinkCategory = DrinkCategory.HotDrinks,
                     SubCategory = DrinkSubCategory.Coffee,
                     ContainsAlcohol = false,
                     AlcoholPercentage = 0,
@@ -1163,7 +1163,7 @@ namespace Snack_Shack.Data
                 new Drink
                 {
                     ProductID = 24,
-                    DrinkCategory = DrinkCategory.SoftDrinks,
+                    DrinkCategory = DrinkCategory.HotDrinks,
                     SubCategory = DrinkSubCategory.Coffee,
                     ContainsAlcohol = false,
                     AlcoholPercentage = 0,
@@ -1213,7 +1213,7 @@ namespace Snack_Shack.Data
                 new Drink
                 {
                     ProductID = 40,
-                    DrinkCategory = DrinkCategory.SoftDrinks,
+                    DrinkCategory = DrinkCategory.HotDrinks,
                     SubCategory = DrinkSubCategory.Tea,
                     ContainsAlcohol = false,
                     AlcoholPercentage = 0,
@@ -1253,7 +1253,7 @@ namespace Snack_Shack.Data
                 new Drink
                 {
                     ProductID = 54,
-                    DrinkCategory = DrinkCategory.SoftDrinks,
+                    DrinkCategory = DrinkCategory.HotDrinks,
                     SubCategory = DrinkSubCategory.Tea,
                     ContainsAlcohol = false,
                     AlcoholPercentage = 0,
@@ -1432,7 +1432,7 @@ namespace Snack_Shack.Data
                 new Food
                 {
                     ProductID = 43,
-                    FoodCategory = FoodCategory.Starters,
+                    FoodCategory = FoodCategory.Sides,
                     Calories = 300,
                     ContainsNuts = false,
                     ContainsGluten = false,
@@ -1443,7 +1443,7 @@ namespace Snack_Shack.Data
                 new Food
                 {
                     ProductID = 44,
-                    FoodCategory = FoodCategory.Starters,
+                    FoodCategory = FoodCategory.Sides,
                     Calories = 375,
                     ContainsNuts = false,
                     ContainsGluten = true,
