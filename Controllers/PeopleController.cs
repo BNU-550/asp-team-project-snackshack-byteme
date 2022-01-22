@@ -25,6 +25,7 @@ namespace Snack_Shack.Controllers
         [Authorize(Roles = "Staff")]
         public async Task<IActionResult> Index()
         {
+            ReturnPage.Name = ReturnPage.PeopleIndex;
             return View(await _context.People.ToListAsync());
         }
 
@@ -75,7 +76,6 @@ namespace Snack_Shack.Controllers
         // GET: People/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            ReturnPage.Name = ReturnPage.PeopleIndex;
 
             if (id == null)
             {
@@ -120,7 +120,15 @@ namespace Snack_Shack.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                if (ReturnPage.Name == ReturnPage.PeopleIndex)
+                {
+                    return RedirectToAction(nameof(Index));
+                }
+                else
+                {
+                    return RedirectToAction("MyAccount", "Home");
+                }
+
             }
             return View(person);
         }

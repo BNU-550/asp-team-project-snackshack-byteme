@@ -4,41 +4,27 @@
     ViewData["Title"] = "MyAccount";
 }
 
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="PersonID" />
-            <div class="form-group">
-                <label asp-for="FirstName" class="control-label"></label>
-                <input asp-for="FirstName" class="form-control" />
-                <span asp-validation-for="FirstName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="LastName" class="control-label"></label>
-                <input asp-for="LastName" class="form-control" />
-                <span asp-validation-for="LastName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="EmailAddress" class="control-label"></label>
-                <input asp-for="EmailAddress" class="form-control" />
-                <span asp-validation-for="EmailAddress" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MobileNumber" class="control-label"></label>
-                <input asp-for="MobileNumber" class="form-control" />
-                <span asp-validation-for="MobileNumber" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+
+
+@if (Model == null)
+{
+    <p>
+        Your account does not yet exist. Please click on the link below to create your account.
+    </p>
+    <div>
+        <a asp-controller="People" asp-action="Create">Create Account</a> |
     </div>
-</div>
-<div>
-    <a asp-action="../People/Edit" asp-route-id="@Model">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+}
+else
+{
+    <partial name="../People/_PeopleView" model="@Model" />
+
+    <div>
+        <a asp-controller="People" asp-action="Edit" asp-route-id="@Model.PersonID">Edit</a> |
+    </div>
+
+}
 
 
-<partial name="_CustomerView" model="@Model" />
+
+

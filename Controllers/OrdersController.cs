@@ -37,6 +37,7 @@ namespace Snack_Shack.Controllers
             var order = await _context.Orders
                 .Include(o => o.Payment)
                 .Include(o => o.Person)
+                
                 .FirstOrDefaultAsync(m => m.OrderID == id);
             if (order == null)
             {

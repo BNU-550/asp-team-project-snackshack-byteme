@@ -1454,7 +1454,7 @@ namespace Snack_Shack.Data
                 new Food
                 {
                     ProductID = 45,
-                    FoodCategory = FoodCategory.Starters,
+                    FoodCategory = FoodCategory.Sides,
                     Calories = 400,
                     ContainsNuts = false,
                     ContainsGluten = false,
