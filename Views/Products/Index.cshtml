@@ -12,12 +12,11 @@
 }
 
 <h1>
-    Product Page
+    Products List
 </h1>
 
-
 <h3>
-    <a class="btn btn-success" asp-action="Create">Add new product</a>
+    <a class="btn btn-success" asp-action="Create">Add New product</a>
 </h3>
 <br />
 <br />
@@ -83,9 +82,12 @@
                     @Html.DisplayFor(modelItem => item.ImageURL)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.ProductID">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.ProductID">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.ProductID">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.ProductID"
+                       class="btn btn-success">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ProductID"
+                       class="btn btn-info">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ProductID"
+                       class="btn btn-danger">Delete</a>
                 </td>
             </tr>
         }

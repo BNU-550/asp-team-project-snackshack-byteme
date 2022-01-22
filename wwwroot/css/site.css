@@ -146,7 +146,7 @@ p#product-summary
 
 */
 
-h1 {
+h2 {
     color: #FF5757;
     font-size: 350%;
     background-color: #FFE8E8;
@@ -155,6 +155,11 @@ h1 {
 
 h3 {
     font-size: 200%;
+    font-family: 'Rubik Mono One';
+}
+
+h5 {
+    font-size: 100%;
     font-family: 'Rubik Mono One';
 }
 
