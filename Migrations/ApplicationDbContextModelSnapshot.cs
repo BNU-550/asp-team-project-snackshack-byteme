@@ -359,9 +359,6 @@ namespace Snack_Shack.Migrations
                     b.Property<int>("ProductID")
                         .HasColumnType("int");
 
-                    b.Property<string>("ProductName")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("Quantity")
                         .HasMaxLength(6)
                         .HasColumnType("int");

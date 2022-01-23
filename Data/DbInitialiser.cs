@@ -489,7 +489,7 @@ namespace Snack_Shack.Data
                 new Product
                 {
                     //ProductID = 48,
-                    Name = "Caeser Salad",
+                    Name = "Caesar Salad",
                     Description = "Romaine lettuce, crunchy croutons, " +
                     "chicken, anchovies, and ceaser dressing ",
                     ProductPrice = 7.90m,
@@ -555,7 +555,7 @@ namespace Snack_Shack.Data
                 {
                     //ProductID = 62,
                     Name = "Chocolate Brownie",
-                    Description = "Served warm with Cornish " +
+                    Description = "Served warm, with Cornish " +
                     "vanilla ice cream",
                     ProductPrice = 5.50m,
                     IsActive = true,
@@ -578,7 +578,7 @@ namespace Snack_Shack.Data
                     //ProductID = 66,
                     Name = "Waffles",
                     Description = "Served with chocolate " +
-                    "ice cream, rasperries, fresh cream " +
+                    "ice cream, raspberries, fresh cream " +
                     "and chocolate sauce",
                     ProductPrice = 6.10m,
                     IsActive = true,

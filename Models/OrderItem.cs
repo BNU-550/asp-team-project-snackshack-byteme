@@ -28,9 +28,7 @@ namespace Snack_Shack.Models
         // Foreign keys
         public int OrderID { get; set; }
         public int ProductID { get; set; }
-        
-        public String ProductName { get; set; }
-        
+       
         /// <summary>
         /// The price of a single item. 
         /// Is this taken from product?

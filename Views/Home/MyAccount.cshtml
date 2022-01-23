@@ -9,9 +9,11 @@
     <p>
         Your account does not yet exist. Please click on the link below to create your account.
     </p>
-    @*<div>
-        <a asp-area="Identity\Pages\Account" asp-action="Register">Create Account</a> |
-    </div>*@
+    <div>
+        <a href="https://localhost:44386/Identity/Account/Register">Create Account</a>
+        <br />
+        <a asp-controller="Home" asp-action="Index">Back</a>
+    </div>
 }
 else
 {
@@ -21,3 +23,7 @@ else
         <a class="btn btn-success text-center" style="background-color: #FF5757; border:none;" asp-controller="People" asp-action="Edit" asp-route-id="@Model.PersonID">Edit</a>
     </div>
 }
+
+@*<div>
+    <a asp-controller="People" asp-action="Create">Create Account</a> |
+</div>*@
