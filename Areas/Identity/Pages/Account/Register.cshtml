@@ -4,44 +4,60 @@
     ViewData["Title"] = "Register";
 }
 
-<h1>@ViewData["Title"]</h1>
 
+<style>
+    body {
+        background-color: #FF5757;
+    }
+</style>
+<style>
+    /* Send button */
+    .button-success {
+        font-family: 'Quicksand', sans-serif;
+        color: #FF5757;
+        background-color: #FFE8E8;
+    }
+
+    form-font {
+        font-family: Century;
+    }
+</style>
+<br />
+<h8>Snack Shack</h8>
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6">
+        <h9>Sign up</h9>
         <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <h4>Create a new account.</h4>
-            <hr />
+            @*<h4>Create a new account.</h4>*@
+
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Input.Email"></label>
+                <label style="font-family: Quicksand" asp-for="Input.Email"></label>
                 <input asp-for="Input.Email" class="form-control" />
                 <span asp-validation-for="Input.Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Input.Password"></label>
+                <label style="font-family: Quicksand" asp-for="Input.Password"></label>
                 <input asp-for="Input.Password" class="form-control" />
                 <span asp-validation-for="Input.Password" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Input.ConfirmPassword"></label>
+                <label style="font-family: Quicksand" asp-for="Input.ConfirmPassword"></label>
                 <input asp-for="Input.ConfirmPassword" class="form-control" />
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
-            <button type="submit" class="btn btn-primary">Register</button>
+            <button type="submit" style="font-family: Quicksand" class="btn button-success">Register</button>
         </form>
     </div>
-    <div class="col-md-6 col-md-offset-2">
+    <div class="col-4 offset-2">
         <section>
-            <h4>Use another service to register.</h4>
-            <hr />
+            @*<h4>Use another service to register.</h4>*@
+
             @{
                 if ((Model.ExternalLogins?.Count ?? 0) == 0)
                 {
                     <div>
-                        <p>
-                            There are no external authentication services configured. See <a href="https://go.microsoft.com/fwlink/?LinkID=532715">this article</a>
-                            for details on setting up this ASP.NET application to support logging in via external services.
-                        </p>
+                        <img class="d-block w-100" src="~/images/Logo.png" alt="Snack Shack Logo">
                     </div>
                 }
                 else
@@ -51,7 +67,7 @@
                             <p>
                                 @foreach (var provider in Model.ExternalLogins)
                                 {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
+                                    <button type="submit" class="btn btn-success" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
                                 }
                             </p>
                         </div>

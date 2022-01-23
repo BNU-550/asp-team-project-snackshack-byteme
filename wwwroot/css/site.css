@@ -8,6 +8,8 @@ for details on configuring this project to bundle and minify static web assets. 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&family=Roboto:wght@100&family=Rubik+Mono+One&family=Rubik:wght@300&family=Titillium+Web:wght@200&display=swap');
 
 
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&family=Roboto:wght@100&family=Rubik+Mono+One&family=Rubik:wght@300&family=Titillium+Web:wght@200&display=swap');
+
 a.navbar-brand {
     white-space: normal;
     text-align: center;
@@ -116,6 +118,21 @@ h7{
     font-size: 150%;
     font-family: 'Rubik Mono One';
 }
+
+h8 {
+    color: #FFE8E8;
+    font-size: 300%;
+    font-family: 'Rubik Mono One';
+}
+
+h9 {
+    font-size: 200%;
+    color: #FFE8E8;
+    font-family: 'Rubik Mono One';
+}
+
+
+
 
 .img {
     border-radius: 10%;
