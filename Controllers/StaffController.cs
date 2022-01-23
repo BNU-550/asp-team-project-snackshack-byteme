@@ -22,6 +22,8 @@ namespace Snack_Shack.Controllers
         }
 
         // GET: Staff
+        // Only staff are authorised to view people (customers)
+        [Authorize(Roles = "Staff")]
         public async Task<IActionResult> Index()
         {
             return View(await _context.Staff.ToListAsync());

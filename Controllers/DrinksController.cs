@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -23,6 +24,8 @@ namespace Snack_Shack.Controllers
         }
 
         // GET: Drinks
+        // Only staff are authorised to view people (customers)
+        [Authorize(Roles = "Staff")]
         public async Task<IActionResult> Index()
         {
             var applicationDbContext = _context.Drinks.Include(d => d.Product);

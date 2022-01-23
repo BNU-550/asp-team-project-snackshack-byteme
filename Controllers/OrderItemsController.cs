@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -18,7 +19,8 @@ namespace Snack_Shack.Controllers
         {
             _context = context;
         }
-
+        // Only staff are authorised to view people (customers)
+        [Authorize(Roles = "Staff")]
         // GET: OrderItems
         public async Task<IActionResult> Index()
         {

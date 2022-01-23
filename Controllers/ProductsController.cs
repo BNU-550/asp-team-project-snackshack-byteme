@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Snack_Shack.Data;
@@ -20,8 +21,9 @@ namespace Snack_Shack.Controllers
 
         // ADDED FILTERING 
         // GET: Products
-        
-       public async Task<IActionResult> Index(
+        // Only staff are authorised to view people (customers)
+        [Authorize(Roles = "Staff")]
+        public async Task<IActionResult> Index(
        string sortOrder,
        string currentFilter,
        string searchString,
