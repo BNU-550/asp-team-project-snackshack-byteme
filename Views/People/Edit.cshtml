@@ -5,6 +5,16 @@
     ViewData["Title"] = "Edit";
 }
 
+    @if (ReturnPage.Name == ReturnPage.MyAccount)
+    {
+        Layout = "_Layout";
+    }
+    else
+    {
+        Layout = "_StaffLayout";
+    }
+
+
 <h1>Edit</h1>
 
 <h4>Person</h4>

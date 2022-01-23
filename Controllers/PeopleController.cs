@@ -53,7 +53,9 @@ namespace Snack_Shack.Controllers
 
         // GET: People/Create
         public IActionResult Create()
+        
         {
+
             return View();
         }
 

@@ -94,13 +94,6 @@ namespace Snack_Shack.Controllers
             return View(await food.ToListAsync());
         }
 
-        // GET: FoodCatergories
-        //public async Task<IActionResult> FoodCategory()
-        //{
-        //    var applicationDbContext = _context.Food.Include(f => f.FoodCategory);
-        //    return View(await applicationDbContext.ToListAsync());
-        //}
-
         public async Task<IActionResult> Starters()
         {
 
@@ -196,10 +189,6 @@ namespace Snack_Shack.Controllers
 
             var person = await _context.People
                 .FirstOrDefaultAsync(m => m.EmailAddress == name);
-            if (person == null)
-            {
-                return NotFound();
-            }
 
             return View(person);
         }
