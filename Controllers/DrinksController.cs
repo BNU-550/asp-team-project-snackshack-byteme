@@ -39,7 +39,6 @@ namespace Snack_Shack.Controllers
 
             var drink = await _context.Drinks
                 .Include(d => d.Product)
-                .Include(d => d.SubCategory)
                 .FirstOrDefaultAsync(m => m.DrinkID == id);
             if (drink == null)
             {

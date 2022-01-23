@@ -5,26 +5,25 @@
     ViewData["Title"] = "OrderDetails";
 }
 
-<h2>Order Details</h2>
+<h1>Order Details</h1>
 <br />
 <br />
 
-<h3>
+<h4>
     Table No. @Html.DisplayFor(model => model.TableNo) |
     Guest: @Html.DisplayFor(model => model.Person.FirstName) |
     OrderNo: @Html.DisplayFor(model => model.OrderID)
-</h3>
+</h4>
 <p>
     Taken by:  @Html.DisplayFor(model => model.StaffName)
     <br />
     Order Date: @Html.DisplayFor(model => model.OrderDate)
 </p>
-<br />
 
 @*ToDo: Add Product Name and OrderID*@
 <div class="container">
     <div class="row">
-        <div class="col-1 bg-success text-white">
+        <div class="col-1">
             <br /><br />
             <b>Product</b>
             <br />
@@ -37,7 +36,7 @@
             <br />
             <br />
         </div>
-        <div class="col-1 bg-success text-white">
+        <div class="col-1">
             <br /><br />
             <b>Price</b>
             <br />
@@ -47,7 +46,7 @@
                 @item.UnitPrice.ToString("£0.00");<br />
             }
         </div>
-        <div class="col-1 bg-success text-white">
+        <div class="col-1">
             <br /><br />
             <b>Quantity</b>
             <br />
@@ -57,7 +56,7 @@
                 @item.Quantity.ToString("");<br />
             }
         </div>
-        <div class="col-1 bg-success text-white">
+        <div class="col-1">
             <br /><br />
             <b>Subtotal</b>
             <br />

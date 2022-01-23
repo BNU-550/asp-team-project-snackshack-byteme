@@ -15,9 +15,9 @@
     Products List
 </h1>
 
-<h3>
+<h4>
     <a class="btn btn-success" asp-action="Create">Add New product</a>
-</h3>
+</h4>
 <br />
 <br />
 
@@ -83,9 +83,9 @@
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.ProductID"
-                       class="btn btn-success">Edit</a> |
+                       class="btn btn-success">Edit</a> <br /><br />
                     <a asp-action="Details" asp-route-id="@item.ProductID"
-                       class="btn btn-info">Details</a> |
+                       class="btn btn-info">Details</a> <br /><br />
                     <a asp-action="Delete" asp-route-id="@item.ProductID"
                        class="btn btn-danger">Delete</a>
                 </td>
