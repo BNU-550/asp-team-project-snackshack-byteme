@@ -77,6 +77,12 @@ namespace Snack_Shack.Controllers
             return View(await drinks.ToListAsync());
         }
 
+        public async Task<IActionResult> WhiteWines()
+        {
+
+            var drinks = _context.Drinks.Include(f => f.Product).Where(d => d.SubCategory == DrinkSubCategory.White);
+            return View(await drinks.ToListAsync());
+        }
 
 
 

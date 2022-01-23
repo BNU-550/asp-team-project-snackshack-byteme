@@ -5,7 +5,7 @@ for details on configuring this project to bundle and minify static web assets. 
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
 
-
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&family=Roboto:wght@100&family=Rubik+Mono+One&family=Rubik:wght@300&family=Titillium+Web:wght@200&display=swap');
 
 
 a.navbar-brand {
@@ -13,7 +13,6 @@ a.navbar-brand {
     text-align: center;
     word-break: break-all;
 }
-
 
 /* Provide sufficient contrast against white background */
 a {
@@ -96,57 +95,6 @@ p#product-summary
 }
 
 
-/*
-.dropdown-submenu {
-    position: relative;
-}
-
-    .dropdown-submenu > .dropdown-menu {
-        top: 0;
-        left: 100%;
-        margin-top: -6px;
-        margin-left: -1px;
-        -webkit-border-radius: 0 6px 6px 6px;
-        -moz-border-radius: 0 6px 6px;
-        border-radius: 0 6px 6px 6px;
-    }
-
-    .dropdown-submenu:hover > .dropdown-menu {
-        display: block;
-    }
-
-    .dropdown-submenu > a:after {
-        display: block;
-        content: " ";
-        float: right;
-        width: 0;
-        height: 0;
-        border-color: transparent;
-        border-style: solid;
-        border-width: 5px 0 5px 5px;
-        border-left-color: #ccc;
-        margin-top: 5px;
-        margin-right: -10px;
-    }
-
-    .dropdown-submenu:hover > a:after {
-        border-left-color: #fff;
-    }
-
-    .dropdown-submenu.pull-left {
-        float: none;
-    }
-
-        .dropdown-submenu.pull-left > .dropdown-menu {
-            left: -100%;
-            margin-left: 10px;
-            -webkit-border-radius: 6px 0 6px 6px;
-            -moz-border-radius: 6px 0 6px 6px;
-            border-radius: 6px 0 6px 6px;
-        }
-
-*/
-
 h2 {
     color: #FF5757;
     font-size: 350%;
@@ -175,22 +123,43 @@ h7{
 
 
 
-/* ============ desktop view ============ */
-@media all and (min-width: 992px) {
-    .navbar .nav-item .dropdown-menu {
-        display: none;
-    }
 
-    .navbar .nav-item:hover .nav-link {
-        color: #fff;
-    }
-
-    .navbar .nav-item:hover .dropdown-menu {
-        display: block;
-    }
-
-    .navbar .nav-item .dropdown-menu {
-        margin-top: 0;
-    }
+/* Contact */
+/* Contact page form */
+.commentbox {
+    width: 100%;
+    align-content: center;
 }
-/* ============ desktop view .end// ============ */
+
+/* Contact paragraph */
+.contactparagraph {
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Contact head */
+.content-head {
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Thank you message */
+.thankyou_message {
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* The text above the comment box's */
+.formtext {
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* The text inside the comment box's */
+.commentbox {
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Send button */
+.button-success {
+    font-family: 'Quicksand', sans-serif;
+    color: #FFE8E8;
+    background-color: #FF5757;
+}
+

@@ -1,5 +1,5 @@
 ﻿@model Snack_Shack.Models.Person
-@using Snack_Shack.Data 
+@using Snack_Shack.Data
 
 @{
     ViewData["Title"] = "Edit";
@@ -39,11 +39,11 @@
                     <input class="form-check-input" asp-for="IsMinor" /> @Html.DisplayNameFor(model => model.IsMinor)
                 </label>
             </div>
-            <div class="form-group form-check">
+            @*<div class="form-group form-check">
                 <label class="form-check-label">
                     <input class="form-check-input" asp-for="IsCustomer" /> @Html.DisplayNameFor(model => model.IsCustomer)
                 </label>
-            </div>
+            </div>*@
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>

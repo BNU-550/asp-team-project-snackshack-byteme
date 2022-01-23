@@ -1,9 +1,8 @@
 ﻿@{
     ViewData["Title"] = "";
 }
-<h2>@ViewData["Title"]</h2> 
-<head>
 
+<head>
     <!-- jQuery library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
@@ -14,24 +13,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
 </head>
 
 <body>
-
     <style>
         body {
             background-color: #FFE8E8;
         }
     </style>
-
-    <br />
-    <div class="row">
-        <div class="col-6 offset-3 text-center">
-            <h2>Contact Us</h2>
-        </div>
-    </div>
-
 
     <!-- Form -->
     <div class="container">
@@ -47,35 +36,38 @@
                             <!-- Name, Message and Email -->
                             <div class="form-elements">
                                 <fieldset class="pure-group">
+                                    <h2>Contact Us</h2>
                                     <label for="Enquiry" class="formtext">
-                                        For any book enquries or questions -</br>
+
+                                        <br>
+                                        For any bookings or general enquries -<br>
                                         Please use the Contact Form
                                         below:
                                     </label>
+                                </fieldset>
+                                <br>
 
-                                    </br>
+                                <!--<div class="form-elements">-->
+                                <fieldset class="pure-group">
+                                    <label for="name" class="formtext">Name:</label>
+                                    <input id="name" name="name" class="commentbox" placeholder="" />
+                                </fieldset>
 
-                                    <!--<div class="form-elements">-->
-                                    <fieldset class="pure-group">
-                                        <label for="name" class="formtext">Name:</label>
-                                        <input id="name" name="name" class="commentbox" placeholder="" />
-                                    </fieldset>
+                                <fieldset class="pure-group">
+                                    <label for="message" class="formtext">Message: </label>
+                                    <textarea class="commentbox" id="message" name="message" rows="4" placeholder=""></textarea>
+                                </fieldset>
 
-                                    <fieldset class="pure-group">
-                                        <label for="message" class="formtext">Message: </label>
-                                        <textarea class="commentbox" id="message" name="message" rows="4" placeholder=""></textarea>
-                                    </fieldset>
+                                <fieldset class="pure-group">
+                                    <label for="email" class="formtext"><em>Your </em> Email Address:</label>
+                                    <input id="email" name="email" type="email" value="" class="commentbox" required
+                                           placeholder="your.name@email.com" />
+                                </fieldset>
 
-                                    <fieldset class="pure-group">
-                                        <label for="email" class="formtext"><em>Your </em> Email Address:</label>
-                                        <input id="email" name="email" type="email" value="" class="commentbox" required
-                                               placeholder="your.name@email.com" />
-                                    </fieldset>
-
-                                    <!-- Send button -->
-                                    <button class="button-success pure-button button-xlarge">
-                                        <i class="fa fa-paper-plane"></i>&nbsp;Send
-                                    </button>
+                                <!-- Send button -->
+                                <button class="button-success pure-button button-xlarge">
+                                    <i class="fa fa-paper-plane"></i>&nbsp;Send
+                                </button>
                             </div>
 
                             <br>
@@ -104,60 +96,9 @@
             </div>
         </div>
     </div>
-
-
     <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
-
     <br>
-
 </body>
-
-
-
-
-
-
-
-<style>
-    /* Contact */
-    /* Contact page form */
-    .commentbox {
-        width: 100%;
-        align-content: center;
-    }
-
-    /* Contact paragraph */
-    .contactparagraph {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    /* Contact head */
-    .content-head {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    /* Thank you message */
-    .thankyou_message {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    /* The text above the comment box's */
-    .formtext {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    /* The text inside the comment box's */
-    .commentbox {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    /* Send button */
-    .button-success {
-        font-family: 'Roboto';
-        color: #FFE8E8;
-        background-color: #FF5757;
-    }
-</style>
 
 <script>
     (function () {
