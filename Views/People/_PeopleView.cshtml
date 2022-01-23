@@ -5,7 +5,17 @@
     ViewData["Title"] = "_PeopleView";
 }
 
-<h1>Personal Details @Model.FullName</h1>
+<style>
+    body {
+        background-color: #FFE8E8;
+    }
+</style>
+
+<br />
+<br />
+
+<h7>@Model.FirstName @Model.LastName - Personal Details</h7>
+
 
 <div>
     <hr />
@@ -39,12 +49,6 @@
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.IsMinor)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.IsCustomer)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.IsCustomer)
         </dd>
     </dl>
 </div>
