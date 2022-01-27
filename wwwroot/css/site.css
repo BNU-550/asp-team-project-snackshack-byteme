@@ -126,7 +126,12 @@ h8 {
 }
 
 h9 {
-    font-size: 200%;
+    font-size: 280%;
+    color: #FFE8E8;
+    font-family: 'Rubik Mono One';
+}
+h10 {
+    font-size: 130%;
     color: #FFE8E8;
     font-family: 'Rubik Mono One';
 }

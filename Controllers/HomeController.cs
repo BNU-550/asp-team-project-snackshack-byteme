@@ -39,7 +39,7 @@ namespace Snack_Shack.Controllers
         // GET: Drinks
         public async Task<IActionResult> Drinks()
         {
-            var drinks = _context.Drinks.Include(f => f.Product);
+            var drinks = _context.Drinks.Include(p => p.Product);
             return View(await drinks.ToListAsync());
         }
 

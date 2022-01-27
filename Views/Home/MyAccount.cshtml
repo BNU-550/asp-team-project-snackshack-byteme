@@ -4,15 +4,41 @@
     ViewData["Title"] = "MyAccount";
 }
 
+
+<style>
+    body {
+        background-color: #FF5757;
+    }
+    </style>
+
 @if (Model == null)
 {
-    <p>
-        Your account does not yet exist. Please click on the link below to create your account.
-    </p>
+    <br />
+    <h10>
+        Your account does not yet exist.
+        <br />Please click on the link below to create your account.
+    </h10>
+    <br />
+    <br />
+    <br />
     <div>
-        <a href="https://localhost:44386/Identity/Account/Register">Create Account</a>
+        <a href="https://localhost:44386/Identity/Account/Register" style="text-decoration: none"><h9>Create Account</h9></a>
         <br />
-        <a asp-controller="Home" asp-action="Index">Back</a>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <a asp-controller="Home" asp-action="Index"><h10>Go Back</h10></a>
     </div>
 }
 else
@@ -20,10 +46,8 @@ else
     <partial name="../People/_PeopleView" model="@Model" />
 
     <div>
-        <a class="btn btn-success text-center" style="background-color: #FF5757; border:none;" asp-controller="People" asp-action="Edit" asp-route-id="@Model.PersonID">Edit</a>
+        <a class="btn btn-success text-center" style="background-color: #FF5757; border:none;"
+           asp-controller="People" asp-action="Edit" asp-route-id="@Model.PersonID">Edit</a>
     </div>
 }
 
-@*<div>
-    <a asp-controller="People" asp-action="Create">Create Account</a> |
-</div>*@
